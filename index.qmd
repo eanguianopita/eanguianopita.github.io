@@ -1,7 +1,7 @@
 -   <div>
 
     ---
-    title: "Emmanuel Anguiano Pita"
+    title: "Javier Emmanuel Anguiano Pita"
     ---
 
     </div>

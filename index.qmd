@@ -1,6 +1,10 @@
----
-title: "Emmanuel Anguiano Pita"
----
+-   <div>
+
+    ---
+    title: "Emmanuel Anguiano Pita"
+    ---
+
+    </div>
 
 This is a Quarto website.
 

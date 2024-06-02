@@ -14,6 +14,9 @@ about:
     - icon: "{{< ai google-scholar size = 5x>}}"
       text: Google Scholar
       href: https://scholar.google.com/citations?user=dERUZv0AAAAJ&hl=es
+    - icon: email
+      text: Email
+      href: mailto:je.ptt@hotmail.com
 css: styles.css
 ---
 :::{#hero-heading}

@@ -3,18 +3,24 @@ project:
   output-dir: docs
 
 website:
-  title: ""
+  title: "Emmanuel Anguiano"
   navbar:
+    background: primary
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: Research.qmd
+        text: Research
 
 format:
   html:
     theme: Yeti
     css: styles.css
     toc: false
+    page-layout: full
+
 
 editor: visual
 

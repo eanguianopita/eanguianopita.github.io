@@ -4,6 +4,7 @@ about:
   id: hero-heading
   template: trestles
   image: \Images\Javier-Anguiano-Pita.png
+  image-shape: rounded
   links:
     - icon: twitter
       text: X profile
@@ -11,13 +12,14 @@ about:
     - icon: github
       text: Github
       href: https://github.com/eanguianopita/
-    - icon: "{{< ai google-scholar size = 5x>}}"
+    - icon: google
       text: Google Scholar
       href: https://scholar.google.com/citations?user=dERUZv0AAAAJ&hl=es
-    - icon: email
+    - icon: envelope-at
       text: Email
       href: mailto:je.ptt@hotmail.com
 css: styles.css
+toc: false
 ---
 :::{#hero-heading}
 <div class="justified-text">

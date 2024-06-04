@@ -21,6 +21,7 @@ je.ptt@hotmail.com
 - Dissertation: *[Essays on North American Economic Integration](https://www.riudg.udg.mx/handle/20.500.12104/20536/browse?type=author&order=ASC&rpp=20&value=Anguiano+Pita%2C+Javier+Emmanuel)*
 
 **Master of Science -- Economics** <br> *Universidad de Guadalajara (Mexico)* [*Aug 2015 --- May 2017*]{.cvdate}
+- Thesis: *[Integración de los Mercados Financieros de América del Norte: Un Análisis de los Mercados Monetarios, Cambiarios y Bursátiles durante el periodo 1995-2016](https://riudg.udg.mx/handle/20.500.12104/80101)*
 
 **Bachelor of Science -- Economics** <br> *Universidad de Guadalajara (Mexico)* [*Aug 2010 --- Dic 2014*]{.cvdate}
 
@@ -39,10 +40,10 @@ je.ptt@hotmail.com
 *Plataforma Economía de Jalisco - Universidad de Guadalajara* [Aug 2020 --- Dec 2023]{.cvdate}
 
 ### Data Scientist and Public Finance Analyst
-*Instituto para el Desarrollo Técnico de las Haciendas Pública de México* [Nov 2017 --- May 2019]
+*Instituto para el Desarrollo Técnico de las Haciendas Pública de México* [Nov 2017 --- May 2019]{.cvdate}
 
 ### Monitoring and Evaluation Manager
-*National Forestry Commission of Mexico* [Jul 2017 --- Nov 2017]
+*National Forestry Commission of Mexico* [Jul 2017 --- Nov 2017]{.cvdate}
 
 ::: {.no-print}
 ## PRESENTATIONS AND WORKSHOPS

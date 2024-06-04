@@ -1,5 +1,5 @@
 ---
-title: "Curriculum Vitae"
+title: "Javier Emmanuel Anguiano Pita"
 format:
   html:
     toc: true
@@ -19,6 +19,10 @@ je.ptt@hotmail.com
 **Doctor of Philosophy -- Economic Studies** <br> *Universidad de Guadalajara (Mexico)* [*Aug 2018 --- May 2022*]{.cvdate}
 
 - Dissertation: *[Essays on North American Economic Integration](https://www.riudg.udg.mx/handle/20.500.12104/20536/browse?type=author&order=ASC&rpp=20&value=Anguiano+Pita%2C+Javier+Emmanuel)*
+
+**Master of Science -- Economics** <br> *Universidad de Guadalajara* [*Aug 2015 --- May 2017*]{.cvdate}
+
+**Bachelor of Science -- Economics** <br> *Universidad de Guadalajara* [*Aug 2010 --- Dic 2014*]{.cvdate}
 
 ## WORK EXPERIENCE{style="page-break-before: always"}
 

@@ -1,5 +1,5 @@
 ---
-title: "Javier Emmanuel Anguiano Pita"
+title: "Curriculum Vitae"
 format:
   html:
     toc: true
@@ -20,15 +20,15 @@ je.ptt@hotmail.com
 
 - Dissertation: *[Essays on North American Economic Integration](https://www.riudg.udg.mx/handle/20.500.12104/20536/browse?type=author&order=ASC&rpp=20&value=Anguiano+Pita%2C+Javier+Emmanuel)*
 
-**Master of Science -- Economics** <br> *Universidad de Guadalajara* [*Aug 2015 --- May 2017*]{.cvdate}
+**Master of Science -- Economics** <br> *Universidad de Guadalajara (Mexico)* [*Aug 2015 --- May 2017*]{.cvdate}
 
-**Bachelor of Science -- Economics** <br> *Universidad de Guadalajara* [*Aug 2010 --- Dic 2014*]{.cvdate}
+**Bachelor of Science -- Economics** <br> *Universidad de Guadalajara (Mexico)* [*Aug 2010 --- Dic 2014*]{.cvdate}
 
-## WORK EXPERIENCE{style="page-break-before: always"}
+## Work Experience{style="page-break-before: always"}
 
-### Data Scientist
+### Postdoctoral Fellow
 
-***Freelance, Multiple Clients*** [Jan 2020 -- June 2021]{.cvdate}
+***Mexican Council for the Humanities, Sciences and Technology*** [May 2024 -- Current]{.cvdate}
 
 Providing data collection, pre-processing, exploratory analysis and modelling services to clients in the early R&D stages of developing data driven products. Projects include:
 

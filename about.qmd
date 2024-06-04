@@ -11,16 +11,14 @@ format-links: [pdf]
 ---
 
 ::: {.print-only .contact-block}
-cynthia.huang@monash.edu
+je.ptt@hotmail.com
 :::
 
-## EDUCATION
+## Education
 
-**Doctor of Philosophy -- Econometrics and Business Statistics** <br> *Monash University* [*Aug 2021 --- Present*]{.cvdate}
+**Doctor of Philosophy -- Economic Studies** <br> *Universidad de Guadalajara (Mexico)* [*Aug 2018 --- May 2022*]{.cvdate}
 
--   New principles and methods for complex data preparation and integration, with applications to official statistics, web-scrapped data and satellite raster images
--   Monash Data Futures Institute PhD Top-Up Scholarship (2021-2024)
--   Expected submission date: Nov 2024
+- Dissertation: *[Essays on North American Economic Integration](https://www.riudg.udg.mx/handle/20.500.12104/20536/browse?type=author&order=ASC&rpp=20&value=Anguiano+Pita%2C+Javier+Emmanuel)*
 
 ## WORK EXPERIENCE{style="page-break-before: always"}
 

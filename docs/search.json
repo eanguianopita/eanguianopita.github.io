@@ -9,9 +9,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Curriculum Vitae",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "cynthia.huang@monash.edu"
   },
   {
     "objectID": "index.html#education",
@@ -40,5 +40,33 @@
     "title": "Javier Emmanuel Anguiano Pita",
     "section": "",
     "text": "Actualmente, soy investigador postdoctoral en el Programa de Doctorado en Estudios Económicos (DEEC) de la Universidad de Guadalajara (UDG), trabajando bajo la supervisión de Antonio Ruiz Porras. Tengo un doctorado en Estudios Económicos y una maestría en Economía de la misma universidad.\nMis intereses de investigación se centran en la intersección de la economía internacional, la macroeconomía y la econometría aplicada. Actualmente trabajo en el papel de la integración comercial y financiera en la transmisión internacional de shocks, los efectos heterogéneos de la política monetaria entre los estados de México y el análisis del desempeño macroeconómico regional y nacional."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Curriculum Vitae",
+    "section": "EDUCATION",
+    "text": "EDUCATION\nDoctor of Philosophy – Econometrics and Business Statistics  Monash University Aug 2021 — Present\n\nNew principles and methods for complex data preparation and integration, with applications to official statistics, web-scrapped data and satellite raster images\nMonash Data Futures Institute PhD Top-Up Scholarship (2021-2024)\nExpected submission date: Nov 2024"
+  },
+  {
+    "objectID": "about.html#work-experience",
+    "href": "about.html#work-experience",
+    "title": "Curriculum Vitae",
+    "section": "WORK EXPERIENCE",
+    "text": "WORK EXPERIENCE\n\nData Scientist\nFreelance, Multiple Clients Jan 2020 – June 2021\nProviding data collection, pre-processing, exploratory analysis and modelling services to clients in the early R&D stages of developing data driven products. Projects include:\n\nData description and preliminary product feasibility insights for a start-up real estate bond platform; including assessing suitability of various property transaction databases for use in initial product prototype.\nDevelopment of statistical anomaly detection regimes and key historical insights from internet quality time-series data for use in parametric insurance products, including documenting analysis tools in an R package."
+  },
+  {
+    "objectID": "about.html#presentations-and-workshops",
+    "href": "about.html#presentations-and-workshops",
+    "title": "Curriculum Vitae",
+    "section": "PRESENTATIONS AND WORKSHOPS",
+    "text": "PRESENTATIONS AND WORKSHOPS\n\nTalk: Misadventures with Reproducibility in R (30 Nov 2022, R Ladies Melbourne Meetup)\nTalk: Designing R Packages (4 Oct 2022, Monash EBS Data Science Research Software Study Group)\nTalk: Quarto Websites as Research Compendiums (16 Aug 2022, Monash EBS Data Science Research Software Study Group)\nWorkshop: Writing academic papers with Rmarkdown and friends (9 Aug 2022, Monash University)"
+  },
+  {
+    "objectID": "about.html#references",
+    "href": "about.html#references",
+    "title": "Curriculum Vitae",
+    "section": "References",
+    "text": "References\nAvailable upon request"
   }
 ]

@@ -5,7 +5,7 @@ about:
   template: trestles
   image: \Images\Javier-Anguiano-Pita.png
   image-shape: rounded
-  links:
+    links:
     - icon: twitter
       text: X profile
       href: https://x.com/eanguiano92

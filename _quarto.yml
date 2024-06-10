@@ -6,15 +6,12 @@ website:
   title: "Emmanuel Anguiano"
   navbar:
     background: primary
-    pinned: true
-    logo: Images/Logo.png 
     left:
       - href: index.qmd
         text: Home
-      - href: CV.qmd
+      - href: CV/index.qmd
         text: CV
-      - href: Research.qmd
-        text: Research
+
 
 format:
   html:

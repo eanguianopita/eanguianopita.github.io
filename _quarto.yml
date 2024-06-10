@@ -6,6 +6,7 @@ website:
   title: "Emmanuel Anguiano"
   navbar:
     background: primary
+    favicon: Images/Logo.png
     left:
       - href: index.qmd
         text: Home

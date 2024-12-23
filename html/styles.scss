@@ -35,39 +35,35 @@ $danger:    $red !default;
 $light:     $gray-400 !default;
 $dark:      $black !default;
 
-
-
-// Links
+/* Links */
 $link-color: $primary !default;
 $link-decoration: none !default;
 $link-hover-color: $red !default;
 $link-hover-decoration: underline !default;
 
-// Footer
+/* Footer */
 $footer-bg: $gray-900 !default;
 $footer-fg: $gray-300 !default;
 
-// Inline code
+/* Inline code */
 $code-bg: $gray-200 !default;
 $code-color: $gray-900 !default;
 
-// TOC
+/* TOC */
 $toc-color: $orange;
 $toc-font-size: 1em;
 
-// Code copy
+/* Code copy */
 $btn-code-copy-color-active: $orange !default;
-
 
 /*-- scss:rules --*/
 
-
+/* Footer Styles */
 .nav-footer {
-    align-items: flex-start;  // Align all flex items to the top
+    align-items: flex-start;  /* Align all flex items to the top */
     flex-wrap: wrap;
     border: 0 !important;
     min-height: 3em;
-    //font-family: $footer-font-family;
 
     a {
         color: $primary;
@@ -78,9 +74,7 @@ $btn-code-copy-color-active: $orange !default;
         padding-bottom: 0.4em;
     }
 
-    // In the default Quarto template, .nav-footer-center has position: absolute 
-    // turned on, which makes the div not be a flex item
-    // This changes that so that it *is* a flex item
+    /* Ensure footer div is a flex item */
     .nav-footer-center {
         text-align: center;
         position: inherit;
@@ -92,8 +86,6 @@ $btn-code-copy-color-active: $orange !default;
         }
     }
 
-    // When the screen is medium or smaller, make each footer chunk be 100% width 
-    // and centered; otherwise make them be 33% width and left/right/centerd
     .nav-footer-left,
     .nav-footer-right,
     .nav-footer-center {
@@ -119,18 +111,37 @@ $btn-code-copy-color-active: $orange !default;
     }
 }
 
-
+/* General body styles */
 body {
-  text-align: justify; /* Justifies the text */
-  text-justify: inter-word; /* Ensures even spacing between words */
-  hyphens: auto; /* Enables word breaking */
-  word-break: normal; /* Maintains default word-breaking behavior */
+  text-align: justify;  /* Justifies the text */
+  text-justify: inter-word;  /* Ensures even spacing between words */
+  hyphens: auto;  /* Enables word breaking */
+  word-break: normal;  /* Maintains default word-breaking behavior */
 }
 
+/* Header Styles (Titles) */
 h1, h2 {
-  text-align: justify; /* Justify text alignment */
-  text-justify: inter-word; /* Prevent excessive space between words */
-  word-spacing: 0.025em; /* Adjust the default spacing between words */
-  letter-spacing: 0.02em; /* Optional: adjust letter spacing slightly */
-  hyphens: auto; /* Enable word hyphenation for breaking */
+  text-align: justify;  /* Justify text alignment */
+  text-justify: inter-word;  /* Prevent excessive space between words */
+  word-spacing: 0.05em;  /* Adjust the default spacing between words */
+  letter-spacing: 0.02em;  /* Optional: adjust letter spacing slightly */
+  hyphens: auto;  /* Enable word hyphenation for breaking */
+  font-family: "Arial", sans-serif;  /* Example: clean, readable font */
+}
+
+/* Specific fix for Quarto titles */
+.title, .main-title {
+  text-align: justify;
+  text-justify: inter-word;
+  word-spacing: 0.01em;  /* Fine adjustment for specific sections */
+  letter-spacing: normal;  /* Reset letter spacing for consistency */
+  hyphens: auto;  /* Allow words to break as needed */
+}
+
+/* Alternative Title Styles */
+h1, h2.alt-style {
+  text-align: left;  /* Use left alignment as an alternative */
+  word-spacing: 0.02em;
+  letter-spacing: normal;
+  hyphens: none;
 }

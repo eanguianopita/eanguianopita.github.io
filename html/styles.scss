@@ -120,9 +120,17 @@ $btn-code-copy-color-active: $orange !default;
 }
 
 
-body, h1, h2, h3, h4, h5, h6 {
+body {
   text-align: justify; /* Justifies the text */
   text-justify: inter-word; /* Ensures even spacing between words */
   hyphens: auto; /* Enables word breaking */
   word-break: normal; /* Maintains default word-breaking behavior */
+}
+
+h1, h2 {
+  text-align: justify; /* Justify text alignment */
+  text-justify: inter-word; /* Prevent excessive space between words */
+  word-spacing: 0.025em; /* Adjust the default spacing between words */
+  letter-spacing: 0.02em; /* Optional: adjust letter spacing slightly */
+  hyphens: auto; /* Enable word hyphenation for breaking */
 }

@@ -3,7 +3,7 @@
 # website settings
 website:
   title: "Emmanuel Anguiano"          # Your name
-
+  favicon: img/taco.png
   # start of the navigation bar at the top of the website
   navbar:
     pinned: false

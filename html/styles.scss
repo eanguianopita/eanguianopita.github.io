@@ -120,5 +120,8 @@ $btn-code-copy-color-active: $orange !default;
 }
 
 body {
-  text-align: justify;
+  text-align: justify; /* Justifies the text */
+  text-justify: inter-word; /* Ensures even distribution between words */
+  hyphens: auto; /* Enables word breaking to avoid large spaces */
+  word-break: normal; /* Preserves default word-breaking behavior */
 }

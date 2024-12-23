@@ -12,12 +12,12 @@ website:
     left:
       - text: "Inicio"
         href: index.qmd
-      
-      - text: "Curso R"
-        href: curso_R/index.qmd
     
       - text: "CV"
         href: cv/index.qmd
+        
+      - text: "Curso R"
+        href: curso_R/index.qmd
     
     # your social media handles
     right:
@@ -47,7 +47,7 @@ project:
     port: 22222
     browser: true
     watch-inputs: true
-    navigate: false
+    navigate: true
 
 execute:
   freeze: true

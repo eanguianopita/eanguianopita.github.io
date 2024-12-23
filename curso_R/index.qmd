@@ -25,7 +25,7 @@ date-modified: "24-12-2024"
 
 | Sesión | Tema                | Diapositivas | Datos |
 |:------:|:-------------------:|:------------:|:-----:|
-| 1      |**Introducción a `R`** | Enlace     |Enlace |
+| 1      |**Introducción a `R` y `RStudio`** | Enlace     |Enlace |
 
 # Instrucciones previas al curso
 

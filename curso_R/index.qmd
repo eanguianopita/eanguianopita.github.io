@@ -4,6 +4,7 @@ author: "[Emmanuel Anguiano](https://eanguianopita.github.io)"
 subtitle: "Universidad de Guadalajara, Posgrados CUCEA 2025"
 lang: es
 date-modified: "2024-12-23"
+css: html/styles.css
 ---
 
 # ¡Bienvenidos al curso de programación en R!

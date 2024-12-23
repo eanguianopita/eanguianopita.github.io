@@ -21,21 +21,7 @@ about:
 ::: {#about-block}
 :::
 
-# Welcome to my personal website!
-
-## English
-I am currently a Postdoctoral Fellow in the Doctoral Program in Economic Studies at the Universidad de Guadalajara. I hold a Ph.D. in Economic Studies and an MSc in Economics from the same institution.
-
-My research interests are at the intersection of international, macro, and development economics, with a particular focus on economic and financial integration between countries with different levels of development. Recently, I have initiated two research projects using subnational data from Mexico: one on the development of short- and long-term forecasts, and another studying the heterogeneous impacts of monetary policy at the state level.
-
-In addition to my research, I work as a consultant and trainer in project and data management for social science research projects. I assist research teams in establishing workflows for data management, project collaboration, and documentation to ensure that their work is replicable and reproducible. I also teach how to use R, Python, and GitHub.
-
-I previously served as a Performance Audit Analyst at the Auditoría Superior del Estado de Jalisco (ASEJ). I also worked as a Data Scientist and Public Finance Analyst at the Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).
-
-I am a recognized Candidate to Researcher in the Mexican System of Researchers (2024–2027) and a recipient of the Emerging Scholars from Emerging Markets Fellowship (2022–2023).
-
-Please feel free to [contact me](mailto:javier.anguiano@cucea.udg.mx) if you have any questions or would like to discuss potential projects.
-
+# Sobre mi
 
 ## Español 
 
@@ -52,5 +38,17 @@ Soy reconocido como Candidato a Investigador en el Sistema Nacional de Investiga
 Por favor, no dudes en [contactarme](mailto:javier.anguiano@cucea.udg.mx) si tienes alguna pregunta o si te gustaría discutir proyectos potenciales.
 
 
+## English
+I am currently a Postdoctoral Fellow in the Doctoral Program in Economic Studies at the Universidad de Guadalajara. I hold a Ph.D. in Economic Studies and an MSc in Economics from the same institution.
+
+My research interests are at the intersection of international, macro, and development economics, with a particular focus on economic and financial integration between countries with different levels of development. Recently, I have initiated two research projects using subnational data from Mexico: one on the development of short- and long-term forecasts, and another studying the heterogeneous impacts of monetary policy at the state level.
+
+In addition to my research, I work as a consultant and trainer in project and data management for social science research projects. I assist research teams in establishing workflows for data management, project collaboration, and documentation to ensure that their work is replicable and reproducible. I also teach how to use R, Python, and GitHub.
+
+I previously served as a Performance Audit Analyst at the Auditoría Superior del Estado de Jalisco (ASEJ). I also worked as a Data Scientist and Public Finance Analyst at the Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).
+
+I am a recognized Candidate to Researcher in the Mexican System of Researchers (2024–2027) and a recipient of the Emerging Scholars from Emerging Markets Fellowship (2022–2023).
+
+Please feel free to [contact me](mailto:javier.anguiano@cucea.udg.mx) if you have any questions or would like to discuss potential projects.
 
 

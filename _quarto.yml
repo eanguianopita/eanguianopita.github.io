@@ -6,10 +6,13 @@ website:
   favicon: img/taco.png
   # start of the navigation bar at the top of the website
   navbar:
-    pinned: false
+    pinned: true
     
     # your sub-pages
     left:
+      - text: "Inicio"
+        href: index.qmd
+      
       - text: "Curso R"
         href: curso_R/index.qmd
     
@@ -18,8 +21,6 @@ website:
     
     # your social media handles
     right:
-      - icon: folder-symlink
-        href: https://github.com/eanguianopita?tab=repositories
       - icon: twitter
         href: https://x.com/eanguiano92
       - icon: linkedin

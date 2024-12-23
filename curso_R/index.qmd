@@ -3,6 +3,7 @@ title: Programación en R para Ciencias Sociales
 author: "[Emmanuel Anguiano](https://eanguianopita.github.io)"
 subtitle: "Universidad de Guadalajara, Posgrados CUCEA 2025"
 lang: es
+date-modified: "23-12-2024"
 ---
 
 # ¡Bienvenidos al curso de programación en R!

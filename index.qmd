@@ -18,9 +18,6 @@ about:
     - icon: envelope
       text: Email
       href: "mailto:je.ptt@hotmail.com"  
-html:
-  head-content: |
-    <meta name="google-site-verification" content="xIckcgwpBgPSk7igNQaAz8KQiqpuddg3H_XmgLptRG8" />
 
 ---
 

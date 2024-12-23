@@ -46,7 +46,7 @@ project:
     port: 22222
     browser: true
     watch-inputs: true
-    navigate: true
+    navigate: false
 
 execute:
   freeze: true
@@ -57,7 +57,7 @@ format:
     theme: 
       - pulse
       - html/styles.scss
-    toc: true
+    toc: false
     code-link: true
     anchor-sections: true
     fig-cap-location: margin

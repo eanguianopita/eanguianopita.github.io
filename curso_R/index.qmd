@@ -1,0 +1,54 @@
+---
+title: Programación en R para Ciencias Sociales
+author: "[Emmanuel Anguiano](https://eanguianopita.github.io)"
+subtitle: "Universidad de Guadalajara, Posgrados CUCEA 2025"
+lang: es
+---
+
+# ¡Bienvenidos al curso de programación en R!
+
+* Este sitio en internet está dedicado al curso _Programación en R para las Ciencias Sociales_ dictado a los estudiantes del [Doctorado en Estudios Económicos](https://deec.cucea.udg.mx/) de la Universidad de Guadalajara.
+* Este curso supone que los estudiantes **no tienen experiencia previa** en temas de programación. 
+* A continuación encontrarán algunas indicaciones previas a iniciar el curso y el plan de estudios. 
+
+
+## Objetivos del curso
+
+* Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente. 
+* En este curso entenderemos el concepto de *investigación* como las habilidades necesaria para el manejo y aprovechamiento de datos.
+* En específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas. 
+* Para tal propósito, nosotros aprenderemos a programar usando el lenguaje `R`.
+
+
+# Plan de estudios
+
+| Sesión | Tema                | Diapositivas | Datos |
+|:------:|:-------------------:|:------------:|:-----:|
+| 1      |**Introducción a `R`** | Enlace     |Enlace |
+
+# Instrucciones previas al curso
+
+* Asegurarse de que su sistema operativo esta actualizado. 
+* Antes del curso deberán descar de internet los siguientes programas: 
+  - [Consola de R](https://cran.r-project.org/).
+  - [RStudio](https://posit.co/download/rstudio-desktop/). 
+  
+* Deberán asegurarse de que cuentan con las versiones más recientes de ambos programas (R > 4.00). 
+
+# Código de conducta 
+
+Este curso está diseñado para ofrecer un espacio de aprendizaje colaborativo y respetuoso. Esperamos que todos los participantes actúen con cortesía, profesionalismo y dedicación. El cumplimiento de las siguientes normas asegurará que todos los estudiantes disfruten de una experiencia de aprendizaje positiva:
+
+1. Respeta las opiniones, puntos de vista y habilidades de los otros participantes. La diversidad de experiencias enriquece el aprendizaje. 
+2. Escucha con atención las preguntas y comentarios de los demás. 
+3. Participa de manera constructiva. Todos estamos aprendiendo algo nuevo. 
+4. Comparte tus conocimientos y, de ser posible, ayuda a resolver dudas de tus pares. 
+5. Si tienes dudas, intenta formular preguntas claras. No se resolveran preguntas sobre tus necesidades particulares durante la clase. 
+6. En este curso no tendremos ningún tipo de evaluación. **Pero**, les recomiendo que presten atención para facilitar sus tareas en el futuro. 
+
+Estas reglas aplican para los **todos** los asistentes al curso (instructor y estudiantes). Cualquier tipo de incumplimiento o falta de respeto puede ocasionar que la expulsión del curso. 
+
+
+# Licencia
+
+Todo el contenido de este curso es gratuito y de acceso abierto. El material se encuentra bajo la licencia  [creative commons license 4.0](https://creativecommons.org/licenses/by/4.0/), por lo tanto se permite cualquier reproducción del contenido, si se otorgan las respectivas atribuciones. 

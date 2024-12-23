@@ -54,5 +54,19 @@
     "title": "Welcome to my personal website!",
     "section": "Español",
     "text": "Español\nActualmente soy Investigador Postdoctoral en el Programa de Doctorado en Estudios Económicos de la Universidad de Guadalajara. Previamente, completé mi doctorado en Estudios Económicos, así como mi maestría y licenciatura en Economía en la misma institución.\nMis intereses de investigación se encuentran en la intersección de la economía internacional, macroeconomía y economía del desarrollo, con un enfoque particular en la integración económica y financiera entre países con diferentes niveles de desarrollo. Recientemente, he iniciado dos proyectos de investigación utilizando datos subnacionales de México: uno sobre el desarrollo de pronósticos macroeconómicos de corto y largo plazo, y otro que estudia los impactos heterogéneos de la política monetaria a nivel estatal.\nAdemás de mi investigación, trabajo como consultor e instructor en gestión de proyectos y datos para científicos sociales. Asisto a equipos de investigación en el establecimiento de flujos de trabajo para la gestión de datos, colaboración en proyectos y documentación, asegurando que su trabajo sea replicable y reproducible. También enseño cómo usar R, Python y GitHub.\nPreviamente me desempeñé como Analista de Auditoría al Desempeño en la Auditoría Superior del Estado de Jalisco (ASEJ). También trabajé como Científico de Datos y Analista de Finanzas Públicas en el Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).\nSoy reconocido como Candidato a Investigador en el Sistema Nacional de Investigadores (2024–2027) y fui becario del programa Emerging Scholars from Emerging Markets Fellowship (2022–2023).\nPor favor, no dudes en contactarme si tienes alguna pregunta o si te gustaría discutir proyectos potenciales."
+  },
+  {
+    "objectID": "curso_R/index.html",
+    "href": "curso_R/index.html",
+    "title": "Programación en R para Ciencias Sociales",
+    "section": "",
+    "text": "Este sitio en internet está dedicado al curso Programación en R para las Ciencias Sociales dictado a los estudiantes del Doctorado en Estudios Económicos de la Universidad de Guadalajara.\nEste curso supone que los estudiantes no tienen experiencia previa en temas de programación.\nA continuación encontrarán algunas indicaciones previas a iniciar el curso y el plan de estudios.\n\n\n\n\nDespués de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente.\nEn este curso entenderemos el concepto de investigación como las habilidades necesaria para el manejo y aprovechamiento de datos.\nEn específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas.\nPara tal propósito, nosotros aprenderemos a programar usando el lenguaje R."
+  },
+  {
+    "objectID": "curso_R/index.html#objetivos-del-curso",
+    "href": "curso_R/index.html#objetivos-del-curso",
+    "title": "Programación en R para Ciencias Sociales",
+    "section": "",
+    "text": "Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente.\nEn este curso entenderemos el concepto de investigación como las habilidades necesaria para el manejo y aprovechamiento de datos.\nEn específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas.\nPara tal propósito, nosotros aprenderemos a programar usando el lenguaje R."
   }
 ]

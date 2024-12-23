@@ -10,10 +10,9 @@ website:
     
     # your sub-pages
     left:
-      - text: "Projects"
-        href: projects/index.qmd
-      - text: "Photography"
-        href: photography/index.qmd
+      - text: "Curso R"
+        href: curso_R/index.qmd
+    
       - text: "CV"
         href: cv/index.qmd
     

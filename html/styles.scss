@@ -119,9 +119,10 @@ $btn-code-copy-color-active: $orange !default;
     }
 }
 
-body {
+
+body, h1, h2, h3, h4, h5, h6 {
   text-align: justify; /* Justifies the text */
-  text-justify: inter-word; /* Ensures even distribution between words */
-  hyphens: auto; /* Enables word breaking to avoid large spaces */
-  word-break: normal; /* Preserves default word-breaking behavior */
+  text-justify: inter-word; /* Ensures even spacing between words */
+  hyphens: auto; /* Enables word breaking */
+  word-break: normal; /* Maintains default word-breaking behavior */
 }

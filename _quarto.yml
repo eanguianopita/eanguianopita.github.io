@@ -3,6 +3,8 @@
 # website settings
 website:
   title: "Emmanuel Anguiano"          # Your name
+  description: "Pagina personal"
+  open-graph: true
   favicon: img/taco.png
   # start of the navigation bar at the top of the website
   navbar:

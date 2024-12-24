@@ -26,7 +26,7 @@ css: html/styles.css
 
 | Sesión | Tema                | Diapositivas | Datos |
 |:------:|:-------------------:|:------------:|:-----:|
-| 1      |**Introducción a `R` y `RStudio`** | [Enlace](https://eanguianopita.github.io/curso_R/Slides/01-IntroR.html){target="_blank"}     |Enlace |
+| 1      |**Introducción a `R` y `RStudio`** | [Enlace](curso_R/Slides/01-IntroR.html){target="_blank"}     |Enlace |
 
 # Instrucciones previas al curso
 

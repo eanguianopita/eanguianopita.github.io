@@ -17,7 +17,7 @@ css: html/styles.css
 ## Objetivos del curso
 
 * Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente. 
-* En este curso entenderemos el concepto de *investigación* como las habilidades necesaria para el manejo y aprovechamiento de datos.
+* En este curso entenderemos el concepto de *programación* como las habilidades necesaria para el manejo y aprovechamiento eficiente de datos.
 * En específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas. 
 * Para tal propósito, nosotros aprenderemos a programar usando el lenguaje `R`.
 
@@ -46,7 +46,7 @@ Este curso está diseñado para ofrecer un espacio de aprendizaje colaborativo y
 3. Participa de manera constructiva. Todos estamos aprendiendo algo nuevo. 
 4. Comparte tus conocimientos y, de ser posible, ayuda a resolver dudas de tus pares. 
 5. Si tienes dudas, intenta formular preguntas claras. No se resolveran preguntas sobre tus necesidades particulares durante la clase. 
-6. En este curso no tendremos ningún tipo de evaluación. **Pero**, les recomiendo que presten atención para facilitar sus tareas en el futuro. 
+6. En este curso **no** tendremos ningún tipo de evaluación. **Pero**, les recomiendo que presten atención para facilitar sus tareas en el futuro. 
 
 Estas reglas aplican para los **todos** los asistentes al curso (instructor y estudiantes). Cualquier tipo de incumplimiento o falta de respeto puede ocasionar que la expulsión del curso. 
 

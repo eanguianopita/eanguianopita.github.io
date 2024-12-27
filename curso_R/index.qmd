@@ -27,11 +27,12 @@ css: html/styles.css
 | Sesión | Tema                | Diapositivas | Datos |
 |:------:|:-------------------:|:------------:|:-----:|
 | 1      |**Introducción a `R` y `RStudio`** | [Enlace](https://eanguianopita.github.io/docs/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"}     |[IMDB.csv](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv)|
+| 2.1   | **Introducción a estructuras de control (bucles)** | [Enlace]() | - |
 
 # Instrucciones previas al curso
 
 * Asegurarse de que su sistema operativo esta actualizado. 
-* Antes del curso deberán descar de internet los siguientes programas: 
+* Antes del curso deberán descargar de internet los siguientes programas: 
   - [Consola de R](https://cran.r-project.org/).
   - [RStudio](https://posit.co/download/rstudio-desktop/). 
   

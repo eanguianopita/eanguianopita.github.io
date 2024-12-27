@@ -26,8 +26,8 @@ css: html/styles.css
 
 | Sesión | Tema                | Diapositivas | Datos |
 |:------:|:-------------------:|:------------:|:-----:|
-| 1      |**Introducción a `R` y `RStudio`** | [Enlace](https://eanguianopita.github.io/docs/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"}     |[IMDB.csv](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv)|
-| 2.1   | **Introducción a estructuras de control (bucles)** | [Enlace](https://eanguianopita.github.io/docs/docs/curso_R/Slides/02-Manejo_datos_noanswers.html) | [PIBE_2020-2023.csv](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) |
+| 1      |**Introducción a `R` y `RStudio`** | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"}     |[IMDB.csv](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv)|
+| 2.1   | **Introducción a estructuras de control (bucles)** | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/02-Manejo_datos_noanswers.html) | [PIBE_2020-2023.csv](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) |
 
 # Instrucciones previas al curso
 

@@ -27,8 +27,8 @@ css: html/styles.css
 | Sesión | Tema                | Diapositivas | Datos | Práctica guíada |
 |:------:|:-------------------:|:------------:|:-----:|:---------------:|
 | 1      |Introducción a `R` y `RStudio` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"}     |[IMDB.csv](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv)|
-| 2.1   | Introducción a estructuras de control (bucles) |  [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/02-Estructura_control_noanswers.html) | [PIBE_2020-2023.csv](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) | - |
-| 2.2  | Manipulación de datos con `Tidyverse` | [Enlace]()| [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/Tidyverse.zip) | -|
+| 2   | Introducción a estructuras de control (bucles) |  [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/02-Estructura_control_noanswers.html) | [PIBE_2020-2023.csv](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) | - |
+| 3  | Manipulación de datos con `Tidyverse` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/03-Manipulacion_datos_tidyverse_noanswers.html)| [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/Tidyverse.zip) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/3_1_Ejercicios_tidyverse.html)|
 
 # Instrucciones previas al curso
 

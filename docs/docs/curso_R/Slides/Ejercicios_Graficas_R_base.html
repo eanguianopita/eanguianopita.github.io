@@ -3235,7 +3235,7 @@ vertical-align: -.125em;
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(data<span class="sc">$</span>loan)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>En este ejercicio solo tenemos dos etiquetas: si y no. Este será el argumento de entrada de la función <code>legend()</code>. Siguendo nuestro ejercicio, supongamos que la etiqueta “no” estará coloreada de “royalblue” y la etiqueta “yes” con “grey”. Estos colores están asignados al argumento <code>fill</code>.</p>
+<p>En este ejercicio solo tenemos dos etiquetas: si y no. Este será el argumento de entrada de la función <code>legend()</code>. Siguendo nuestro ejercicio, supongamos que la etiqueta “no” estará coloreada de “royalblue” y la etiqueta “yes” con “grey”. Estos colores están asignados al argumento <code>fill</code>. El título de la leyenda debe decir “Préstamo”.</p>
 <p>Por último, la ubicación de la leyenda sobre el gráfico posicionala en la parte superior derecha usando el argumento “topright”.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(ptab_data, </span>
@@ -3244,7 +3244,7 @@ vertical-align: -.125em;
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topright&quot;</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>), <span class="at">fill =</span> <span class="fu">c</span>(<span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Loan&quot;</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Préstamo&quot;</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nota que estamos trabajando por capas. Primero generamos el gráfico y encima posicionamos la capa con la leyenda.</p>
 </section>
@@ -3255,6 +3255,29 @@ vertical-align: -.125em;
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x =</span> data<span class="sc">$</span>age, <span class="at">main =</span> <span class="st">&quot;Histograma de Edad&quot;</span>, </span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Edad&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Frecuencia&quot;</span>,</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ejericio-5" class="level2">
+<h2 class="anchored" data-anchor-id="ejericio-5">Ejericio 5</h2>
+<p>Por último, genera una figura que contenga de forma simultánea las gráficas que generamos en los ejercicios 3 y 4. Guarda la figura en formato <code>.png</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="st">&quot;Figura1.png&quot;</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(ptab_data, </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="st">&quot;Préstamos por nivel educativo&quot;</span>,</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Nivel educativo&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Proporción&quot;</span>, </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="fu">c</span>(<span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;grey&quot;</span>))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="at">x =</span> <span class="st">&quot;topright&quot;</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>), <span class="at">fill =</span> <span class="fu">c</span>(<span class="st">&quot;royalblue&quot;</span>, <span class="st">&quot;grey&quot;</span>), </span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">&quot;Préstamo&quot;</span>)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(<span class="at">x =</span> data<span class="sc">$</span>age, <span class="at">main =</span> <span class="st">&quot;Histograma de Edad&quot;</span>, </span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Edad&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Frecuencia&quot;</span>,</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&quot;purple&quot;</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>

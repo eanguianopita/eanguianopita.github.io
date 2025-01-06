@@ -3,7 +3,7 @@ title: Programación en R para Ciencias Sociales
 author: "[Emmanuel Anguiano](https://eanguianopita.github.io)"
 subtitle: "Universidad de Guadalajara, Posgrados CUCEA 2025"
 lang: es
-date-modified: "2024-12-23"
+date-modified: "2025-01-06"
 css: html/styles.css
 ---
 
@@ -52,6 +52,8 @@ Este curso está diseñado para ofrecer un espacio de aprendizaje colaborativo y
 Estas reglas aplican para los **todos** los asistentes al curso (instructor y estudiantes). Cualquier tipo de incumplimiento o falta de respeto puede ocasionar que la expulsión del curso.
 
 # Cheatsheets
+
+En esta sección encontraras algunas guías rápidas para utilizar los comandos más populares de las librerías que se enlistan a continuación (da clic en cada imagen para descargar el PDF).
 
 ```{=html}
 <style>

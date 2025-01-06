@@ -3319,6 +3319,35 @@ font-weight: 600;
 </div>
 </section>
 </section>
+<section id="ejercicio-3" class="level1">
+<h1>Ejercicio 3</h1>
+<p>En este ejercicio vamos a crear una tabla que nos muestre la calificación promedio que se le otorgaron a las películas por cada década. Para tal propósito, primero vamos a crear una nueva variable <code>decade</code> usando condicionales. Posteriormente, vamos a calcular el promedio de la variable <code>rating</code> agrupando los valores por <code>decade</code>. Asegurate de que la tabla ordene los valores promedio de <code>rating</code> en orden descendente.</p>
+<section id="solución" class="level2">
+<h2 class="anchored" data-anchor-id="solución">Solución:</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>IMDB2 <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="co"># Creamos una variable que indique la década</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">mutate</span>(<span class="at">decade =</span> <span class="fu">case_when</span>(</span>
+<span id="cb13-4"><a href="#cb13-4"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1950</span><span class="sc">:</span><span class="dv">1959</span>) <span class="sc">~</span> <span class="st">&quot;50s&quot;</span>,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1960</span><span class="sc">:</span><span class="dv">1969</span>) <span class="sc">~</span> <span class="st">&quot;60s&quot;</span>,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1970</span><span class="sc">:</span><span class="dv">1979</span>) <span class="sc">~</span> <span class="st">&quot;70s&quot;</span>,</span>
+<span id="cb13-7"><a href="#cb13-7"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1980</span><span class="sc">:</span><span class="dv">1989</span>) <span class="sc">~</span> <span class="st">&quot;80s&quot;</span>,</span>
+<span id="cb13-8"><a href="#cb13-8"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1990</span><span class="sc">:</span><span class="dv">1999</span>) <span class="sc">~</span> <span class="st">&quot;90s&quot;</span>,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2000</span><span class="sc">:</span><span class="dv">2009</span>) <span class="sc">~</span> <span class="st">&quot;2000s&quot;</span>,</span>
+<span id="cb13-10"><a href="#cb13-10"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2010</span><span class="sc">:</span><span class="dv">2019</span>) <span class="sc">~</span> <span class="st">&quot;2010s&quot;</span>,</span>
+<span id="cb13-11"><a href="#cb13-11"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2019</span><span class="sc">:</span><span class="dv">2029</span>) <span class="sc">~</span> <span class="st">&quot;2020s&quot;</span>,</span>
+<span id="cb13-12"><a href="#cb13-12"></a><span class="at">.default =</span> <span class="st">&quot;40s or older&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-13"><a href="#cb13-13"></a>  </span>
+<span id="cb13-14"><a href="#cb13-14"></a><span class="co"># Creamos una tabla con los valores del rating por década</span></span>
+<span id="cb13-15"><a href="#cb13-15"></a><span class="fu">group_by</span>(decade) <span class="sc">%&gt;%</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a><span class="fu">summarise</span>(<span class="at">avg_rating =</span> <span class="fu">mean</span>(Rating)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-17"><a href="#cb13-17"></a><span class="fu">arrange</span>(<span class="sc">-</span>avg_rating)  <span class="co"># Ordenamos de mayor a menor </span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="fin-de-la-práctica-guíada" class="level1">
+<h1>Fin de la práctica guíada</h1>
+</section>
 
 </main>
 <!-- /main column -->

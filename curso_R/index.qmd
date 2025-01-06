@@ -54,6 +54,43 @@ Este curso está diseñado para ofrecer un espacio de aprendizaje colaborativo y
 Estas reglas aplican para los **todos** los asistentes al curso (instructor y estudiantes). Cualquier tipo de incumplimiento o falta de respeto puede ocasionar que la expulsión del curso. 
 
 
+# Cheatsheets 
+## Cheatsheets
+
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1em;">
+
+  <a href="https://eanguianopita.github.io/docs/cheatsheets/baser.pdf" target="_blank">
+    <img src="https://eanguianopita.github.io/docs/img/rbase_badge.png" alt="baseR" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  </a>
+
+  <a href="https://link-to-dplyr-cheatsheet.com" target="_blank">
+    <img src="https://your-image-host/dplyr.png" alt="dplyr" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  </a>
+
+  <a href="https://link-to-rmarkdown-cheatsheet.com" target="_blank">
+    <img src="https://your-image-host/rmarkdown.png" alt="rmarkdown" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  </a>
+
+  <a href="https://link-to-rstudio-cheatsheet.com" target="_blank">
+    <img src="https://your-image-host/rstudio.png" alt="RStudio" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  </a>
+
+  <a href="https://link-to-readr-cheatsheet.com" target="_blank">
+    <img src="https://your-image-host/readr.png" alt="readr" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  </a>
+
+  <a href="https://link-to-ggplot2-cheatsheet.com" target="_blank">
+    <img src="https://your-image-host/ggplot2.png" alt="ggplot2" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  </a>
+
+  <a href="https://link-to-latex-cheatsheet.com" target="_blank">
+    <img src="https://your-image-host/latex.png" alt="LaTeX" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  </a>
+
+</div>
+
+
+
 # Licencia
 
 Todo el contenido de este curso es gratuito y de acceso abierto. El material se encuentra bajo la licencia  [creative commons license 4.0](https://creativecommons.org/licenses/by/4.0/), por lo tanto se permite cualquier reproducción del contenido, si se otorgan las respectivas atribuciones. 

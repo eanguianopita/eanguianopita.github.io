@@ -9,87 +9,92 @@ css: html/styles.css
 
 # ¡Bienvenidos al curso de programación en R!
 
-* Este sitio en internet está dedicado al curso _Programación en R para las Ciencias Sociales_ dictado a los estudiantes del [Doctorado en Estudios Económicos](https://deec.cucea.udg.mx/) de la Universidad de Guadalajara.
-* Este curso supone que los estudiantes **no tienen experiencia previa** en temas de programación. 
-* A continuación encontrarán algunas indicaciones previas a iniciar el curso y el plan de estudios. 
-
+-   Este sitio en internet está dedicado al curso *Programación en R para las Ciencias Sociales* dictado a los estudiantes del [Doctorado en Estudios Económicos](https://deec.cucea.udg.mx/) de la Universidad de Guadalajara.
+-   Este curso supone que los estudiantes **no tienen experiencia previa** en temas de programación.
+-   A continuación encontrarán algunas indicaciones previas a iniciar el curso y el plan de estudios.
 
 ## Objetivos del curso
 
-* Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente. 
-* En este curso entenderemos el concepto de *programación* como las habilidades necesaria para el manejo y aprovechamiento eficiente de datos.
-* En específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas. 
-* Para tal propósito, nosotros aprenderemos a programar usando el lenguaje `R`.
-
+-   Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente.
+-   En este curso entenderemos el concepto de *programación* como las habilidades necesaria para el manejo y aprovechamiento eficiente de datos.
+-   En específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas.
+-   Para tal propósito, nosotros aprenderemos a programar usando el lenguaje `R`.
 
 # Plan de estudios
 
-| Sesión | Tema                | Diapositivas | Datos | Práctica guíada |
-|:------:|:-------------------:|:------------:|:-----:|:---------------:|
-| 1      |Introducción a `R` y `RStudio` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"}     |[Datos](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv)|
-| 2   | Introducción programación funcional y gráficos básicos |  [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/02-Estructura_control_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicios_Graficas_R_base.html) |
-| 3  | Manipulación de datos con `Tidyverse` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/03-Manipulacion_datos_tidyverse_noanswers.html)| [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/Tidyverse.zip) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/3_1_Ejercicios_tidyverse.html)|
-4       | Visualización de datos| [Enlace]() | [Enlace]() | [Enlace 1](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicio_manipulación_dplyr.html) <br> [Enlace 2]()| 
+| Sesión | Tema | Diapositivas | Datos | Práctica guíada |
+|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| 1 | Introducción a `R` y `RStudio` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"} | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv) |  |
+| 2 | Introducción programación funcional y gráficos básicos | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/02-Estructura_control_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicios_Graficas_R_base.html) |
+| 3 | Manipulación de datos con `Tidyverse` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/03-Manipulacion_datos_tidyverse_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/Tidyverse.zip) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/3_1_Ejercicios_tidyverse.html) |
+| 4 | Visualización de datos | [Enlace]() | [Enlace]() | [Enlace 1](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicio_manipulación_dplyr.html) <br> [Enlace 2]() |
+| 5 |  |  |  |  |
 
 # Instrucciones previas al curso
 
-* Asegurarse de que su sistema operativo esta actualizado. 
-* Antes del curso deberán descargar de internet los siguientes programas: 
-  - [Consola de R](https://cran.r-project.org/).
-  - [RStudio](https://posit.co/download/rstudio-desktop/). 
-  
-* Deberán asegurarse de que cuentan con las versiones más recientes de ambos programas (R > 4.00). 
+-   Asegurarse de que su sistema operativo esta actualizado.
+-   Antes del curso deberán descargar de internet los siguientes programas:
+    -   [Consola de R](https://cran.r-project.org/).
+    -   [RStudio](https://posit.co/download/rstudio-desktop/).
+-   Deberán asegurarse de que cuentan con las versiones más recientes de ambos programas (R \> 4.00).
 
-# Código de conducta 
+# Código de conducta
 
 Este curso está diseñado para ofrecer un espacio de aprendizaje colaborativo y respetuoso. Esperamos que todos los participantes actúen con cortesía, profesionalismo y dedicación. El cumplimiento de las siguientes normas asegurará que todos los estudiantes disfruten de una experiencia de aprendizaje positiva:
 
-1. Respeta las opiniones, puntos de vista y habilidades de los otros participantes. La diversidad de experiencias enriquece el aprendizaje. 
-2. Escucha con atención las preguntas y comentarios de los demás. 
-3. Participa de manera constructiva. Todos estamos aprendiendo algo nuevo. 
-4. Comparte tus conocimientos y, de ser posible, ayuda a resolver dudas de tus pares. 
-5. Si tienes dudas, intenta formular preguntas claras. No se resolveran preguntas sobre tus necesidades particulares durante la clase. 
-6. En este curso **no** tendremos ningún tipo de evaluación. **Pero**, les recomiendo que presten atención para facilitar sus tareas en el futuro. 
+1.  Respeta las opiniones, puntos de vista y habilidades de los otros participantes. La diversidad de experiencias enriquece el aprendizaje.
+2.  Escucha con atención las preguntas y comentarios de los demás.
+3.  Participa de manera constructiva. Todos estamos aprendiendo algo nuevo.
+4.  Comparte tus conocimientos y, de ser posible, ayuda a resolver dudas de tus pares.
+5.  Si tienes dudas, intenta formular preguntas claras. No se resolveran preguntas sobre tus necesidades particulares durante la clase.
+6.  En este curso **no** tendremos ningún tipo de evaluación. **Pero**, les recomiendo que presten atención para facilitar sus tareas en el futuro.
 
-Estas reglas aplican para los **todos** los asistentes al curso (instructor y estudiantes). Cualquier tipo de incumplimiento o falta de respeto puede ocasionar que la expulsión del curso. 
+Estas reglas aplican para los **todos** los asistentes al curso (instructor y estudiantes). Cualquier tipo de incumplimiento o falta de respeto puede ocasionar que la expulsión del curso.
 
+# Cheatsheets
 
-# Cheatsheets 
+```{=html}
+<style>
+  .image-row {
+    display: flex; /* Coloca las imágenes en fila */
+    gap: 10px; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en múltiples líneas si el espacio es limitado */
+  }
+  .image-row img {
+    width: 120px; /* Ajusta el tamaño de las imágenes */
+    height: auto; /* Mantén la proporción original */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+  }
+</style>
 
-<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1em;">
-
-  <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/baser.pdf" target="_blank">
-    <img src="https://eanguianopita.github.io/docs/img/rbase_badge.png" alt="baseR" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+<div class="image-row">
+    <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/baser.pdf">
+    <img src="https://eanguianopita.github.io/docs/curso_R/img/rbase_badge.png" alt="baseR">
   </a>
-
-  <a href="https://link-to-dplyr-cheatsheet.com" target="_blank">
-    <img src="https://your-image-host/dplyr.png" alt="dplyr" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  
+   <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/rstudio.pdf">
+    <img src="https://eanguianopita.github.io/docs/curso_R/img/rstudio_badge.png" alt="rStudio">
+  </a>  
+  
+  <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/readr.pdf">
+    <img src="https://eanguianopita.github.io/docs/curso_R/img/readr_badge.png" alt="readr">
+  </a>  
+  
+  <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/dplyr.pdf">
+    <img src="https://eanguianopita.github.io/docs/curso_R/img/dplyr_badge.png" alt="dplyr">
   </a>
-
-  <a href="https://link-to-rmarkdown-cheatsheet.com" target="_blank">
-    <img src="https://your-image-host/rmarkdown.png" alt="rmarkdown" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/ggplot2.pdf">
+    <img src="https://eanguianopita.github.io/docs/curso_R/img/ggplot2_badge.png" alt="ggplot2">
   </a>
-
-  <a href="https://link-to-rstudio-cheatsheet.com" target="_blank">
-    <img src="https://your-image-host/rstudio.png" alt="RStudio" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
+  
+    <a href=https://eanguianopita.github.io/docs/curso_R/cheatsheets/rmarkdown.pdf">
+    <img src="https://eanguianopita.github.io/docs/curso_R/img/rmarkdown_badge.png" alt="rmarkdown">
   </a>
-
-  <a href="https://link-to-readr-cheatsheet.com" target="_blank">
-    <img src="https://your-image-host/readr.png" alt="readr" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
-  </a>
-
-  <a href="https://link-to-ggplot2-cheatsheet.com" target="_blank">
-    <img src="https://your-image-host/ggplot2.png" alt="ggplot2" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
-  </a>
-
-  <a href="https://link-to-latex-cheatsheet.com" target="_blank">
-    <img src="https://your-image-host/latex.png" alt="LaTeX" style="width: 100px; height: 100px; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);">
-  </a>
-
+  
 </div>
-
-
+```
 
 # Licencia
 
-Todo el contenido de este curso es gratuito y de acceso abierto. El material se encuentra bajo la licencia  [creative commons license 4.0](https://creativecommons.org/licenses/by/4.0/), por lo tanto se permite cualquier reproducción del contenido, si se otorgan las respectivas atribuciones. 
+Todo el contenido de este curso es gratuito y de acceso abierto. El material se encuentra bajo la licencia [creative commons license 4.0](https://creativecommons.org/licenses/by/4.0/), por lo tanto se permite cualquier reproducción del contenido, si se otorgan las respectivas atribuciones.

@@ -23,14 +23,16 @@ website:
     
     # your social media handles
     right:
-      - icon: twitter
+      - icon: twitter-X
         href: https://x.com/eanguiano92
       - icon: linkedin
         href: https://www.linkedin.com/in/anguianopita/
       - icon: envelope
         aria-label: email
         href: "mailto:je.ptt@hotmail.com"  
-  
+      - icon: google
+        href: https://scholar.google.com/citations?hl=es&user=VnF9P6cAAAAJ
+        
 html:
   head-content: |
     <meta name="google-site-verification" content="xIckcgwpBgPSk7igNQaAz8KQiqpuddg3H_XmgLptRG8" />

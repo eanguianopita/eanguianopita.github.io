@@ -6,7 +6,7 @@ about:
   image-width: 15em
   image-shape: rectangle
   links:
-    - icon: twitter
+    - icon: twitter-x
       text: X
       href: https://x.com/eanguiano92
     - icon: github
@@ -18,7 +18,9 @@ about:
     - icon: envelope
       text: Email
       href: "mailto:je.ptt@hotmail.com"  
-
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?hl=es&user=VnF9P6cAAAAJ
 ---
 
 ::: {#about-block}

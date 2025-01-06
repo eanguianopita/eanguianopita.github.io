@@ -88,7 +88,7 @@ Estas reglas aplican para los **todos** los asistentes al curso (instructor y es
     <img src="https://eanguianopita.github.io/docs/curso_R/img/ggplot2_badge.png" alt="ggplot2">
   </a>
   
-    <a href=https://eanguianopita.github.io/docs/curso_R/cheatsheets/rmarkdown.pdf">
+    <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/rmarkdown.pdf">
     <img src="https://eanguianopita.github.io/docs/curso_R/img/rmarkdown_badge.png" alt="rmarkdown">
   </a>
   

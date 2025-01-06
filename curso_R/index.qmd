@@ -29,7 +29,7 @@ css: html/styles.css
 | 1      |Introducción a `R` y `RStudio` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"}     |[Datos](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv)|
 | 2   | Introducción programación funcional y gráficos básicos |  [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/02-Estructura_control_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicios_Graficas_R_base.html) |
 | 3  | Manipulación de datos con `Tidyverse` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/03-Manipulacion_datos_tidyverse_noanswers.html)| [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/Tidyverse.zip) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/3_1_Ejercicios_tidyverse.html)|
-4       | Visualización de datos con `ggplot2`  | [Enlace]() | [Enlace 1](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicio_manipulación_dplyr.html) <br> [Enlace 2]()| [Enlace]() | 
+4       | Visualización de datos con `ggplot2`  | [Enlace]() | [Enlace]() | [Enlace 1](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicio_manipulación_dplyr.html) <br> [Enlace 2]()| 
 
 # Instrucciones previas al curso
 

@@ -3210,6 +3210,7 @@ font-weight: 600;
 <p>Existen otras alternativas para corregir los problemas con la variable <code>Year</code>. Por ejemplo, podemos usar <strong>expresiones regulares</strong> para describir patrones en las cadenas de texto ( <em>strings</em> ). Revisa la <code>cheatsheet</code> sobre el uso de expresiones regulares usando el paquete <code>{stringr}</code> en este <a href="https://github.com/rstudio/cheatsheets/blob/main/strings.pdf">enlace</a>.</p>
 <section id="solución-con-expresiones-regulares" class="level3">
 <h3 class="anchored" data-anchor-id="solución-con-expresiones-regulares">Solución con expresiones regulares</h3>
+<p>Puedes consultar una <strong>cheatsheet</strong> sobre el uso de expresiones regulares con el paquete <code>stringr</code> en este <a href="https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_strings.pdf">Enlace</a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>IMDB2 <span class="ot">&lt;-</span> IMDB <span class="sc">%&gt;%</span> </span>
 <span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">&quot;[^0-9]+&quot;</span>,<span class="st">&quot;&quot;</span>, Year)))</span>
@@ -3219,12 +3220,17 @@ font-weight: 600;
 </section>
 <section id="explicación-detallada" class="level3">
 <h3 class="anchored" data-anchor-id="explicación-detallada">Explicación detallada</h3>
-<p>El código anterior <code>gsub(&quot;[^0-9]+&quot;,&quot;&quot;, Year)</code> utiliza la función <code>gsub()</code> para realizar una sustitución en una cadena de texto guardada en la variable <code>Year</code>. El código elimina cualquier carácter que no sea un número del contenido de <code>Year</code>.</p>
+<p>El código anterior <code>gsub(&quot;[^0-9]+&quot;,&quot;&quot;, Year)</code> utiliza la función <code>gsub()</code> para realizar una sustitución en una cadena de texto guardada en la variable <code>Year</code>.</p>
 <p>Argumentos de la función <code>gsub()</code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">gsub</span>(patrón a buscar, reemplazo, vector_caracteres)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>La expresión que buscamos en lal cadena de texto <code>&quot;[^0-9]+&quot;</code> es una expresión regular que define el siguiente patrón a buscar:</p>
+<p>La expresión que buscamos en lal cadena de texto <code>&quot;[^0-9]+&quot;</code> es una expresión regular que indica que caracteres deben ser reemplazados.</p>
+<ul>
+<li><code>[^0-9]</code>: Significa “todo lo que no sea un número del 0 al 9.</li>
+<li>El símbolo <code>^</code> dentro de los corchetes indica una negación.</li>
+<li><code>+</code>: Significa “uno o más de estos caracteres no numéricos”. Esto asegura que se eliminen grupos consecutivos de caracteres no numéricos.</li>
+</ul>
 </section>
 </section>
 <section id="ejercicio-2.2" class="level2">

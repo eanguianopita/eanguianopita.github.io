@@ -3212,30 +3212,32 @@ font-weight: 600;
 <h3 class="anchored" data-anchor-id="solución-con-expresiones-regulares">Solución con expresiones regulares</h3>
 <p>Puedes consultar una <strong>cheatsheet</strong> sobre el uso de expresiones regulares con el paquete <code>stringr</code> en este <a href="https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_strings.pdf">Enlace</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>IMDB2 <span class="ot">&lt;-</span> IMDB <span class="sc">%&gt;%</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">&quot;[^0-9]+&quot;</span>,<span class="st">&quot;&quot;</span>, Year)))</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a>IMDB2<span class="sc">$</span>Year</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">rm</span>(IMDB2)</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>IMDB2 <span class="ot">&lt;-</span> IMDB <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="#cb6-4"></a>  <span class="fu">mutate</span>(<span class="at">Year =</span> <span class="fu">as.numeric</span>(<span class="fu">gsub</span>(<span class="st">&quot;[^0-9]+&quot;</span>,<span class="st">&quot;&quot;</span>, Year)))</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a>IMDB2<span class="sc">$</span>Year</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="explicación-detallada" class="level3">
 <h3 class="anchored" data-anchor-id="explicación-detallada">Explicación detallada</h3>
-<p>El código anterior <code>gsub(&quot;[^0-9]+&quot;,&quot;&quot;, Year)</code> utiliza la función <code>gsub()</code> para realizar una sustitución en una cadena de texto guardada en la variable <code>Year</code>.</p>
+<p>El código anterior <code>gsub(&quot;[^0-9]+&quot;,&quot;&quot;, Year)</code> utiliza la función <code>gsub()</code> para buscar un patrón y realizar una sustitución en la cadena de texto guardada en la variable <code>Year</code>.</p>
 <p>Argumentos de la función <code>gsub()</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">gsub</span>(patrón a buscar, reemplazo, vector_caracteres)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">gsub</span>(patrón a buscar, reemplazo, nombre_variable)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>La expresión que buscamos en lal cadena de texto <code>&quot;[^0-9]+&quot;</code> es una expresión regular que indica que caracteres deben ser reemplazados.</p>
 <ul>
-<li><code>[^0-9]</code>: Significa “todo lo que no sea un número del 0 al 9.</li>
+<li><code>&quot;[^0-9]+&quot;</code>: Este es un patrón de expresión regular que significa “cualquier cosa que no sea un número del 0 al 9. Nota que el <code>+</code> significa que puede haber uno o más de estos caractéres no numéricos.</li>
 <li>El símbolo <code>^</code> dentro de los corchetes indica una negación.</li>
 <li><code>+</code>: Significa “uno o más de estos caracteres no numéricos”. Esto asegura que se eliminen grupos consecutivos de caracteres no numéricos.</li>
+<li><code>&quot;&quot;</code>: Esto significa que estamos reemplazando los caracteres que coinciden con el patrón anterior (cualquier cosa que no sea un número), con una cadena vacía. En otras palabras, los eliminamos.</li>
 </ul>
 </section>
 </section>
 <section id="ejercicio-2.2" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-2.2">Ejercicio 2.2</h2>
-<p>La variable <code>Type</code> o clasificación de la película valores que no están codificados como perdidos sino que son espacios en blanco usando <code>&quot;&quot;</code>.</p>
+<p>La variable <code>Type</code> o clasificación de la película contiene valores que no están codificados como perdidos sino que son espacios en blanco generados usando <code>&quot;&quot;</code>.</p>
 <p>Para codificar correctamente los datos perdidos podemos usar el siguiente código:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Reemplazar los valores perdidos con NA en variable Type</span></span>
@@ -3243,7 +3245,7 @@ font-weight: 600;
 <span id="cb8-3"><a href="#cb8-3"></a>IMDB2 <span class="ot">&lt;-</span> IMDB2 <span class="sc">%&gt;%</span></span>
 <span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> <span class="fu">if_else</span>(Type <span class="sc">==</span> <span class="st">&quot;&quot;</span>, <span class="cn">NA_character_</span>, Type))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Supongamos que además de codificar las variables queremos descartar las observaciones con valores perdidos i.e., <code>NA</code>. Para tal propósito podemos complementar el código anterior con lal siguiente línea:</p>
+<p>Supongamos que además de codificar las variables queremos descartar las observaciones con valores perdidos i.e., <code>NA</code>. Para tal propósito podemos complementar el código anterior con las siguientes líneas:</p>
 <div class="cell" data-source-line-numbers="3">
 <div class="sourceCode cell-code" id="cb9" data-source-line-numbers="3" data-code-line-numbers="3"><pre class="sourceCode numberSource r numberLines number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>IMDB2 <span class="ot">&lt;-</span> IMDB <span class="sc">%&gt;%</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">mutate</span>(<span class="at">Type =</span> <span class="fu">if_else</span>(Type <span class="sc">==</span> <span class="st">&quot;&quot;</span>, <span class="cn">NA_character_</span>, Type)) <span class="sc">%&gt;%</span> </span>
@@ -3265,7 +3267,7 @@ font-weight: 600;
 <span id="cb10-8"><a href="#cb10-8"></a></span>
 <span id="cb10-9"><a href="#cb10-9"></a>IMDB2 <span class="ot">&lt;-</span> IMDB2 <span class="sc">%&gt;%</span></span>
 <span id="cb10-10"><a href="#cb10-10"></a>  <span class="fu">mutate</span>(<span class="at">Genre_Cat =</span> <span class="fu">case_when</span>(</span>
-<span id="cb10-11"><a href="#cb10-11"></a>    <span class="fu">str_detect</span>(Genre, <span class="st">&quot;Action&quot;</span>) <span class="sc">~</span> <span class="st">&quot;Action&quot;</span>,</span>
+<span id="cb10-11"><a href="#cb10-11"></a>    <span class="fu">str_detect</span>(Genre, <span class="st">&quot;Action&quot;</span>) <span class="sc">~</span> <span class="st">&quot;Action&quot;</span>,  <span class="co"># ~ Asigna el valor</span></span>
 <span id="cb10-12"><a href="#cb10-12"></a>    <span class="fu">str_detect</span>(Genre, <span class="st">&quot;Comedy&quot;</span>) <span class="sc">~</span> <span class="st">&quot;Comedy&quot;</span>,</span>
 <span id="cb10-13"><a href="#cb10-13"></a>    <span class="fu">str_detect</span>(Genre, <span class="st">&quot;Drama&quot;</span>) <span class="sc">~</span> <span class="st">&quot;Drama&quot;</span>,</span>
 <span id="cb10-14"><a href="#cb10-14"></a>    <span class="fu">str_detect</span>(Genre, <span class="st">&quot;Horror&quot;</span>) <span class="sc">~</span> <span class="st">&quot;Horror&quot;</span>,</span>
@@ -3284,54 +3286,52 @@ font-weight: 600;
 </section>
 <section id="ejercicio-2.4" class="level1">
 <h1>Ejercicio 2.4</h1>
-<p>La variable <code>Director_Stars</code> está almacenando realmente dos variables <code>Director</code> y <code>Stars</code>. Debemos separar esta variable en dos nuevas columnas en nuestra base de datos. Para este propósito podemos usar la función <code>separte_wider_delim()</code>. Esta funcion requiere que definamos primero que símbolo se está usando para delimitar las dos variables en cuestión.</p>
+<p>La variable <code>Director_Stars</code> está almacenando realmente dos variables <code>Director</code> y <code>Stars</code>. Asimismo, contiene los strings <code>Director:</code> y <code>Stars:</code>. Debemos separar esta variable en dos nuevas columnas en nuestra base de datos y eliminar las palabras sobrantes.</p>
+<p>Para este propósito podemos usar la función <code>separte_wider_delim()</code>. Esta funcion requiere que definamos primero que símbolo se está usando para delimitar las dos variables en cuestión. (Nota: el separador es : <code>|</code>. La expresion <code>\n</code> es un caracter que implica un salto de línea. )</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Observamos las características de la variable</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a></span>
 <span id="cb11-3"><a href="#cb11-3"></a>IMDB2<span class="sc">$</span>Director_Stars[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span>
 <span id="cb11-4"><a href="#cb11-4"></a></span>
-<span id="cb11-5"><a href="#cb11-5"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb11-6"><a href="#cb11-6"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb11-7"><a href="#cb11-7"></a></span>
-<span id="cb11-8"><a href="#cb11-8"></a><span class="co"># Limpiamos y separamos los datos</span></span>
-<span id="cb11-9"><a href="#cb11-9"></a>IMDB2 <span class="ot">&lt;-</span> IMDB2 <span class="sc">%&gt;%</span></span>
-<span id="cb11-10"><a href="#cb11-10"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb11-11"><a href="#cb11-11"></a>    <span class="co"># Removemos \n (separador de líneas)</span></span>
-<span id="cb11-12"><a href="#cb11-12"></a>    <span class="at">Director_Stars =</span> <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>, Director_Stars) </span>
-<span id="cb11-13"><a href="#cb11-13"></a>    <span class="co"># Removemos el espacio excesivo</span></span>
-<span id="cb11-14"><a href="#cb11-14"></a>    <span class="sc">%&gt;%</span> <span class="fu">str_squish</span>()</span>
-<span id="cb11-15"><a href="#cb11-15"></a>    )    <span class="sc">%&gt;%</span></span>
-<span id="cb11-16"><a href="#cb11-16"></a>  <span class="co"># Separamos las columnas usando como delimitador el símbolo &quot;|&quot;</span></span>
-<span id="cb11-17"><a href="#cb11-17"></a>  <span class="fu">separate_wider_delim</span>(Director_Stars, <span class="at">delim =</span> <span class="st">&quot; | &quot;</span>, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">&quot;Director&quot;</span>, <span class="st">&quot;Stars&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb11-18"><a href="#cb11-18"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb11-19"><a href="#cb11-19"></a>    <span class="co"># Rmovemos las etiquetas de las columnas</span></span>
-<span id="cb11-20"><a href="#cb11-20"></a>    <span class="at">Director =</span> <span class="fu">str_remove</span>(Director, <span class="st">&quot;Director:</span><span class="sc">\\</span><span class="st">s*&quot;</span>),</span>
-<span id="cb11-21"><a href="#cb11-21"></a>    <span class="at">Stars =</span> <span class="fu">str_remove</span>(Stars, <span class="st">&quot;Stars:</span><span class="sc">\\</span><span class="st">s*&quot;</span>)  </span>
-<span id="cb11-22"><a href="#cb11-22"></a>    )</span>
-<span id="cb11-23"><a href="#cb11-23"></a>  <span class="co"># Usamos \\s* como comodín de espacios en blanco</span></span>
-<span id="cb11-24"><a href="#cb11-24"></a><span class="co"># Resultado</span></span>
-<span id="cb11-25"><a href="#cb11-25"></a><span class="fu">View</span>(IMDB2)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="co"># Limpiamos y separamos los datos</span></span>
+<span id="cb11-6"><a href="#cb11-6"></a>IMDB2 <span class="ot">&lt;-</span> IMDB2 <span class="sc">%&gt;%</span></span>
+<span id="cb11-7"><a href="#cb11-7"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb11-8"><a href="#cb11-8"></a>    <span class="co"># Removemos \n (separador de líneas)</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a>    <span class="at">Director_Stars =</span> <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>, <span class="st">&quot; &quot;</span>, Director_Stars) </span>
+<span id="cb11-10"><a href="#cb11-10"></a>    <span class="co"># Removemos el espacio excesivo</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>    <span class="sc">%&gt;%</span> <span class="fu">str_squish</span>()</span>
+<span id="cb11-12"><a href="#cb11-12"></a>    )    <span class="sc">%&gt;%</span></span>
+<span id="cb11-13"><a href="#cb11-13"></a>  <span class="co"># Separamos las columnas usando como delimitador el símbolo &quot;|&quot;</span></span>
+<span id="cb11-14"><a href="#cb11-14"></a>  <span class="fu">separate_wider_delim</span>(Director_Stars, <span class="at">delim =</span> <span class="st">&quot; | &quot;</span>, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">&quot;Director&quot;</span>, <span class="st">&quot;Stars&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb11-15"><a href="#cb11-15"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb11-16"><a href="#cb11-16"></a>    <span class="co"># Rmovemos las etiquetas de las columnas</span></span>
+<span id="cb11-17"><a href="#cb11-17"></a>    <span class="at">Director =</span> <span class="fu">str_remove</span>(Director, <span class="st">&quot;Director:</span><span class="sc">\\</span><span class="st">s*&quot;</span>),</span>
+<span id="cb11-18"><a href="#cb11-18"></a>    <span class="at">Stars =</span> <span class="fu">str_remove</span>(Stars, <span class="st">&quot;Stars:</span><span class="sc">\\</span><span class="st">s*&quot;</span>)  </span>
+<span id="cb11-19"><a href="#cb11-19"></a>    )</span>
+<span id="cb11-20"><a href="#cb11-20"></a>  <span class="co"># Usamos \\s* como comodín de espacios en blanco</span></span>
+<span id="cb11-21"><a href="#cb11-21"></a><span class="co"># Resultado</span></span>
+<span id="cb11-22"><a href="#cb11-22"></a><span class="fu">View</span>(IMDB2)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="ejercicio-2.5" class="level2">
 <h2 class="anchored" data-anchor-id="ejercicio-2.5">Ejercicio 2.5</h2>
-<p>La variable <code>Duration</code> mide la duración de cada película en minutos. Sin embargo, nota que los datos contienen el valor numérico y el string <code>min</code> en la misma celda. Necesitamos generar una nueva variable que nos permita ordenar las películas de acuerdo a su duración en orden ascendente.</p>
+<p>La variable <code>Duration</code> mide la duración de cada película en minutos. Sin embargo, nota que los datos contienen el valor numérico y el string <code>min</code> en la misma celda. Necesitamos generar una nueva variable <code>numerica</code> que nos permita ordenar las películas de acuerdo a su duración en orden ascendente.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>IMDB2 <span class="ot">&lt;-</span> IMDB2 <span class="sc">%&gt;%</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb12-3"><a href="#cb12-3"></a>    <span class="at">duration_num =</span> <span class="fu">str_remove</span>(Duration, <span class="st">&quot; min&quot;</span>) <span class="sc">%&gt;%</span> <span class="co"># Remove &quot; min&quot;</span></span>
 <span id="cb12-4"><a href="#cb12-4"></a>      <span class="fu">as.numeric</span>()  <span class="co"># Convert the remaining string to numeric</span></span>
 <span id="cb12-5"><a href="#cb12-5"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">arrange</span>(duration_num)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-6"><a href="#cb12-6"></a>  <span class="fu">arrange</span>(duration_num) <span class="co"># Usa arrange(-var) para orden descendente</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="ejercicio-3" class="level1">
 <h1>Ejercicio 3</h1>
-<p>En este ejercicio vamos a crear una tabla que nos muestre la calificación promedio que se le otorgaron a las películas por cada década. Para tal propósito, primero vamos a crear una nueva variable <code>decade</code> usando condicionales. Posteriormente, vamos a calcular el promedio de la variable <code>rating</code> agrupando los valores por <code>decade</code>. Asegurate de que la tabla ordene los valores promedio de <code>rating</code> en orden descendente.</p>
+<p>En este ejercicio vamos a crear una tabla que nos muestre, por cada década, los promedio de la variable <code>Rating</code>. Para tal propósito, primero vamos a crear una nueva variable denominada <code>decade</code> usando condicionales. Después, vamos a calcular el promedio de la variable <code>Rating</code> agrupando los valores usando <code>group_by()</code> para cada década. Asegurate de que la tabla ordene los valores promedio de <code>rating</code> en orden descendente.</p>
 <section id="solución" class="level2">
 <h2 class="anchored" data-anchor-id="solución">Solución:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>IMDB2 <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb13" data-source-line-numbers="nil" data-code-line-numbers="nil"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a> IMDB2 <span class="sc">%&gt;%</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="co"># Creamos una variable que indique la década</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a><span class="fu">mutate</span>(<span class="at">decade =</span> <span class="fu">case_when</span>(</span>
 <span id="cb13-4"><a href="#cb13-4"></a>Year <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1950</span><span class="sc">:</span><span class="dv">1959</span>) <span class="sc">~</span> <span class="st">&quot;50s&quot;</span>,</span>

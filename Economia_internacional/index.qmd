@@ -1,0 +1,70 @@
+---
+title: "Economía Internacional: Teorías y Evidencias Empíricas"
+author: "[Emmanuel Anguiano](https://eanguianopita.github.io)"
+subtitle: "Universidad de Guadalajara, Posgrados CUCEA 2025"
+lang: es
+date-modified: "2025-01-06"
+css: html/styles.css
+---
+
+# ¡Bienvenidos al curso! 🖖
+
+-   Este sitio en internet está dedicado al seminario *Economía Internacional: Teorías y Evidencias Empíricas* dictado a los estudiantes del [Doctorado en Estudios Económicos](https://deec.cucea.udg.mx/) de la Universidad de Guadalajara.
+-   Este curso supone que los estudiantes tienen experiencia previa en cursos de Microeconomía, Macroeconomía, Comercio Internacional y algunas nociones básicas de Econometría (series de tiempo). 
+
+-   A continuación encontrarán algunas indicaciones previas a iniciar el curso y el plan de estudios.
+
+## Objetivos del curso
+
+### Comercio internacional
+
+1.  Comprender la racionalidad de algunos modelos económicos que explican por qué los países comercian entre sí. 
+
+1. Analizar los efectos del comercio internacional sobre grupos específicos dentro de un país a nivel agregado y desagregado.
+
+1. Discutir cómo es que las políticas gubernamentales influyen en el comercio internacional y, en particular, cómo es que estas decisiones afectan a intereses particulares y al país como un ente agregado. 
+
+
+### Finanzas internacionales
+
+1. Explicar cómo están estructurados los mercados financieros internacionales y cómo las monedas de distintos países se relacionan entre sí en los mercados de divisas. 
+
+1. Desarrollar una comprensión de cómo la situación macroeconómica de un país (p.ej. desempleo e inflación), influye en otros países a través de los mercados de tipos de cambio. 
+
+1. Investigar cómo las políticas gubernamentales pueden ayudar a alcanzar los objetivos de pleno empleo y baja inflación en un mundo globalizado. 
+
+# Plan de estudios
+
+| Sesión | Tema | Diapositivas | Lecturas |
+|:-------------:|:-------------:|:-------------:|:-------------:|
+| 1 | Introducción a la economía internacional | [Enlace](https://eanguianopita.github.io/docs/Economia_internacional/Slides/01-intro){target="_blank"} | [Lecturas]() |  |
+
+# Libros de texto
+
+Las sesiones de este seminario se organizarán en dos partes: en la primera parte se discutirá la teoría básica sobre los modelos teóricos y, en la segunda parte, se revisarán algunas evidencias empíricas relativas al tema (artículos de investigación).
+
+Los libros de texto a partir de los cuales se revisará la teoría son los siguientes 📚:
+
+- Gerber, James. (2023). _International Economics_ (8va ed.). Pearson. 
+
+- Feenstra, Robert C. (2016). _Advanced International Trade_ (2da ed.). Princeton University Press. 
+
+
+
+# Código de conducta
+
+Este curso está diseñado para ofrecer un espacio de aprendizaje colaborativo y respetuoso. Esperamos que todos los participantes actúen con cortesía, profesionalismo y dedicación. El cumplimiento de las siguientes normas asegurará que todos los estudiantes disfruten de una experiencia de aprendizaje positiva:
+
+1.  Respeta las opiniones, puntos de vista y habilidades de los otros participantes. La diversidad de experiencias enriquece el aprendizaje.
+2.  Escucha con atención las preguntas y comentarios de los demás.
+3.  Participa de manera constructiva. Todos estamos aprendiendo algo nuevo.
+4.  Comparte tus conocimientos y, de ser posible, ayuda a resolver dudas de tus pares.
+5.  Si tienes dudas, intenta formular preguntas claras. No se resolveran preguntas sobre tus necesidades particulares durante la clase.
+
+Estas reglas aplican para los **todos** los asistentes al curso (instructor y estudiantes). Cualquier tipo de incumplimiento o falta de respeto puede ocasionar que la expulsión del curso.
+
+
+
+# Licencia
+
+Todo el contenido de este curso es gratuito y de acceso abierto. El material se encuentra bajo la licencia [creative commons license 4.0](https://creativecommons.org/licenses/by/4.0/), por lo tanto se permite cualquier reproducción del contenido, si se otorgan las respectivas atribuciones.

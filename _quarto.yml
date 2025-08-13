@@ -20,6 +20,9 @@ website:
         
       - text: "Curso R!"
         href: curso_R/index.qmd
+      
+      - text: "Eco. Internacional"
+        href: Economia_internacional/index.qmd
     
     # your social media handles
     right:

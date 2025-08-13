@@ -18,6 +18,9 @@ website:
       - text: "CV"
         href: cv/index.qmd
         
+      - text: "Curso R!"
+        href: cv/index.qmd
+        
       - text: "Economía Internacional"
         href: Economia_internacional/index.qmd
     

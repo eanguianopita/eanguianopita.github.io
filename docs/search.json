@@ -1,26 +1,5 @@
 [
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "Projects",
-    "section": "",
-    "text": "arXiv Preprint | Code\nOver the centuries, I have devoted countless hours to deciphering and translating the ancient scripts and dialects of the various peoples of Middle-earth. My goal is to gain a deeper understanding of the cultures and histories of these peoples by studying their languages. Currently, I am working on a monograph that explores the linguistic roots of the Elvish languages. Through extensive research and analysis, I hope to shed light on the connections between the different dialects of Elvish and their origins. This project has been particularly challenging, as Elvish is a complex and nuanced language, but I am determined to see it through to completion."
-  },
-  {
-    "objectID": "projects/index.html#the-languages-of-middle-earth",
-    "href": "projects/index.html#the-languages-of-middle-earth",
-    "title": "Projects",
-    "section": "",
-    "text": "arXiv Preprint | Code\nOver the centuries, I have devoted countless hours to deciphering and translating the ancient scripts and dialects of the various peoples of Middle-earth. My goal is to gain a deeper understanding of the cultures and histories of these peoples by studying their languages. Currently, I am working on a monograph that explores the linguistic roots of the Elvish languages. Through extensive research and analysis, I hope to shed light on the connections between the different dialects of Elvish and their origins. This project has been particularly challenging, as Elvish is a complex and nuanced language, but I am determined to see it through to completion."
-  },
-  {
-    "objectID": "projects/index.html#the-history-of-the-war-of-the-ring",
-    "href": "projects/index.html#the-history-of-the-war-of-the-ring",
-    "title": "Projects",
-    "section": "The History of the War of the Ring",
-    "text": "The History of the War of the Ring\n\narXiv Preprint | Code\nI am creating a comprehensive and detailed history of the conflict that goes beyond the surface-level events. By gathering information from a variety of sources, including my own memories, written accounts, and oral histories, I hope to shed new light on this important period in Middle-earth’s history and provide valuable insights into the motivations and actions of the various players involved.\n\nView the tutorial for this template (+ download link)"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Emmanuel Anguiano",
@@ -35,27 +14,6 @@
     "text": "Descargar"
   },
   {
-    "objectID": "photography/index.html",
-    "href": "photography/index.html",
-    "title": "Photography",
-    "section": "",
-    "text": "As a wizard and scholar of Middle-earth, I have been studying the magic of the natural world for centuries. Through my self-portraits, I aim to capture the essence of my own being and reflect on my own journey through time. Each photograph is a reflection of my own experiences and emotions. Through my photography, I hope to offer a glimpse into my life as a scholar and adventurer, and inspire others to reflect on their own journeys through the world.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView the tutorial for this template (+ download link)"
-  },
-  {
-    "objectID": "index.html#english",
-    "href": "index.html#english",
-    "title": "¡Bienvenidos!",
-    "section": "",
-    "text": "I am currently a Postdoctoral Fellow in the Doctoral Program in Economic Studies at the Universidad de Guadalajara. I hold a Ph.D. in Economic Studies and an MSc in Economics from the same institution.\nMy research interests are at the intersection of international, macro, and development economics, with a particular focus on economic and financial integration between countries with different levels of development. Recently, I have initiated two research projects using subnational data from Mexico: one on the development of short- and long-term forecasts, and another studying the heterogeneous impacts of monetary policy at the state level.\nIn addition to my research, I work as a consultant and trainer in project and data management for social science research projects. I assist research teams in establishing workflows for data management, project collaboration, and documentation to ensure that their work is replicable and reproducible. I also teach how to use R, Python, and GitHub.\nI previously served as a Performance Audit Analyst at the Auditoría Superior del Estado de Jalisco (ASEJ). I also worked as a Data Scientist and Public Finance Analyst at the Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).\nI am a recognized Candidate to Researcher in the Mexican System of Researchers (2024–2027) and a recipient of the Emerging Scholars from Emerging Markets Fellowship (2022–2023).\nPlease feel free to contact me if you have any questions or would like to discuss potential projects."
-  },
-  {
-    "objectID": "index.html#español",
-    "href": "index.html#español",
-    "title": "¡Bienvenidos!",
-    "section": "",
-    "text": "Actualmente soy Investigador Postdoctoral en el Programa de Doctorado en Estudios Económicos de la Universidad de Guadalajara. Previamente, completé mi doctorado en Estudios Económicos, así como mi maestría y licenciatura en Economía en la misma institución.\nMis intereses de investigación se encuentran en la intersección de la economía internacional, macroeconomía y economía del desarrollo, con un enfoque particular en la integración económica y financiera entre países con diferentes niveles de desarrollo. Recientemente, he iniciado dos proyectos de investigación utilizando datos subnacionales de México: uno sobre el desarrollo de pronósticos macroeconómicos de corto y largo plazo, y otro que estudia los impactos heterogéneos de la política monetaria a nivel estatal.\nAdemás de mi investigación, trabajo como consultor e instructor en gestión de proyectos y datos para científicos sociales. Asisto a equipos de investigación en el establecimiento de flujos de trabajo para la gestión de datos, colaboración en proyectos y documentación, asegurando que su trabajo sea replicable y reproducible. También enseño cómo usar R, Python y GitHub.\nPreviamente me desempeñé como Analista de Auditoría al Desempeño en la Auditoría Superior del Estado de Jalisco (ASEJ). También trabajé como Científico de Datos y Analista de Finanzas Públicas en el Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).\nSoy reconocido como Candidato a Investigador en el Sistema Nacional de Investigadores (2024–2027) y fui becario del programa Emerging Scholars from Emerging Markets Fellowship (2022–2023).\nPor favor, no dudes en contactarme si tienes alguna pregunta o si te gustaría discutir proyectos potenciales."
-  },
-  {
     "objectID": "curso_R/index.html",
     "href": "curso_R/index.html",
     "title": "Programación en R para Ciencias Sociales",
@@ -68,20 +26,6 @@
     "title": "Programación en R para Ciencias Sociales",
     "section": "",
     "text": "Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente.\nEn este curso entenderemos el concepto de programación como las habilidades necesaria para el manejo y aprovechamiento eficiente de datos.\nEn específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas.\nPara tal propósito, nosotros aprenderemos a programar usando el lenguaje R."
-  },
-  {
-    "objectID": "index.html#bienvenidos",
-    "href": "index.html#bienvenidos",
-    "title": "Emmanuel Anguiano",
-    "section": "",
-    "text": "Actualmente soy Investigador Postdoctoral en el Programa de Doctorado en Estudios Económicos de la Universidad de Guadalajara. Previamente, completé mi doctorado en Estudios Económicos, así como mi maestría y licenciatura en Economía en la misma institución.\nMis intereses de investigación se encuentran en la intersección de la economía internacional, macroeconomía y economía del desarrollo, con un enfoque particular en la integración económica y financiera entre países con diferentes niveles de desarrollo. Recientemente, he iniciado dos proyectos de investigación utilizando datos subnacionales de México: uno sobre el desarrollo de pronósticos macroeconómicos de corto y largo plazo, y otro que estudia los impactos heterogéneos de la política monetaria a nivel estatal.\nAdemás de mi investigación, trabajo como consultor e instructor en gestión de proyectos y datos para científicos sociales. Asisto a equipos de investigación en el establecimiento de flujos de trabajo para la gestión de datos, colaboración en proyectos y documentación, asegurando que su trabajo sea replicable y reproducible. También enseño cómo usar R, Python y GitHub.\nPreviamente me desempeñé como Analista de Auditoría al Desempeño en la Auditoría Superior del Estado de Jalisco (ASEJ). También trabajé como Científico de Datos y Analista de Finanzas Públicas en el Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).\nSoy reconocido como Candidato a Investigador en el Sistema Nacional de Investigadores (2024–2027) y fui becario del programa Emerging Scholars from Emerging Markets Fellowship (2022–2023).\nPor favor, no dudes en contactarme si tienes alguna pregunta o si te gustaría discutir proyectos potenciales.\n\n\nI am currently a Postdoctoral Fellow in the Doctoral Program in Economic Studies at the Universidad de Guadalajara. I hold a Ph.D. in Economic Studies and an MSc in Economics from the same institution.\nMy research interests are at the intersection of international, macro, and development economics, with a particular focus on economic and financial integration between countries with different levels of development. Recently, I have initiated two research projects using subnational data from Mexico: one on the development of short- and long-term forecasts, and another studying the heterogeneous impacts of monetary policy at the state level.\nIn addition to my research, I work as a consultant and trainer in project and data management for social science research projects. I assist research teams in establishing workflows for data management, project collaboration, and documentation to ensure that their work is replicable and reproducible. I also teach how to use R, Python, and GitHub.\nI previously served as a Performance Audit Analyst at the Auditoría Superior del Estado de Jalisco (ASEJ). I also worked as a Data Scientist and Public Finance Analyst at the Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).\nI am a recognized Candidate to Researcher in the Mexican System of Researchers (2024–2027) and a recipient of the Emerging Scholars from Emerging Markets Fellowship (2022–2023).\nPlease feel free to contact me if you have any questions or would like to discuss potential projects."
-  },
-  {
-    "objectID": "curso_R/index.html#cheatsheets-1",
-    "href": "curso_R/index.html#cheatsheets-1",
-    "title": "Programación en R para Ciencias Sociales",
-    "section": "Cheatsheets",
-    "text": "Cheatsheets"
   },
   {
     "objectID": "Economia_internacional/index.html",

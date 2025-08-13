@@ -18,7 +18,7 @@ css: html/styles.css
 -   Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente.
 -   En este curso entenderemos el concepto de *programación* como las habilidades necesaria para el manejo y aprovechamiento eficiente de datos.
 -   En específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas.
--   Para tal propósito, nosotros aprenderemos a programar usando el lenguaje `R`.
+-   Para tal propósito, nosotros aprenderemos a programar usando el lenguaje `R`..
 
 # Plan de estudios
 

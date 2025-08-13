@@ -24,10 +24,10 @@ css: html/styles.css
 
 | Sesión | Tema | Diapositivas | Datos | Práctica guíada |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| 1 | Introducción a `R` y `RStudio` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"} | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv) |  |
-| 2 | Manipulación de datos con `Tidyverse` | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/03-Manipulacion_datos_tidyverse_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/Tidyverse.zip) | [Enlace 1](https://eanguianopita.github.io/docs/curso_R/Slides/3_1_Ejercicios_tidyverse.html)<br> [Enlace 2](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicio_manipulación_dplyr.html)|
-| 3 | Introducción a la programación funcional y gráficos básicos | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/02-Estructura_control_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/Ejercicios_Graficas_R_base.html) |
-| 4 | Visualización de datos | [Enlace](https://eanguianopita.github.io/docs/curso_R/Slides/04-Visualizacion_datos_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/Data_visualization.zip) |  [Enlace]() |
+| 1 | Introducción a `R` y `RStudio` | [Enlace](https://eanguianopita.github.io/curso_R/Slides/01-Intro_R_noanswers.html){target="_blank"} | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/IMDB.csv) |  |
+| 2 | Manipulación de datos con `Tidyverse` | [Enlace](https://eanguianopita.github.io/curso_R/Slides/03-Manipulacion_datos_tidyverse_noanswers.html) | [Datos](https://eanguianopita.github.io/curso_R/Datos/Tidyverse.zip) | [Enlace 1](https://eanguianopita.github.io/curso_R/Slides/3_1_Ejercicios_tidyverse.html)<br> [Enlace 2](https://eanguianopita.github.io/curso_R/Slides/Ejercicio_manipulación_dplyr.html)|
+| 3 | Introducción a la programación funcional y gráficos básicos | [Enlace](https://eanguianopita.github.io/curso_R/Slides/02-Estructura_control_noanswers.html) | [Datos](https://eanguianopita.github.io/docs/curso_R/Datos/PIBE_2020-2023.csv) | [Enlace](https://eanguianopita.github.io/curso_R/Slides/Ejercicios_Graficas_R_base.html) |
+| 4 | Visualización de datos | [Enlace](https://eanguianopita.github.io/curso_R/Slides/04-Visualizacion_datos_noanswers.html) | [Datos](https://eanguianopita.github.io/curso_R/Datos/Data_visualization.zip) |  [Enlace]() |
 | 5 | Introducción a la investigación reproducible | [Enlace]() | [Datos]()  | [Enlace]() |
 
 # Instrucciones previas al curso
@@ -71,27 +71,27 @@ En esta sección encontraras algunas guías rápidas para utilizar los comandos 
 </style>
 
 <div class="image-row">
-    <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/baser.pdf">
-    <img src="https://eanguianopita.github.io/docs/curso_R/img/rbase_badge.png" alt="baseR">
+    <a href="https://eanguianopita.github.io/curso_R/cheatsheets/baser.pdf">
+    <img src="https://eanguianopita.github.io/curso_R/img/rbase_badge.png" alt="baseR">
   </a>
   
-   <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/rstudio.pdf">
-    <img src="https://eanguianopita.github.io/docs/curso_R/img/rstudio_badge.png" alt="rStudio">
+   <a href="https://eanguianopita.github.io/curso_R/cheatsheets/rstudio.pdf">
+    <img src="https://eanguianopita.github.io/curso_R/img/rstudio_badge.png" alt="rStudio">
   </a>  
   
-  <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/readr.pdf">
-    <img src="https://eanguianopita.github.io/docs/curso_R/img/readr_badge.png" alt="readr">
+  <a href="https://eanguianopita.github.io/curso_R/cheatsheets/readr.pdf">
+    <img src="https://eanguianopita.github.io/curso_R/img/readr_badge.png" alt="readr">
   </a>  
   
-  <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/dplyr.pdf">
-    <img src="https://eanguianopita.github.io/docs/curso_R/img/dplyr_badge.png" alt="dplyr">
+  <a href="https://eanguianopita.github.io/curso_R/cheatsheets/dplyr.pdf">
+    <img src="https://eanguianopita.github.io/curso_R/img/dplyr_badge.png" alt="dplyr">
   </a>
-  <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/ggplot2.pdf">
-    <img src="https://eanguianopita.github.io/docs/curso_R/img/ggplot2_badge.png" alt="ggplot2">
+  <a href="https://eanguianopita.github.io/curso_R/cheatsheets/ggplot2.pdf">
+    <img src="https://eanguianopita.github.io/curso_R/img/ggplot2_badge.png" alt="ggplot2">
   </a>
   
-    <a href="https://eanguianopita.github.io/docs/curso_R/cheatsheets/rmarkdown.pdf">
-    <img src="https://eanguianopita.github.io/docs/curso_R/img/rmarkdown_badge.png" alt="rmarkdown">
+    <a href="https://eanguianopita.github.io/curso_R/cheatsheets/rmarkdown.pdf">
+    <img src="https://eanguianopita.github.io/curso_R/img/rmarkdown_badge.png" alt="rmarkdown">
   </a>
   
 </div>

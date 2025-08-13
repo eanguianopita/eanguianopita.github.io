@@ -37,7 +37,7 @@ css: html/styles.css
 
 | Sesión | Tema | Diapositivas | Lecturas |
 |:-------------:|:-------------:|:-------------:|:-------------:|
-| 1 | Introducción a la economía internacional | [Enlace](https://eanguianopita.github.io/docs/Economia_internacional/Slides/01-intro){target="_blank"} | [Syllabus](https://eanguianopita.github.io/docs/Economia_internacional/Syllabus/Syllabus_Clase_EcoInt.pdf) |  |
+| 1 | Introducción a la economía internacional | [Enlace](https://eanguianopita.github.io/Economia_internacional/Slides/01-intro){target="_blank"} | [Syllabus](https://eanguianopita.github.io/Economia_internacional/Syllabus/Syllabus_Clase_EcoInt.pdf) |  |
 
 # Libros de texto
 

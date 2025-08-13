@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Emmanuel Anguiano",
+    "section": "",
+    "text": "X\n  \n  \n    \n     Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n  \n    \n     Google Scholar\n  \n\n  \n  \nBiografía\nActualmente soy Investigador Postdoctoral en el Programa de Doctorado en Estudios Económicos de la Universidad de Guadalajara. Previamente, completé mi doctorado en Estudios Económicos, así como mi maestría y licenciatura en Economía en la misma institución.\nHe sido reconocido como Candidato a Investigador en el Sistema Nacional de Investigadores (2024–2027) de la SECIHTI y fui becario del programa Emerging Scholars from Emerging Markets (2022–2023) organizado por la Academy of International Bussiness (AIB).\nMis intereses de investigación se encuentran en la intersección de la economía internacional, macroeconomía y economía del desarrollo, con un enfoque particular en la integración económica y financiera entre países con diferentes niveles de desarrollo. Recientemente, he iniciado dos proyectos de investigación utilizando datos subnacionales de México: uno sobre el desarrollo de pronósticos macroeconómicos de corto y largo plazo, y otro que estudia los impactos heterogéneos de la política monetaria a nivel estatal.\nAdemás de mi investigación, trabajo como consultor e instructor en gestión de proyectos y datos para científicos sociales. Asisto a equipos de investigación en el establecimiento de flujos de trabajo para la gestión de datos, colaboración en proyectos y documentación, asegurando que su trabajo sea replicable y reproducible. También enseño cómo usar R, Python y GitHub.\nPreviamente me desempeñé como Analista de Auditoría al Desempeño en la Auditoría Superior del Estado de Jalisco (ASEJ). También trabajé como Científico de Datos y Analista de Finanzas Públicas en el Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).\nPor favor, no dudes en contactarme si tienes alguna pregunta o si te gustaría discutir posibles colaboraciones en proyectos de investigación.\nEnglish\nI am currently a Postdoctoral Fellow in the Doctoral Program in Economic Studies at the Universidad de Guadalajara, sponsored by the Mexican Council of Humanities, Sciences, and Technologies. At the same institution, I also earned my Ph.D. in Economic Studies, as well as my MSc and BSc in Economics.\nI am a recognized Candidate Researcher in the Mexican System of Researchers (2024–2027) and a recipient of the Emerging Scholars from Emerging Markets Fellowship (2022–2023), sponsored by the Academy of International Business (AIB).\nMy research interests are at the intersection of international, macro, and development economics, with a particular focus on economic and financial integration between countries at different levels of development. Recently, I have launched two research projects using subnational data from Mexico: one focuses on developing short- and long-term forecasts, while the other examines the heterogeneous impacts of monetary policy shocks at the state level.”\nIn addition to my research, I work as a consultant and trainer in project and data management for social science research projects. I assist research teams in establishing workflows for data management, project collaboration, and documentation to ensure that their work is replicable and reproducible. I also teach how to use R, Python, and GitHub.\nI previously served as a Performance Audit Analyst at the Auditoría Superior del Estado de Jalisco (ASEJ). I also worked as a Data Scientist and Public Finance Analyst at the Instituto para el Desarrollo Técnico de las Haciendas Públicas de México (INDETEC).\nPlease feel free to contact me if you have any questions or would like to discuss potential projects."
+  },
+  {
+    "objectID": "cv/index.html",
+    "href": "cv/index.html",
+    "title": "Curriculum vitae",
+    "section": "",
+    "text": "Descargar"
+  },
+  {
+    "objectID": "curso_R/index.html",
+    "href": "curso_R/index.html",
+    "title": "Programación en R para Ciencias Sociales",
+    "section": "",
+    "text": "Este sitio en internet está dedicado al curso Programación en R para las Ciencias Sociales dictado a los estudiantes del Doctorado en Estudios Económicos de la Universidad de Guadalajara.\nEste curso supone que los estudiantes no tienen experiencia previa en temas de programación.\nA continuación encontrarán algunas indicaciones previas a iniciar el curso y el plan de estudios.\n\n\n\n\nDespués de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente.\nEn este curso entenderemos el concepto de programación como las habilidades necesaria para el manejo y aprovechamiento eficiente de datos.\nEn específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas.\nPara tal propósito, nosotros aprenderemos a programar usando el lenguaje R."
+  },
+  {
+    "objectID": "curso_R/index.html#objetivos-del-curso",
+    "href": "curso_R/index.html#objetivos-del-curso",
+    "title": "Programación en R para Ciencias Sociales",
+    "section": "",
+    "text": "Después de concluir el curso, se espera que los asistentes sean capacez de desarrollar sus propios proyectos de investigación de forma eficiente.\nEn este curso entenderemos el concepto de programación como las habilidades necesaria para el manejo y aprovechamiento eficiente de datos.\nEn específico, nos interesa desarrollar conocimientos básicos para automatizar tareas repetitivas.\nPara tal propósito, nosotros aprenderemos a programar usando el lenguaje R."
+  },
+  {
+    "objectID": "Economia_internacional/index.html",
+    "href": "Economia_internacional/index.html",
+    "title": "Economía Internacional: Teorías y Evidencias Empíricas",
+    "section": "",
+    "text": "Este sitio en internet está dedicado al seminario Economía Internacional: Teorías y Evidencias Empíricas dictado a los estudiantes del Doctorado en Estudios Económicos de la Universidad de Guadalajara.\nEste curso supone que los estudiantes tienen experiencia previa en cursos de Microeconomía, Macroeconomía, Comercio Internacional y algunas nociones básicas de Econometría (series de tiempo).\nA continuación encontrarán algunas indicaciones previas a iniciar el curso y el plan de estudios.\n\n\n\n\n\n\nComprender la racionalidad de algunos modelos económicos que explican por qué los países comercian entre sí.\nAnalizar los efectos del comercio internacional sobre grupos específicos dentro de un país a nivel agregado y desagregado.\nDiscutir cómo es que las políticas gubernamentales influyen en el comercio internacional y, en particular, cómo es que estas decisiones afectan a intereses particulares y al país como un ente agregado.\n\n\n\n\n\nExplicar cómo están estructurados los mercados financieros internacionales y cómo las monedas de distintos países se relacionan entre sí en los mercados de divisas.\nDesarrollar una comprensión de cómo la situación macroeconómica de un país (p.ej. desempleo e inflación), influye en otros países a través de los mercados de tipos de cambio.\nInvestigar cómo las políticas gubernamentales pueden ayudar a alcanzar los objetivos de pleno empleo y baja inflación en un mundo globalizado."
+  },
+  {
+    "objectID": "Economia_internacional/index.html#objetivos-del-curso",
+    "href": "Economia_internacional/index.html#objetivos-del-curso",
+    "title": "Economía Internacional: Teorías y Evidencias Empíricas",
+    "section": "",
+    "text": "Comprender la racionalidad de algunos modelos económicos que explican por qué los países comercian entre sí.\nAnalizar los efectos del comercio internacional sobre grupos específicos dentro de un país a nivel agregado y desagregado.\nDiscutir cómo es que las políticas gubernamentales influyen en el comercio internacional y, en particular, cómo es que estas decisiones afectan a intereses particulares y al país como un ente agregado.\n\n\n\n\n\nExplicar cómo están estructurados los mercados financieros internacionales y cómo las monedas de distintos países se relacionan entre sí en los mercados de divisas.\nDesarrollar una comprensión de cómo la situación macroeconómica de un país (p.ej. desempleo e inflación), influye en otros países a través de los mercados de tipos de cambio.\nInvestigar cómo las políticas gubernamentales pueden ayudar a alcanzar los objetivos de pleno empleo y baja inflación en un mundo globalizado."
+  }
+]

@@ -38,7 +38,7 @@ css: html/styles.css
 | Sesión | Tema | Diapositivas | Lecturas |
 |:-------------:|:-------------:|:-------------:|:-------------:|
 | 1 | Introducción a la economía internacional | [Enlace](https://eanguianopita.github.io/docs/Economia_internacional/Slides/01-intro){target="_blank"} | [Syllabus](https://eanguianopita.github.io/docs/Economia_internacional/Syllabus/Syllabus_Clase_EcoInt.pdf) |  |
-| 2 | Modelo ricardiano| [Autarquía](https://eanguianopita.github.io/docs/Economia_internacional/Slides/02-ricardian) <br> [Libre comercio](https://eanguianopita.github.io/docs/Economia_internacional/Slides/02-ricardian)| | 
+| 2 | Modelo ricardiano| [Autarquía](https://eanguianopita.github.io/docs/Economia_internacional/Slides/02-ricardian) <br> [Libre comercio](https://eanguianopita.github.io/docs/Economia_internacional/Slides/02-ricardian)| [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_2.txt) | 
 
 # Libros de texto
 

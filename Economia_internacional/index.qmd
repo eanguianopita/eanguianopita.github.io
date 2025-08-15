@@ -46,7 +46,7 @@ Las sesiones de este seminario se organizarán en dos partes: en la primera part
 
 Los libros de texto a partir de los cuales se revisará la teoría son los siguientes 📚:
 
-- Gerber, James. (2023). _International Economics_ (8va ed.). Pearson. 
+- Gerber, James. (2023). _International Economics_ (8va ed.). Pearson
 
 - Feenstra, Robert C. (2016). _Advanced International Trade_ (2da ed.). Princeton University Press. 
 

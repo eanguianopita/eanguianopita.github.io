@@ -18,11 +18,13 @@ website:
       - text: "CV"
         href: cv/index.qmd
         
-      - text: "Curso R!"
-        href: curso_R/index.qmd
+      - text: "Clases"
+        menu: 
+          - text: "Curso R!"
+            href: curso_R/index.qmd
         
-      - text: "Economía Internacional"
-        href: Economia_internacional/index.qmd
+          - text: "Economía Internacional"
+            href: Economia_internacional/index.qmd
     
     # your social media handles
     right:

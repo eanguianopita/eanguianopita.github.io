@@ -1,0 +1,14 @@
+/* Fija la foto a la izquierda */
+#about-block .about-image {
+  position: fixed;
+  top: 150px;        /* ajusta según tu header */
+  left: 50px;        /* ajusta la distancia del borde */
+  width: 12em !important;
+  z-index: 10;
+}
+
+/* Empuja el texto a la derecha para no tapar la foto */
+#about-block .about-text {
+  margin-left: 15em;  /* deja espacio para la foto */
+  max-width: 60ch;    /* mejora la legibilidad */
+}

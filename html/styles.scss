@@ -121,32 +121,74 @@ body {
 
 /* Header Styles (Titles) */
 h1, h2 {
-  text-align: justify;  /* Justify text alignment */
-  text-justify: inter-word;  /* Prevent excessive space between words */
-  word-spacing: 0.05em;  /* Adjust the default spacing between words */
-  letter-spacing: 0.02em;  /* Optional: adjust letter spacing slightly */
-  hyphens: auto;  /* Enable word hyphenation for breaking */
-  font-family: "Arial", sans-serif;  /* Example: clean, readable font */
+  text-align: justify;  
+  text-justify: inter-word;  
+  word-spacing: 0.05em;  
+  letter-spacing: 0.02em;  
+  hyphens: auto;  
+  font-family: "Arial", sans-serif;  
 }
 
 /* Specific fix for Quarto titles */
 .title, .main-title {
   text-align: justify;
   text-justify: inter-word;
-  word-spacing: 0.01em;  /* Fine adjustment for specific sections */
-  letter-spacing: normal;  /* Reset letter spacing for consistency */
-  hyphens: auto;  /* Allow words to break as needed */
+  word-spacing: 0.01em;  
+  letter-spacing: normal;  
+  hyphens: auto;  
 }
 
 /* Alternative Title Styles */
 h1, h2.alt-style {
-  text-align: left;  /* Use left alignment as an alternative */
+  text-align: left;  
   word-spacing: 0.02em;
   letter-spacing: normal;
   hyphens: none;
 }
 
-
+/* Base font size */
 * {
-  font-size: 16px !important;
+  font-size: 18px !important;
+}
+
+/* =================================================================
+   ESTILOS PARA LA PÁGINA DE INICIO CON COLUMNA FIJA
+   ================================================================= */
+
+/* PASO 1: Hacemos que el contenedor principal de la página sea más ancho.
+   Esto es CRUCIAL para que la columna de texto tenga espacio para crecer. */
+main.content {
+  max-width: 10000px !important; /* Ajusta este valor si quieres la página más ancha o estrecha */
+  margin: 0 auto;      /* Mantiene el contenido general centrado */
+}
+
+/* PASO 2: Fijamos la columna de la imagen y los enlaces a la izquierda. */
+.quarto-about-trestles .about-entity {
+  position: fixed;
+  top: 120px;            /* Distancia desde la parte superior (ajústala si es necesario) */
+  left: 50px;            /* Distancia desde la izquierda (ajústala si es necesario) */
+  width: 18em;           /* Ancho de esta columna */
+  z-index: 10;
+}
+
+/* PASO 3: Ajustamos la columna del texto para que no se oculte detrás de la imagen. */
+.quarto-about-trestles .about-contents {
+  margin-left: 10em;     /* Crea el espacio a la izquierda para la columna fija */
+  padding-right: 2em;    /* Añade un poco de aire en el borde derecho para que el texto no se pegue */
+}
+
+/* PASO 4: Nos aseguramos de que en pantallas pequeñas (móviles) todo se vea bien. */
+@media (max-width: 992px) {
+  /* La columna de la imagen deja de estar fija y se pone arriba */
+  .quarto-about-trestles .about-entity {
+    position: static;
+    margin: 0 auto;
+    padding-bottom: 2em; /* Espacio entre la imagen/enlaces y el texto de abajo */
+  }
+
+  /* El texto vuelve a su posición normal, sin margen */
+  .quarto-about-trestles .about-contents {
+    margin-left: 0;
+    padding-right: 0;
+  }
 }

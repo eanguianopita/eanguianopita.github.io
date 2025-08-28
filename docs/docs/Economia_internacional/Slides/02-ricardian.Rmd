@@ -1,0 +1,1886 @@
+---
+title: "I9387: Clase 2"
+subtitle: "Modelo ricardiano (autarquía)"
+author: "Emmanuel Anguiano"
+date: "Otoño 2025"
+output:
+  xaringan::moon_reader:
+    css: ['default', 'metropolis', 'metropolis-fonts', 'my-css.css']
+    self_contained: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+
+---
+
+
+
+class: inverse, middle
+
+```{r Setup, include = F}
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(ggthemes, viridis, knitr, dslabs, gapminder, extrafont, Ecdat, wooldridge, tidyverse, magrittr)
+#devtools::install_github("R-CoderDotCom/econocharts")
+
+library(econocharts)
+# Define colors
+red_pink <- "#e64173"
+met_slate <- "#272822" 
+turquoise <- "#20B2AA"
+orange <- "#FFA500"
+red <- "#fb6107"
+blue <- "#2b59c3"
+green <- "#8bb174"
+grey_light <- "grey70"
+grey_mid <- "grey50"
+grey_dark <- "grey20"
+purple <- "#6A5ACD"
+slate <- "#314f4f"
+# Notes directory
+dir_slides <- "~/Semana 1/01-Intro"
+# Knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F
+)  
+opts_chunk$set(dev = "svg")
+options(device = function(file, width, height) {
+  svg(tempfile(), width = width, height = height)
+})
+options(crayon.enabled = F)
+options(knitr.table.format = "html")
+```
+
+```{css, echo = F, eval = F}
+@media print {
+  .has-continuation {
+    display: block !important;
+  }
+}
+```
+
+# Prólogo
+
+---
+# ¿Por qué comercian los países? 
+
+* **Teorías viejas**: 
+
+  - Ricardo: Diferencias en la tecnología de los países (Ventaja compartiva).
+  - Hecksher-Ohlin: La especialización depende de las diferencias en dotaciones de factores productivos.
+  
+--
+
+* **Teorías nuevas**: 
+
+  - Armington: Las personas prefieren consumir bienes extranjeros. 
+  - Competencia monopolística: Gusto por la variedad (Paul Krugman).
+  - Economías de escala: Es más barato producir todo en un solo país (Melitz).
+
+---
+
+# Ventaja comparativa
+
+* El modelo ricardiano del comercio utiliza los conceptos de .hi-pink[ventaja comparativa] y .hi-blue[costo de oportunidad]. 
+
+--
+
+* El .hi-blue[costo de oportunidad] de producir un bien mide el costo de renunciar a producir otra cosa con los mismos recursos. 
+
+--
+
+```{r, out.width="60%", echo=FALSE}
+
+knitr::include_graphics("figures/Negative_Opportunity_Cost.jpg")
+
+```
+---
+class: inverse, middle
+
+# Modelo ricardiano (1 factor)
+
+---
+# Supuestos del modelo
+
+1. .hi-pink[Mercados (bienes y factores)]: Competencia perfecta. 
+
+--
+
+2. El factor __trabajo__ es homogéneo y no específico (sectores). 
+
+--
+
+3. Los trabajadores pueden moverse libremente entre sectores en los mercados domésticos pero .hi-red[no hay migración]. 🚩
+
+--
+
+4. La producción de los bienes requiere cantidades distintas de trabajo: 
+  - __Un solo factor__. 
+  - El .hi-pink[producto marginal del trabajo] es constante. 
+  
+--
+
+5. No existen barreras al comercio ni .hi-pink[costos de transacción]. 
+
+--
+
+6. La tecnología es constante en cada país. 
+
+--
+
+7. Las dotaciones de factores son __fijas__ ($\bar{L}$). 
+
+---
+
+# Configuración del modelo
+
+* Imagina 2 países: .hi-blue[Doméstico] y .hi-red[Extranjero]. 
+
+--
+
+* Cada país puede producir dos bienes: .hi-blue[botellas de vino (x)] y .hi-red[queso (y)]. 
+
+--
+
+* La oferta de trabajo en cada país es fija: 
+  -  $\color{blue}{\bar{L}}$ para el país doméstico y $\color{red}{\bar{L}}$ para el extranjero. 
+  
+--
+
+* Definamos: 
+  - $\color{blue}{l_{x}}$: la cantidad de trabajo .hi-pink[necesaria] para elaborar una botella de __vino__. 
+  - $\color{red}{l_{y}}$: la cantidad de trabajo .hi-pink[necesaria] para elaborar un pieza de __queso__. 
+
+
+---
+# Modelo para el país doméstico
+
+* El conjunto de producción .hi-blue[Doméstico] y la posible asignación total de trabajadores en cada país se representa por: 
+
+  - $l_{x} x + l_{y} y \leq \bar{L}$
+  
+--
+
+* Para encontrar la .hi-pink[Frontera de Posibilidades de Producción (FPP)] supongamos que la oferta y demanda de trabajo son iguales: 
+
+  - $l_{x}x + l_{y}y = L$
+  
+  
+--
+
+  - $y = \frac{L}{l_y} - \frac{l_{x}}{l_{y}} x$
+  
+--
+
+* intercepto en $y$: $\frac{L}{l_y}$ (producción máxima en $y$).
+* intercepto en $x$: $\frac{L}{l_x}$ (producción máxima en $x$).
+
+
+---
+# Modelo para el país doméstico
+
+```{r, echo=FALSE, out.width="95%"}
+# 1. Cargar la librería ggplot2
+# Si no la tienes instalada, ejecuta primero: install.packages("ggplot2")
+library(ggplot2)
+
+# 2. Definir los parámetros del modelo
+# Puedes cambiar estos valores para ver cómo se ajusta el gráfico
+L <- 120  # Total de unidades de trabajo
+lx <- 3   # Unidades de trabajo para producir una unidad de X
+ly <- 2   # Unidades de trabajo para producir una unidad de Y
+
+# 3. Calcular los puntos de intercepción (los extremos de la FPP)
+x_intercept <- L / lx
+y_intercept <- L / ly
+
+# 4. Crear los datos para la línea de la FPP y el área de producción
+# Data frame para la línea que va de (0, L/ly) a (L/lx, 0)
+ppf_data <- data.frame(
+  x = c(0, x_intercept),
+  y = c(y_intercept, 0)
+)
+
+# Data frame para el polígono que sombrea el "Production Set"
+production_set_data <- data.frame(
+  x = c(0, x_intercept, 0),
+  y = c(0, 0, y_intercept)
+)
+
+# 5. Crear el gráfico paso a paso
+ggplot() +
+  # Dibuja y colorea el área del "Conjunto de Producción" (Production Set)
+  geom_polygon(data = production_set_data, aes(x = x, y = y), fill = "#c1f0b2", alpha = 0.8) +
+  
+  # Dibuja la línea de la FPP (PPF)
+  geom_line(data = ppf_data, aes(x = x, y = y), color = "blue", size = 1.5) +
+  
+  # Añade las etiquetas de texto
+  annotate("text", x = x_intercept * 0.3, y = y_intercept * 0.75, label = "FPP", 
+           color = "white", background = "blue", size = 4, fontface = "bold",
+           padding = unit(0.2, "lines")) +
+  
+  annotate("text", x = x_intercept * 0.3, y = y_intercept * 0.3, label = "Conjunto factible de producción", 
+           color = "#1e6b02", size = 4) +
+           
+  annotate("text", x = x_intercept * 0.65, y = y_intercept * 0.5, label = "Pendiente == -l[x]/l[y]", 
+           parse = TRUE, color = "blue", size = 6) +
+  
+  # Personaliza los ejes para que se parezcan a la imagen
+  scale_x_continuous(
+    breaks = c(0, x_intercept),
+    labels = c("0", expression(L/l[x])),
+    expand = c(0, 0), # Para que el eje empiece justo en 0
+    limits = c(0, x_intercept * 1.05)
+  ) +
+  scale_y_continuous(
+    breaks = c(0, y_intercept),
+    labels = c("0", expression(L/l[y])),
+    expand = c(0, 0), # Para que el eje empiece justo en 0
+    limits = c(0, y_intercept * 1.05)
+  ) +
+  
+  # Nombra los ejes
+  labs(x = "x", y = "y") +
+  
+  # Aplica un tema limpio
+  theme_classic() +
+  theme(
+    axis.text = element_text(size = 12),
+    axis.title = element_text(size = 14, face = "bold")
+  )
+
+```
+---
+# Entendiendo el intercambio
+
+.columns[
+.column[
+
+
+* __Pendiente__ de la FPP: .hi-pink[Tasa Marginal de Transformación (TMT)].
+
+* La TMT es la tasa a la que el mercado (.hi-blue[doméstico]) valora el intercambio entre los bienes $x$ e $y$.
+  
+* El .hi-purple[precio relativo] de $x$ (en términos de $y$) o, el costo de oportunidad de $x$]
+  
+  
+
+
+.column[
+```{r, echo=FALSE, out.width="140%", fig.height=12}
+# 1. Cargar la librería ggplot2
+# Si no la tienes instalada, ejecuta primero: install.packages("ggplot2")
+library(ggplot2)
+
+# 2. Definir los parámetros del modelo
+# Puedes cambiar estos valores para ver cómo se ajusta el gráfico
+L <- 120  # Total de unidades de trabajo
+lx <- 3   # Unidades de trabajo para producir una unidad de X
+ly <- 2   # Unidades de trabajo para producir una unidad de Y
+
+# 3. Calcular los puntos de intercepción (los extremos de la FPP)
+x_intercept <- L / lx
+y_intercept <- L / ly
+
+# 4. Crear los datos para la línea de la FPP y el área de producción
+# Data frame para la línea que va de (0, L/ly) a (L/lx, 0)
+ppf_data <- data.frame(
+  x = c(0, x_intercept),
+  y = c(y_intercept, 0)
+)
+
+# Data frame para el polígono que sombrea el "Production Set"
+production_set_data <- data.frame(
+  x = c(0, x_intercept, 0),
+  y = c(0, 0, y_intercept)
+)
+
+# 5. Crear el gráfico paso a paso
+ggplot() +
+  # Dibuja y colorea el área del "Conjunto de Producción" (Production Set)
+  geom_polygon(data = production_set_data, aes(x = x, y = y), fill = "#c1f0b2", alpha = 0.8) +
+  
+  # Dibuja la línea de la FPP (PPF)
+  geom_line(data = ppf_data, aes(x = x, y = y), color = "blue", size = 1.5) +
+  
+  # Añade las etiquetas de texto
+  annotate("text", x = x_intercept * 0.3, y = y_intercept * 0.75, label = "FPP", 
+           color = "white", background = "blue", size = 4, fontface = "bold",
+           padding = unit(0.2, "lines")) +
+  
+  annotate("text", x = x_intercept * 0.3, y = y_intercept * 0.3, label = "Conjunto factible de producción", 
+           color = "#1e6b02", size = 4) +
+           
+  annotate("text", x = x_intercept * 0.65, y = y_intercept * 0.5, label = "Pendiente == -l[x]/l[y]", 
+           parse = TRUE, color = "blue", size = 6) +
+  
+  # Personaliza los ejes para que se parezcan a la imagen
+  scale_x_continuous(
+    breaks = c(0, x_intercept),
+    labels = c("0", expression(L/l[x])),
+    expand = c(0, 0), # Para que el eje empiece justo en 0
+    limits = c(0, x_intercept * 1.05)
+  ) +
+  scale_y_continuous(
+    breaks = c(0, y_intercept),
+    labels = c("0", expression(L/l[y])),
+    expand = c(0, 0), # Para que el eje empiece justo en 0
+    limits = c(0, y_intercept * 1.05)
+  ) +
+  
+  # Nombra los ejes
+  labs(x = "x", y = "y") +
+  
+  # Aplica un tema limpio
+  theme_classic() +
+  theme(
+    axis.text = element_text(size = 12),
+    axis.title = element_text(size = 14, face = "bold")
+  )
+
+```
+]
+
+]
+
+---
+
+class: inverse, middle
+
+.bigger[.center[.white[**Ventaja absoluta y comparativa (Autarquía)**]]]
+
+---
+
+# Ventaja absoluta (Adam Smith)
+
+.columns[
+
+.column[
+* Decimos que un país tiene .hi-purple[ventaja absoulta] si requiere de menos trabajadores para producir (una unidad) de un bien.
+
+* .hi-green[Ejemplo]:
+
+  - Si $\color{blue}{l_{x}} < \color{red}{l_{x}}$, entonces el país .hi-blue[doméstico] tiene una ventaja absoluta en producir $x$. 
+  - Si $\color{blue}{l_{y}} > \color{red}{l_{y}}$, entonces el país .hi-red[extranjero] tiene una ventaja absoluta en producir $y$. ]
+  
+.column[
+```{r, out.width="120%", echo=FALSE, out.height= "200%"}
+
+knitr::include_graphics("figures/Adam_smith.jpg")
+
+```
+
+]
+
+]
+
+---
+# Ventaja comparativa (Ricardo)
+
+.columns[
+
+.column[
+* Un país tiene .hi-pink[ventaja comparativa] en producir un bien, si el **costo de oportunidad** de producir dicho bien _es menor_ en comparación con el de otros países. 
+
+* .hi-green[Ejemplo]:
+
+  - Si $\color{blue}{\frac{l_{x}}{l_{y}}} < \color{red}{\frac{l_x}{l_y}}$, entonces el país .hi-blue[doméstico] tiene ventaja comparativa en producir $x$.
+  - Si $\color{blue}{\frac{l_{x}}{l_{y}}} > \color{red}{\frac{l_x}{l_y}}$, entonces el país .hi-red[extranjero] tiene ventaja comparativa en producir $y$.]
+  
+.column[
+```{r, out.width="90%", echo=FALSE, }
+
+knitr::include_graphics("figures/David_ricardo.jpg")
+
+```
+
+]
+
+]
+
+---
+# Ideas sobre la ventaja comparativa
+
+* Pendiente de la FPP = **Costo de oportunidad** del bien $x$ (cantidad de $y$ que se entrega por 1 de $x$)
+
+* Si los países tienen diferentes pendientes en sus FPP, tienen diferentes costos de oportunidad (¡Comerciar!). 
+
+* Un país con .hi-pink[pendiente más suave (menor magnitud)] tiene un .hi-pink[menor costo de oportunidad de x] (o un mayor costo de y), lo que implica una **ventaja comparativa en x**.
+
+* Un país con .hi-purple[pendiente más pronunciada (mayor magnitud)] tiene un .hi-pink[mayor costo de oportunidad de x (o un menor costo de y)], lo que implica una **ventaja comparativa en y**.
+
+
+
+---
+
+class: inverse, middle
+
+.bigger[.center[.white[**Ejemplo en autarquía**]]]
+
+---
+# Ejemplo modelo ricardiano (1-factor)
+
+.columns[
+
+.column.bg-lightgreen[
+
+**.green[Ejemplo]**. Supongamos lo siguiente: 
+
+* El país .hi-blue[doméstico] tiene 100 trabajadores. 
+  - Requiere 1 trabajador para producir $\color{red}{x}$. 
+  - Requiere 2 trabajadores para producir $\color{blue}{y}$
+  
+* El país .hi-red[extranjero] tiene 100 trabajadores. 
+  - Requiere 1 trabajador para producir $\color{red}{x}$.
+  - Requiere 4 trabajadores para producir $\color{blue}{y}$
+]
+
+.column[
+
+1. Para cada país, encuentra la ecuación de su FPP y grafícala. 
+
+1. ¿Qué país tiene **ventaja absoluta** en producir $x$ e $y$?
+
+1. ¿Qué país tiene **ventaja comparativa** en producir $x$ e $y$?
+]
+
+]
+
+
+---
+# Solución 
+
+.columns[
+
+.column[
+
+.hi-blue[**Doméstico**]:
+
+$$\begin{align*}
+  l_x x + l_y y &= L \\
+  1 x + 2y &= 100 \\
+  2y &= 100 - x \\
+  y &= 50 - 0.5x 
+\end{align*}$$
+
+```{r, echo=FALSE, out.width="100%"}
+# 1. Cargar la librería ggplot2
+# Si no la tienes instalada, ejecuta primero: install.packages("ggplot2")
+library(ggplot2)
+
+# 2. Definir la función que quieres graficar
+equation <- function(x) {
+  50 - 0.5 * x
+}
+
+# 3. Crear el gráfico
+ggplot(data.frame(x = c(0, 100)), aes(x = x)) +
+  
+  # Dibuja la línea de la función en el rango de x (de 0 a 100)
+  geom_function(fun = equation, color = "blue", linewidth = 1.5) +
+  
+  # Configura los límites y las marcas de los ejes para que coincidan con la imagen
+  scale_x_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  scale_y_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  
+  # Nombra los ejes y añade la ecuación como un pie de foto (caption)
+  labs(
+    x = "x", 
+    y = "y",
+    caption = "y = 50 – 0.5x"
+  ) +
+  
+  # Aplica un tema visual limpio y clásico
+  theme_classic() +
+  
+  # Personaliza el estilo para que se parezca más a la imagen
+  theme(
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12),
+    plot.caption = element_text(
+      hjust = 0.5,      # Centra el pie de foto
+      size = 18,        # Aumenta el tamaño de la fuente
+      color = "blue",   # Cambia el color a azul
+      face = "bold"     # Pone el texto en negrita
+    )
+  )
+
+```
+
+]
+
+
+
+.column[
+
+.hi-red[Extranjero]:
+
+$$\begin{align*}
+  l_x x + l_y y &= L \\
+  1 x + 4y &= 100 \\
+  4y &= 100 - x \\
+  y &= 25 - 0.25x 
+\end{align*}$$
+
+
+```{r, echo=FALSE, out.width="100%"}
+# 1. Cargar la librería ggplot2
+# Si no la tienes instalada, ejecuta primero: install.packages("ggplot2")
+library(ggplot2)
+
+# 2. Definir la función que quieres graficar
+equation <- function(x) {
+  25 - 0.25 * x
+}
+
+# 3. Crear el gráfico
+ggplot(data.frame(x = c(0, 100)), aes(x = x)) +
+  
+  # Dibuja la línea de la función en el rango de x (de 0 a 100)
+  geom_function(fun = equation, color = "blue", linewidth = 1.5) +
+  
+  # Configura los límites y las marcas de los ejes para que coincidan con la imagen
+  scale_x_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  scale_y_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  
+  # Nombra los ejes y añade la ecuación como un pie de foto (caption)
+  labs(
+    x = "x", 
+    y = "y",
+    caption = "y = 25 – 0.25x"
+  ) +
+  
+  # Aplica un tema visual limpio y clásico
+  theme_classic() +
+  
+  # Personaliza el estilo para que se parezca más a la imagen
+  theme(
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12),
+    plot.caption = element_text(
+      hjust = 0.5,      # Centra el pie de foto
+      size = 18,        # Aumenta el tamaño de la fuente
+      color = "red",   # Cambia el color a azul
+      face = "bold"     # Pone el texto en negrita
+    )
+  )
+
+```
+]
+
+]
+
+
+---
+# Ventaja comparativa y precios relativos de autarquía
+
+* Hasta ahora suponemos que los países están en .hi-pink[autarquía], es decir que no comercian entre sí. 
+
+--
+
+
+* Para encontrar la .hi-pink[ventaja comparativa] para cada país, necesitamos calcular su .hi-purple[costo de oportunidad] de producir cada bien en cada país (i.e. .hi-pink[precio relativo en autarquía])
+
+--
+
+* Un país con un .hi-turquoise[precio relativo de autarquía más bajo] tiene una ventaja comparativa en producir dicho bien. 
+
+---
+# Ejemplo: Ventaja comparativa
+
+.columns[
+
+.column[
+.hi-blue[**Doméstico**]:
+
+```{r, echo=FALSE, out.width="100%"}
+# 1. Cargar la librería ggplot2
+# Si no la tienes instalada, ejecuta primero: install.packages("ggplot2")
+library(ggplot2)
+
+# 2. Definir la función que quieres graficar
+equation <- function(x) {
+  50 - 0.5 * x
+}
+
+# 3. Crear el gráfico
+ggplot(data.frame(x = c(0, 100)), aes(x = x)) +
+  
+  # Dibuja la línea de la función en el rango de x (de 0 a 100)
+  geom_function(fun = equation, color = "blue", linewidth = 1.5) +
+  
+  annotate(
+  "label",  
+  x = 50, y = 25,
+  label = "Pendiente = -0.5",
+  color = "blue",
+  fontface = "bold",
+  size = 4,
+  fill = "white",
+  label.padding = unit(0.2, "lines"),
+  label.r = unit(0.1, "lines"),
+  label.size = 0.5
+)+
+  
+  # Configura los límites y las marcas de los ejes para que coincidan con la imagen
+  scale_x_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  scale_y_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  
+  # Nombra los ejes y añade la ecuación como un pie de foto (caption)
+  labs(
+    x = "x", 
+    y = "y",
+    caption = "y = 50 – 0.5x"
+  ) +
+  
+  # Aplica un tema visual limpio y clásico
+  theme_classic() +
+  
+  # Personaliza el estilo para que se parezca más a la imagen
+  theme(
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12),
+    plot.caption = element_text(
+      hjust = 0.5,      # Centra el pie de foto
+      size = 18,        # Aumenta el tamaño de la fuente
+      color = "blue",   # Cambia el color a azul
+      face = "bold"     # Pone el texto en negrita
+    )
+  )
+
+```
+
+- Precio relativo de autarquía de $\color{red}{x}$: $0.5\color{blue}{y}$ [Pendiente de la FPP].
+
+- Precio relativo de autarquía de $\color{blue}{y}$: $2\color{red}{x}$
+
+
+]
+
+.column[
+.hi-red[**Extranjero**]:
+
+```{r, echo=FALSE, out.width="100%"}
+# 1. Cargar la librería ggplot2
+# Si no la tienes instalada, ejecuta primero: install.packages("ggplot2")
+library(ggplot2)
+
+# 2. Definir la función que quieres graficar
+equation <- function(x) {
+  25 - 0.25 * x
+}
+
+# 3. Crear el gráfico
+ggplot(data.frame(x = c(0, 100)), aes(x = x)) +
+  
+  # Dibuja la línea de la función en el rango de x (de 0 a 100)
+  geom_function(fun = equation, color = "red", linewidth = 1.5) +
+  
+  annotate(
+  "label",  
+  x = 50, y = 20,
+  label = "Pendiente = -0.25",
+  color = "red",
+  fontface = "bold",
+  size = 4,
+  fill = "white",
+  label.padding = unit(0.2, "lines"),
+  label.r = unit(0.1, "lines"),
+  label.size = 0.5
+)+
+  
+  # Configura los límites y las marcas de los ejes para que coincidan con la imagen
+  scale_x_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  scale_y_continuous(
+    limits = c(0, 100), 
+    breaks = seq(0, 100, by = 10),
+    expand = c(0, 0) # Asegura que el eje empiece exactamente en 0
+  ) +
+  
+  # Nombra los ejes y añade la ecuación como un pie de foto (caption)
+  labs(
+    x = "x", 
+    y = "y",
+    caption = "y = 50 – 0.5x"
+  ) +
+  
+  # Aplica un tema visual limpio y clásico
+  theme_classic() +
+  
+  # Personaliza el estilo para que se parezca más a la imagen
+  theme(
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12),
+    plot.caption = element_text(
+      hjust = 0.5,      # Centra el pie de foto
+      size = 18,        # Aumenta el tamaño de la fuente
+      color = "red",   # Cambia el color a azul
+      face = "bold"     # Pone el texto en negrita
+    )
+  )
+
+```
+
+- Precio relativo de autarquía de $\color{red}{x}$: $0.25\color{blue}{y}$ [Pendiente de la FPP].
+
+- Precio relativo de autarquía de $\color{blue}{y}$: $4\color{red}{x}$
+]
+]
+
+---
+# Ejemplo: Ventaja comparativa
+.pull-left[
+.center[
+Precios relativos de autarquía <br> (Costos de oportunidad)
+]
+
+|  País  | .pink[1x] | .purple[1y] |
+|----|-----:|--------:|
+| .blue[Doméstico] | 0.5y | **2x** |
+| .red[Extranjero] | **0.25y** | 4x |
+]
+
+--
+
+.pull-right[
+
+- El país .blue[Doméstico] tiene ventaja comparativa en producir .blue[y] 
+
+- El .red[Extranjero] tiene ventaja comparativa en producir .red[x]
+
+]
+
+---
+# Ejemplo: Apertura comercial 
+
+
+.pull-left[
+.center[
+Precios relativos de autarquía <br> (Costos de oportunidad)
+]
+
+|   País | .pink[1x] | .purple[1y] |
+|----|-----:|--------:|
+| .blue[Doméstico] | 0.5y | **2x** |
+| .red[Extranjero] | **0.25y** | 4x |
+]
+
+--
+
+.pull-right[
+
+- Supongamos que ahora los países se abren para comerciar entre sí. 
+
+- Hasta aquí, hemos considerado los precios relativos en .hi-pink[autarquía].
+
+- Procedamos a ver que sucede con los precios relativos cuando los países se abren al .hi-pink[comercio internacional].]
+
+---
+
+class: inverse, middle
+
+.bigger[.center[.white[**Ejemplo con comercio internacional**]]]
+
+
+---
+# Ejemplo: Apertura comercial
+
+.pull-left[
+.center[
+Precios relativos de autarquía <br> (Costos de oportunidad)
+]
+
+|   País | .pink[1x] | .blue[1y] |
+|----|-----:|--------:|
+| .blue[Doméstico] | 0.5y | **2x** |
+| .red[Extranjero] | **0.25y** | 4x |
+]
+
+--
+
+.pull-right[
+
+Aquí vamos a omitir algunos detalles importantes: 
+
+* Ricardo supone una .hi-pink[teoría del valor-trabajo] y que el producto marginal del trabajo es **constante**. 
+
+* Hasta ahora no hemos dicho nada del $PmgL$ para simplificar el análisis. 
+
+* También estamos en un intercambio directo (trueque) de bienes; aquí no hay dinero.]
+
+
+---
+
+# Ejemplo: Apertura comercial 
+
+.pull-left[
+.center[
+Precios relativos de autarquía <br> (Costos de oportunidad)
+]
+
+|   País | .pink[1x] | .purple[1y] |
+|----|-----:|--------:|
+| .blue[Doméstico] | 0.5y | **2x** |
+| .red[Extranjero] | **0.25y** | 4x |
+]
+
+.pull-right[
+.smaller[
+- .blue[**Doméstico**]:
+  - Comprar .pink[x] si $p_x < 0.5y$
+  - Vender .purple[y] si $p_y > 2x$
+
+- El precio de autarquía de .purple[y]:
+  - En país .blue[Doméstico]: 2x
+  - En .red[Extranjero]: 4x
+
+- El país .blue[Doméstico] puede exportar  el bien.purple[**y**] al .red[Extranjero] y vender a un precio ¡más alto!
+  - Todo .blue[L] en país .blue[Doméstico] se moverá a la industria (que paga salarios más altos) elaborando el bien .purple[**y**]
+]
+]
+---
+
+# Ejemplo: Apertura comercial
+
+.pull-left[
+.center[
+Precios relativos de autarquía <br> (Costos de oportunidad)
+]
+
+|  País  | .pink[1x] | .purple[1y] |
+|----|-----:|--------:|
+| .blue[Doméstico] | 0.5y | **2x** |
+| .red[Extranjero] | **0.25y** | 4x |
+]
+
+.pull-right[
+.smaller[
+- El país .red[**Extranjero**] :
+  - Venderá .pink[x] si $p_x > 0.25y$
+  - Comprará .purple[y] si $p_y < 4x$
+
+- El precio de autarquía de .pink[x]:
+  - En país .blue[Doméstico]: 0.5y
+  - En el .red[Extranjero]: 0.25y
+
+- El país .red[Extranjero] puede exportar .pink[**x**] al país .blue[doméstico] y vender a un precio ¡más alto!
+  - Todo .red[L] en el .red[Extranjero] se moverá a la industria que elabora .pink[**x**]  (paga salarios más altos) 
+]
+]
+---
+
+# Ejemplo: Apertura comercial
+
+.pull-left[
+.center[
+Precios relativos de autarquía <br> (Costos de oportunidad)
+]
+
+| País   | .pink[1x] | .purple[1y] |
+|----|-----:|--------:|
+| .blue[Doméstico] | 0.5y | **2x** |
+| .red[Extranjero] | **0.25y** | 4x |
+]
+
+.pull-right[
+
+Posible rango de .hi-pink[precios relativos **mundiales**]:
+
+$$\color{purple}{0.25y} < \color{magenta}{p_x} < \color{purple}{0.5 y}$$
+
+$$\color{magenta}{2x} < \color{purple}{p_y} < \color{magenta}{4x}$$
+]
+
+---
+
+# Ejemplo: Especialización
+
+
+.pull-left[
+
+### .hi-blue[Doméstico]
+
+```{r, fig.height=4, echo = F, fig.height=7}
+Home_PPF=function(x){50-0.5*x}
+
+home_ppf<-ggplot(data = tibble(x=1:10), aes(x = x))+
+  stat_function(fun = Home_PPF, geom="line", size=2, color = "blue")+
+  scale_x_continuous(breaks = seq(0,100,10), 
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10), 
+                     limits = c(0,100),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+home_ppf+
+  geom_label(x = 0, y = 50, label = "A", color = "blue", alpha=1)+
+  coord_cartesian(clip = "off")
+```
+
+El país .hi-blue[Doméstico] se especializará en producir únicamente el bien .hi-blue[**y**] en el punto A
+]
+
+.pull-right[
+
+### .hi-red[Extranjero]
+
+```{r, fig.height=4, echo = F, fig.height= 7}
+Foreign_PPF=function(x){25-0.25*x}
+
+foreign_ppf<-ggplot(data = tibble(x=1:10), aes(x = x))+
+  stat_function(fun = Foreign_PPF, geom="line", size=2, color = "red")+
+  scale_x_continuous(breaks = seq(0,100,10), 
+                     limits = c(0,100),
+                     expand = c(0,0))+
+  scale_y_continuous(breaks = seq(0,100,10), 
+                     limits = c(0,100),
+                     expand=c(0,0))+
+  theme_classic(base_family = "Fira Sans Condensed", base_size=20)
+
+foreign_ppf+
+  geom_label(x = 100, y = 0, label = "A'", color = "red")+
+  coord_cartesian(clip = "off")
+```
+
+El .hi-red[Extranjero] se especializará en producir únicamente el bien .pink[**x**] en el punto A'.
+]
+
+
+---
+# Ajuste en precios debido al comercio 
+
+- El país .hi-blue[Doméstico] exportará el bien .purple[**y**] $\implies$ vende *menos* .purple[y] en  país .hi-blue[Doméstico] $\implies$ $\uparrow p_y$ en .hi-blue[Doméstico]
+
+--
+
+- Cuando el bien .purple[**y**] llega al país .hi-red[Extranjero] $\implies$ existe *más* .purple[y] en el mercado .hi-red[Extranjero] $\implies$ $\downarrow p_y$ en el .hi-red[Extranjero]
+
+--
+
+- El país .red[Extranjero] exportará más de .pink[x] $\implies$ se vende *menos* .pink[x] en el .red[Extranjero] $\implies$ $\uparrow p_x$ en el .red[Extranjero]
+
+--
+
+- Cuando .pink[x] llega al país .hi-blue[Doméstico] $\implies$ existe *más* .pink[x] en el país .hi-blue[Doméstico] $\implies$ $\downarrow p_x$ en .hi-blue[Doméstico]
+
+---
+
+
+class: inverse, middle
+
+.bigger[.center[.white[**Equilibrio con comercio internacional: Precios relativos mundiales**]]]
+
+---
+
+# Precios relativos mundiales
+
+* En el .hi-turquoise[equilibrio con comercio internacional], los precios relativos se ajustarán hasta **igualarse** entre ambos países: 
+
+$$\frac{p_x^{\star}}{p_y^{\star}} = \frac{p_x}{p_y} = \frac{p_x'}{p_y'}$$
+
+* Debe ubicarse dentro de un rango que sea aceptable para ambas partes:
+
+$$\color{purple}{0.25y} < \color{magenta}{p_x} < \color{purple}{0.5 y}$$
+$$\color{magenta}{2x} < \color{purple}{p_y} < \color{magenta}{4x}$$
+
+* .hi-turquoise[Supongamos que el precio relativo mundial] se fija en:
+
+$$\frac{p_x^{\star}}{p_y^{\star}} = 0.4 y$$
+
+---
+# Precios relativos mundiales
+
+.pull-left[
+
+### .hi-blue[Doméstico]
+
+```{r, fig.height=4, echo = F, fig.height=7}
+home_ppf+
+  geom_label(x = 0, y = 50, label = "A", color = "blue")+
+  stat_function(fun = function(x){50-0.4*x}, size = 1, linetype = "dashed")+
+  geom_label(x = 50, y =25, label = "Pendiente = -0.5", color = "blue")+
+  geom_label(x = 70, y =22, label = "Pendiente = -0.4", color = "black")+
+  coord_cartesian(clip = "off")
+```
+
+]
+
+.pull-right[
+
+### .hi-red[Extranjero]
+
+```{r, fig.height=4, echo = F, fig.height=7}
+foreign_ppf+
+  geom_label(x = 100, y = 0, label = "A'", color = "red")+
+  stat_function(fun = function(x){40-0.4*x}, size = 1, linetype = "dashed")+
+  geom_label(x = 50, y =12.5, label = "Pendiente = -0.25", color = "red")+
+  geom_label(x = 70, y =12, label = "Pendiente = -0.4", color = "black")+
+  coord_cartesian(clip = "off")
+```
+
+]
+
+El precio relativo mundial de x: $\frac{p_x^{\star}}{p_y^{\star}}=0.4y$
+
+Ambos países enfrentan la misma .hi[tasa de cambio internacional] con pendiente $= -0.4$
+
+
+---
+# Triangulos comerciales
+
+.pull-left[
+
+### .hi-blue[Doméstico]
+
+```{r, fig.height=4, echo = F, fig.height=7}
+home_ppf+
+  geom_label(x = 0, y = 50, label = "A", color = "blue")+
+  stat_function(fun = function(x){50-0.4*x}, size = 1, linetype = "dashed")+
+  annotate("segment", x = 0, xend = 0, y = 50, yend = 30, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=2.5, y=40, label="Exportaciones", color="purple")+
+  coord_cartesian(clip = "off")
+```
+
+El país .blue[Doméstico] exportará .purple[20y] al .red[Extranjero]
+
+]
+
+.pull-right[
+
+### .hi-red[Extranjero]
+
+```{r, fig.height=4, echo=FALSE, fig.height=7}
+foreign_ppf+
+  geom_label(x = 100, y = 0, label = "A'", color = "red")+
+  stat_function(fun = function(x){40-0.4*x}, size = 1, linetype = "dashed")+
+  annotate("segment", x = 50, xend = 50, y = 0, yend = 20, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=50, y=10, label="Importaciones", color="purple")+
+  coord_cartesian(clip = "off")
+```
+
+]
+
+---
+
+# Triángulos comerciales
+
+.pull-left[
+
+### .hi-blue[Doméstico]
+
+```{r, fig.height=7, echo = F}
+home_ppf+
+  geom_label(x = 0, y = 50, label = "A", color = "blue")+
+  stat_function(fun = function(x){50-0.4*x}, size = 1, linetype = "dashed")+
+  annotate("segment", x = 0, xend = 0, y = 50, yend = 30, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=2.5, y=40, label="Exportaciones", color="purple")+
+  annotate("segment", x = 0, xend = 50, y = 30, yend = 30, colour = "magenta", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=25, y=30, label="Importaciones", color="magenta")+
+  coord_cartesian(clip = "off")
+```
+
+El país .blue[Doméstico] exporta .purple[20y] al .red[Extranjero]
+
+]
+
+.pull-right[
+
+### .hi-red[Extranjero]
+
+```{r, fig.height=4, echo = F, fig.height=7}
+foreign_ppf+
+  geom_label(x = 100, y = 0, label = "A'", color = "red")+
+  stat_function(fun = function(x){40-0.4*x}, size = 1, linetype = "dashed")+
+  annotate("segment", x = 50, xend = 50, y = 0, yend = 20, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=50, y=10, label="Importaciones", color="purple")+
+  annotate("segment", x = 100, xend = 50, y = 0, yend = 0, colour = "magenta", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=75, y=5, label="Exportaciones", color="magenta")+
+  coord_cartesian(clip = "off")
+```
+El país .red[Extranjero] exporta .pink[50x] al país .blue[Doméstico]
+
+]
+
+
+---
+# Triángulos comerciales
+
+.pull-left[
+
+### .hi-blue[Doméstico]
+
+```{r, fig.height=7, echo = F}
+home_ppf+
+  geom_label(x = 0, y = 50, label = "A", color = "blue")+
+  stat_function(fun = function(x){50-0.4*x}, size = 1, linetype = "dashed")+
+  annotate("segment", x = 0, xend = 0, y = 50, yend = 30, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=2.5, y=40, label="Exportaciones", color="purple")+
+  annotate("segment", x = 0, xend = 50, y = 30, yend = 30, colour = "magenta", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=25, y=30, label="Importaciones", color="magenta")+
+  geom_label(x = 50, y = 30, label = "B", color = "blue")+
+  coord_cartesian(clip = "off")
+```
+
+]
+
+.pull-right[
+
+### .hi-red[Extranjero]
+
+```{r, fig.height=7, echo = F}
+foreign_ppf+
+  geom_label(x = 100, y = 0, label = "A'", color = "red")+
+  stat_function(fun = function(x){40-0.4*x}, size = 1, linetype = "dashed")+
+  annotate("segment", x = 50, xend = 50, y = 0, yend = 20, colour = "purple", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=50, y=10, label="Importaciones", color="purple")+
+  annotate("segment", x = 100, xend = 50, y = 0, yend = 0, colour = "magenta", size=2, alpha=1, arrow=arrow(length=unit(0.5,"cm"), ends="last", type="closed"))+
+  geom_label(x=75, y=5, label="Exportaciones", color="magenta")+
+  geom_label(x = 50, y = 20, label = "B'", color = "red")+
+  coord_cartesian(clip = "off")
+```
+
+]
+
+Comercio a lo largo del **tipo de cambio mundial** (precios relativos mundiales) desde los puntos de especialización (A y A') hasta los puntos de consumo (B y B'), ¡más allá de las FPP!
+
+---
+
+class: inverse, middle
+
+.bigger[.center[.white[**Formalización del modelo ricardiano**]]]
+
+---
+# Introducción
+
+**Supuestos básico del modelo**
+
+* Dos bienes, dos países. 
+
+* Un factor de producción ($\bar{L}$).
+
+* Diferencias en tecnología: costo relativo del trabajo (PmgL).
+
+--
+
+**¿Qué nos hace falta?**
+
+* No hemos especificado las preferencias (Demanda por cada bien).
+
+* Derivar el equilibrio algebráico del modelo (¡Hasta ahora solo fue gráfico! 📈)
+
+* Separar el problema del consumidor y el del productor.
+
+---
+# Solución de modelos competitivos 
+
+1. Especificar agentes: Consumidores, productores, ocasionalmente gobierno. 
+
+1. Definir el problema de optimización para cada agente. 
+
+1. Establecer restricciones globales. Vaciado de los mercados. 
+
+1. Resolver el equilibrio competitivo. 
+
+--
+
+**¿Qué es un equilibrio competitivo?**
+
+- Precios y asignaciones tales que todos los agentes estén satisfechos con sus elecciones, dadas las elecciones de los otros agentes. 
+
+---
+# Preferencias del consumidor
+
+* La literatura sobre las preferencias es amplia. Aquí vamos a ignorar como se definen y suponemos una forma funcional específica para la función de utilidad. 
+
+* Para los consumidores: 
+  - Mayor nivel de utilidad (ordinal) = Mejor 👍🏾
+  - Mismo nivel de utilidad = Indiferente 🤔
+  
+--
+
+**Propiedades de las funciones de utilidad** 
+
+* Monótonas: Más de todo es mejor que menos de todo. 
+
+* Transitivas: A es mejor que B y B es mejor que C $\implies$ A es mejor que C. 
+
+* Completas: Es posible calcular el valor de la función de utilidad para todas las asignaciones posibles. 
+
+
+---
+# Ejemplo: Función de utilidad
+
+Supongamos que existen dos bienes: $c_1$ es el bien de consumo 1, $c_2$ es el bien de consumo 2. 
+
+* Función de utilidad de tipo **Cobb-Douglas**: 
+
+$$U(c_1, c_2) = (c_1)^{\theta_{1}} (c_2)^{\theta_{2}}$$
+
+Supongamos que $\theta_1 = \theta_2 = 0.5$. ¿Cuál será la elección óptima del consumidor $(c_1, c_2) = (1,2)$ ó $(1.5, 1.5)$?
+
+--
+
+$$\begin{align*}
+ U(1,2) &= (1)^{0.5} \times (2)^{0.5} \approx 1.41 \\
+ U(1.5, 1.5) &= (1.5)^{0.5} \times (1.5)^{0.5} \approx  1.5
+\end{align*}$$
+
+--
+
+$U(1.5, 1.5) > U(1,2) \implies$ el consumidor prefiere la segunda asignación. 
+
+---
+# Ejemplo: Función de utilidad
+
+Supongamos que existen dos bienes: $c_1$ es el bien de consumo 1, $c_2$ es el bien de consumo 2. 
+
+* Función de utilidad de tipo **Cobb-Douglas**: 
+
+$$U(c_1, c_2) = (c_1)^{\theta_{1}} (c_2)^{\theta_{2}}$$
+.red[Importante]: La utilidad no tiene unidades naturales. Nos importa la **utilidad relativa**
+
+--
+
+* Las transformaciones que preservan el orden se consideran funciones de utilidad equivalentes. 
+
+* Transformaciones comunes que preservan el orden: Adición, multiplicación, potencia, logaritmos, etc. 
+
+
+--
+
+**Ejemplo**: Tomar logaritmos a función de utilidad
+
+$$\tilde{U}(c_1, c_2) = \theta_{1} \log c_{1} + \theta_{2} \log c_{2}$$
+
+
+---
+# Problema del consumidor
+
+El problema del consumidor consiste en .red[maximizar] su función de utilidad sujeto a una .blue[restricción presupuestal].
+
+**Restricción presupuestal**
+
+* Sin esta restricción los consumidores quisieran consumir una cantidad infinita de todo. 
+
+* La restricción presupuestaria forza a que el gasto del consumidor sea menor a su ingreso. 
+
+* En los modelos estáticos suponemos que **no** existen los préstamos ni el ahorro.
+
+
+--
+
+**Gasto de consumo**: suma de los gastos (= precio $\times$ cantidad) de todos los bienes. 
+
+
+--
+
+**Fuentes de ingreso**: Ingreso laboral (salario $\times$ trabajo ofertado (horas)).
+
+Otras fuentes potenciales: renta del capital, ganancias de las empresas, impuestos del gobierno. 
+
+
+---
+# Problema del consumidor 
+
+Dados los precios ${p_1, p_2, w}$, el consumidor elegirá consumir ${c_1,c_2}$ para **Maximizar su utilidad**: 
+
+$$\begin{align*}
+ \max_{c_1, c_2} \quad & U(c_1, c_2) \\
+ \text{sujeto a} \quad & p_{1}c_{1} + p_{2}c_{2} \leq wL
+\end{align*}$$
+
+
+--
+Adicionalmente, utilizamos una restricción de no-negatividad: 
+
+$$c_{1}\geq 0; c_{2}\geq 0$$
+En adelante, omitiremos esta restricción por simplicidad. 
+
+
+---
+
+# Problema del consumidor 
+
+Dados los precios ${p_1, p_2, w}$, el consumidor elegirá consumir ${c_1,c_2}$ para **Maximizar su utilidad**: 
+
+$$\begin{align*}
+ \max_{c_1, c_2} \quad & U(c_1, c_2) \\
+ \text{sujeto a} \quad & p_{1}c_{1} + p_{2}c_{2} \leq wL
+\end{align*}$$
+
+**Nota 1**: Al resolver el problema debemos suponer una forma funcional para la función de utilidad. 
+
+
+--
+
+**Nota 2**: Los consumidores no eligen como asignar su fuerza de trabajo entre el bien 1 y el 2. Simplemente ofrecen su fuerza de trabajo. 
+
+Las empresas que contratan la mano de obra determinan la cantidad de trabajadores en cada sector (los salarios deben igualarse en ambas industrias).
+
+---
+# Problema de las empresas 
+
+En el modelo ricardiano suponemos que las empresas son **perfectamente competitivas**.
+
+* Esto significa que no hay ganancias extraordinarias y que las empresas no tienen poder de mercado (tomadoras de precio). 
+
+
+--
+
+Suponemos que todas las empresas de un mismo país tienen la misma tecnología de producción para un bien determinado: 
+
+- Normalmente suponemos **rendimientos constantes a escala (RCE)**: duplicar insumos $\implies$ duplicar productos. 
+
+- La tecnología de producción es diferente entre bienes, no entre empresas. 
+
+- Por simplicidad, suponemos que las empresas producen un solo bien. 
+
+
+---
+# Funciones de producción
+
+* Las funciones de producción especifican como se transforman los insumos en productos. 
+
+* Ejemplo de la función de producción de tipo Cobb-Douglas: 
+
+$$ Y = f(K, L) = AK^{\theta}L^{1-\theta}$$
+
+Donde $Y$ es la producción, $f(K,L)$ es la función de producción, $A$ es la PTF, $K$ es capital y $L$ es trabajo. $\theta \in [0,1]$. 
+
+--
+
+Por ahora, supongamos que solo existe el factor trabajo. Caso especial cuando $\theta = 0$. 
+
+$$y_{m} = z_{m}L_{m}$$
+Donde $y_{m}$ es la producción del bien $m$, $l_{m}$ es la cantidad de trabajo utilizada para producir el bien $m$, y $z_m$ es la productividad del trabajo. 
+
+--
+
+.red[Recordatorio:] $a_{m}=\frac{1}{z_m}$ (costo laboral unitario es recíproco de la productividad)
+
+.red[Importante: La producción tiene unidades naturales. No se utilizan transformaciones ⚠️]
+
+
+---
+# Problema de optimización de las empresas
+
+Las empresas **maximizan sus beneficios**. Los beneficios son iguales a las ganancias menos los costos. 
+
+La empresa que produce el bien $m$ resuelve: 
+
+$$\begin{align*}
+ \max_{y_m, l_m} \quad & p_{m} y_{m} - w_{m} l_{m}\\
+ \text{sujeto a} \quad & y_{m} = \frac{1}{a_m}l_m 
+\end{align*}$$
+
+(No hay beneficios en equilibrio, pero es irrelevante para el problema de la empresa en este momento)
+
+
+---
+# Condición de vaciado de mercados 
+
+La última parte del problema es especificar las condiciones de vaciado de los mercados. 
+
+**Vaciado del mercado de trabajo**: Demanda de trabajo = Oferta de trabajo (en cada país). 
+
+$$\begin{align*}
+l_{1}^{D}+l_{2}^{D}&=\bar{L^{D}}\\
+l_{1}^{E}+l_{2}^{E}&=\bar{L^{E}}
+\end{align*}$$
+
+
+--
+
+**Vaciado del mercado de bienes**: La producción de cada producto = consumo de cada producto. 
+
+.red[Importante: Esta condición cambia dependiendo de modelo en autarquía o libre comercio.]
+
+---
+# Vaciado de mercados: Autarquía 
+
+En autarquía, el vaciado de los mercados domésticos implica que se consuma todo lo que se produce a nivel local: 
+
+$$\begin{align*}
+c_{1}^{D} = y_{1}^{D} \\
+c_{2}^{D} = y_{2}^{D}
+\end{align*}$$
+
+Lo que suceda en el extranjero es **irrelevante** para el equilibrio doméstico. 
+
+---
+
+# Vaciado de mercados: Libre comercio
+
+En libre comercio, los países no necesariamente consumen únicamente lo que producen:
+
+$$\begin{align*}
+c_{1}^{D} + c_{1}^{E}  = y_{1}^{D} + y_{1}^{E}\\
+c_{2}^{D} + c_{2}^{F} = y_{2}^{D} + y_{2}^{E}
+\end{align*}$$
+
+* Los países expanden sus posibilidades de consumo mediante el intercambio. 
+
+* Mantenemos el supuesto de que **todo** lo que se .hi-red[produce] se .hi-green[consume].
+
+---
+# Definición del equilibrio 
+La solución de los problemas de optimización nos llevará a  los precios de equilibrio ${p_1, p_2}$, salarios ${w_D, w_E}$, y asignaciones ${C^{i}, Y^{i}}_{i\in [D,E]}$ tales que: 
+
+1. Los consumidores maximizan su utilidad 🙋🏾‍♂️
+
+1. Las empresas maximizan sus beneficios 👩🏾‍💼
+
+1. Los mercados se vacían. 
+
+
+---
+# Variables exógenas vs endógenas
+
+Cuando trabajamos con modelos es importante que distingamos claramente la diferencia entre las variables exógenas y endógenas. 
+
+* Las variables **exógenas** son parámetros que se determinan por fuera del modelo.
+  - Parámetros sobre la productividad, preferencias, oferta de trabajo. 
+  
+* Las variables **endógenas** son parámetros que se determinan por el modelo en equilibrio: 
+  - Salarios y precios, asignaciones de trabajo y consumo entre industrias/bienes. 
+  - Resultados de equilibrio para las variables endógenas dependen de los parámetros exógenos. .red[Lo contrario no es verdad]. 
+  - Parámetros exógenos $\neq$ arbitrarios. Pueden estimarse usando datos. 
+
+
+---
+class: inverse, middle
+
+.bigger[.center[.white[**Solución de equilibrio: <br> Problema del consumidor**]]]
+
+---
+# Solución: Problema del consumidor
+
+El consumidor debe resolver el siguiente problema de optimización: 
+
+$$\begin{align*}
+ \max_{c_1, c_2} \quad & U(c_1, c_2) = \theta_{1}\log c_{1}+ \theta_{2} \log c_{2} \\
+ \text{sujeto a} \quad & p_{1}c_{1} + p_{2}c_{2} =   wL
+\end{align*}$$
+
+* Este problema de optimización con restricciones puede resolverse utilizando el **método lagrangiano**.
+
+* Buscamos la curva de indiferencia (CI) que es tangente a la recta presupuestaria. 
+
+* Las CI están dadas por la siguiente función: 
+
+$$c_2 = \exp[(U-\theta_{1}\log c_{1})/\theta_{2}]$$
+
+---
+
+# Problema del consumidor: Gráficamente
+```{r, echo = F, fig.height=7}
+# Cargar librería
+library(ggplot2)
+
+# 1. Parámetros
+alpha <- 0.5
+I <- 4
+U_levels <- c(1, 1.5, 2, 2.5, 3)
+
+# 2. Curvas de indiferencia
+c1 <- seq(0.1, 5, length.out = 100)
+c2 <- seq(0.1, 5, length.out = 100)
+grid <- expand.grid(c1 = c1, c2 = c2)
+grid$U <- with(grid, c1^alpha * c2^(1 - alpha))
+
+# 3. Restricción presupuestaria
+bc <- data.frame(c1 = seq(0, I, length.out = 100))
+bc$c2 <- I - bc$c1
+
+# 4. Punto óptimo
+opt_c1 <- alpha * I
+opt_c2 <- (1 - alpha) * I
+opt_point <- data.frame(c1 = opt_c1, c2 = opt_c2)
+
+# 5. Graficar
+ggplot() +
+  # Curvas de indiferencia
+  geom_contour(data = grid, aes(x = c1, y = c2, z = U), 
+               breaks = U_levels, color = "gray40") +
+  
+  # Restricción presupuestaria
+  geom_line(data = bc, aes(x = c1, y = c2), color = "red", size = 1.2) +
+  
+  # Punto óptimo
+  geom_point(data = opt_point, aes(x = c1, y = c2), color = "blue", size = 3) +
+  geom_text(data = opt_point, aes(x = c1 + 0.1, y = c2 + 0.3), 
+            label = "Óptimo", color = "blue", size = 5, hjust = 0) +
+  
+  # Etiquetas
+  annotate("text", x = 3.9, y = 0.2, label = "Recta presupuestaria", size = 5) +
+  annotate("text", x = 3.9, y = 2.6, label = "Curva de indiferencia", size = 5) +
+
+  # Ejes sólidos
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.8) +
+  geom_vline(xintercept = 0, color = "black", linewidth = 0.8) +
+
+  # Ejes y tema
+  labs(x = expression(c[1]), y = expression(c[2])) +
+  scale_x_continuous(breaks = seq(0, 5, by = 1), limits = c(0, 5)) +
+  scale_y_continuous(breaks = seq(0, 5, by = 1), limits = c(0, 5)) +
+  theme_minimal(base_size = 16)
+
+
+```
+
+
+
+---
+# Método lagrangiano
+
+Si queremos maximizar  la función $f(x,y)$ sujeto a $g(x,y) = 0$, el Lagrangiano es: 
+$$\mathcal{L}(x,y,\lambda) = f(x,y) + \lambda g(x,y)$$ 
+
+Donde $\lambda$ se define como el **multiplicador lagrangiano**. 
+
+Podemos resolver el problema de maximización encontrando los valores de ${x,y,\lambda}$ que resuelvan el siguiente sistema de .red[Condiciones de Primer Orden (CPO)]: 
+
+$$\begin{align*}
+\frac{\partial \mathcal{L}(x,y,\lambda)}{\partial x} &= 0\\
+\frac{\partial \mathcal{L}(x,y,\lambda)}{\partial y} &=0 \\
+\frac{\partial \mathcal{L}(x,y,\lambda)}{\partial \lambda} &=0  
+\end{align*}$$
+
+
+
+---
+
+# Método lagrangiano
+
+Si queremos maximizar  la función $f(x,y)$ sujeto a $g(x,y) = 0$, el Lagrangiano es: 
+$$\mathcal{L}(x,y,\lambda) = f(x,y) + \lambda g(x,y)$$ 
+
+Donde $\lambda$ se define como el **multiplicador lagrangiano**. 
+
+Podemos resolver el problema de maximización encontrando los valores de ${x,y,\lambda}$ que resuelvan el siguiente sistema de .red[Condiciones de Primer Orden (CPO)]: 
+
+$$\begin{align*}
+\frac{\partial \mathcal{L}(x,y,\lambda)}{\partial x} = 0 &\implies \color{red}{\frac{\partial f(x,y)}{\partial x} + \lambda \frac{\partial g(x,y)}{\partial x} = 0} \\
+\frac{\partial \mathcal{L}(x,y,\lambda)}{\partial y} = 0 &\implies \color{red}{\frac{\partial f(x,y)}{\partial y} + \lambda \frac{\partial g(x,y)}{\partial y} = 0} \\
+\frac{\partial \mathcal{L}(x,y,\lambda)}{\partial \lambda} = 0 &\implies \color{red}{g(x,y) = 0}
+\end{align*}$$
+
+---
+
+# Solución al problema del consumidor
+
+El Lagrangiano del problema del consumidor es: 
+
+$$\mathcal{L}(c_1, c_2, \lambda) = \theta_1 \log c_{1} + \theta_2 \log c_{2} + \lambda (wL- p_{1}c_{1} - p_{2}c_2)$$
+
+Las CPO quedan de la siguiente forma: 
+
+$$\begin{align*}
+[c_{1}] = \frac{\partial \mathcal{L}(c_1, c_2, \lambda)}{\partial c_{1}} = 0 
+&\implies \color{red}{\frac{\partial (\theta_{1}\log c_{1} + \theta_{2} \log c_{2})}{\partial c_{1}} + \lambda \frac{\partial (wL - p_{1}c_{1} - p_{2}c_{2})}{\partial c_{1}}} = 0 \\
+[c_{2}] = \frac{\partial \mathcal{L}(c_1, c_2, \lambda)}{\partial c_{2}} = 0 
+&\implies \color{red}{\frac{\partial (\theta_{1}\log c_{1} + \theta_{2} \log c_{2})}{\partial c_{2}} + \lambda \frac{\partial (wL - p_{1}c_{1} - p_{2}c_{2})}{\partial c_{2}}} = 0 \\
+[\lambda] = \frac{\partial \mathcal{L}(c_{1}, c_{2}, \lambda)}{\partial \lambda} = 0 
+&\implies \color{red}{wL - p_{1}c_{1} - p_{2}c_{2}} = 0
+\end{align*}$$
+
+---
+
+# Solución al problema del consumidor
+
+El Lagrangiano del problema del consumidor es: 
+
+$$\mathcal{L}(c_1, c_2, \lambda) = \theta_1 \log c_{1} + \theta_2 \log c_{2} + \lambda (wL- p_{1}c_{1} - p_{2}c_2)$$
+
+Las CPO quedan de la siguiente forma: 
+
+$$\begin{align*}
+[c_{1}] = \frac{\partial \mathcal{L}(c_1, c_2, \lambda)}{\partial c_{1}} = 0 
+&\implies \color{red}{\frac{\theta_{1}}{c_{1}} - \lambda p_{1} = 0} \\
+[c_{2}] = \frac{\partial \mathcal{L}(c_1, c_2, \lambda)}{\partial c_{2}} = 0 
+&\implies \color{red}{\frac{\theta_{2}}{c_{2}} - \lambda p_{2} = 0} \\
+[\lambda] = \frac{\partial \mathcal{L}(c_{1}, c_{2}, \lambda)}{\partial \lambda} = 0 
+&\implies \color{red}{wL - p_{1}c_{1} - p_{2}c_{2} = 0}
+\end{align*}$$
+
+
+--
+
+* Tenemos un sistema de tres ecuaciones con tres incognitas ${c_1, c_{2}, \lambda}$
+
+* El sistema está identificado, podemos encontrar una solución **única**. 
+
+* Nota: Para una solución única, no podemos tener que una ecuación sea una combinación de las otras dos. 
+
+
+---
+
+# Resolviendo el sistema de ecuaciones
+
+Podemos reordenar el sistema de ecuaciones de la siguiente forma: 
+
+$$\begin{align*}
+\color{red}{\frac{\theta_{1}}{c_{1}}} &= \color{red}{\lambda p_1} \\
+\color{red}{\frac{\theta_{2}}{c_{2}}} &= \color{red}{\lambda p_{2}} \\
+\color{red}{wL} &= \color{red}{p_1 c_{1} + p_{2} c_{2}}
+\end{align*}$$
+Utilizando las primeras dos CPO, podemos encontrar el consumo relativo ($\lambda$ desaparece): 
+
+$$\color{red}{\frac{(\frac{\theta_{1}}{c_1})}{(\frac{\theta_{2}}{c_{2}})}=\frac{\lambda p_{1}}{\lambda p_2}} \implies \color{blue}{\frac{\theta_1 c_{2}}{\theta_{2}c_{1}} = \frac{p_1}{p_2}} \implies \color{purple} {c_2 = \frac{\theta_2 p_{1}}{\theta_{1}p_{2}}c_1}$$
+
+---
+# Solución al sistema de ecuaciones
+
+Tomando las productividades relativas 
+
+$$\color{purple}{c_{2} = \frac{\theta_{2}p_1}{\theta_1 p_2}c_1}$$
+Combinando la ecuación anterior con la recta presupuestaria tenemos que: 
+
+$$\color{red}{wL = p_{1} c_{1} + p_{2}}\left(\color{purple}{\frac{\theta_{2}p_1}{\theta_1 p_2}c_1}\right) \implies \color{red}{wL = p_1 c_1 +} \left( \color{purple}{\frac{\theta_2}{\theta_1}p_1 c_1}\right)$$
+Reordenando para $c_1$ tenemos: 
+
+$$\color{red}{c_1 = \frac{wL}{p_1}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}$$
+Podemos hacer algo parecido para encontrar $c_{2}$. 
+
+---
+# Solucion al problema del consumidor 
+
+$$\begin{align*}
+&\color{red}{c_1 = \frac{wL}{p_1} \left( \frac{\theta_1}{\theta_1 + \theta_2} \right)} \\
+&\color{red}{c_2 = \frac{wL}{p_2} \left( \frac{\theta_2}{\theta_1 + \theta_2} \right)}
+\end{align*}$$
+Nota: Las preferencias de tipo Cobb-Douglas implican que los gastos son constantes y proporcionales en ambos bienes: 
+
+$$\frac{p_1 c_1 }{wL} = \left( \frac{\theta_1}{\theta_1 + \theta_2} \right)$$
+* El consumo del bien 1 no depende del precio del bien 2
+
+---
+# Solución al problema de las empresas 
+
+Las empresas que producen $m$ resuelven: 
+
+$$\begin{align*}
+ \max_{[y_m, l_m]} \quad & p_{m} y_{m} - w_{m} l_{m}\\
+ \text{sujeto a} \quad & y_{m} = \frac{1}{a_m}l_m 
+\end{align*}$$
+
+Aquí no necesitamos un Lagrangiano: 
+  - Sustituimos la función de producción en lugar de la producción en el problema de optimización. 
+  - Hacemos esto porque sabemos $l_m \implies$ sabemos $y_m$. 
+  - Si hacemos el Lagrangiano llegamos al mismo resultado. 
+
+---
+
+# Solución al problema de las empresas 
+
+Las empresas que producen $m$ resuelven: 
+
+$$\begin{align*}
+ \max_{[l_m]} \quad & p_{m} \color{red}{\left(\frac{1}{a_m}l_m \right)} - w_{m} l_{m}\\
+ \text{sujeto a} \quad & y_{m} = \frac{1}{a_m}l_m 
+\end{align*}$$
+
+
+Tomando la primera derivada parcial (CPO): 
+
+$$[l_m] = \frac{\color{red}{\partial \left( p_m \left(\frac{1}{a_m}l_m \right) - w_m l_m \right)}}{\color{red}{\partial l_m}} = 0 
+\implies 
+\color{red}{
+\overbrace{\frac{p_m}{a_m}}^{\text{Ingreso marginal}} 
+= 
+\overbrace{w}^{\text{Costo marginal}}
+}$$
+  .red[Importante: Esto solo funciona para soluciones interiores] ($\color{red}{l_{m}>0}$). Necesitamos más información para una solución de esquina ($l_{m}=0$)]. 
+
+---
+# Solución al problema de las empresas
+
+**Solución interior**
+
+* Si $l_m > 0$ debemos tener que $\color{red}{\frac{p_m}{a_m} = w}$ en equilibrio. 
+
+**Solución de esquina**
+
+* Las empresas no escogen precios. ¿Qué pasa si $\color{red}{\frac{p_m}{a_m}<w}$?
+  - Las empresas no producirán $m$ en equilibrio.
+  - Sea $\pi_m (l_m)$ la función que representa los beneficios de la empresa $m$ cuando utiliza $l_m$ unidades de trabajo: 
+  
+  $$\color{red}{\pi_m (l_m) = \overbrace{\left(\frac{p_m}{a_m}-w \right)}^{\text{Negativo}}l_m}$$; maximizada en $\color{red}{\pi_m(0) = 0}$
+  
+---
+
+# Solución al problema de las empresas
+
+**Solución interior**
+
+* Si $l_m > 0$ debemos tener que $\color{red}{\frac{p_m}{a_m} = w}$ en equilibrio. 
+
+**Solución de esquina**
+
+* Las empresas no escogen precios. ¿Qué pasa si $\color{red}{\frac{p_m}{a_m}>w}$?
+  - Nunca sucederá en equilibrio
+
+  $$\color{red}{\pi_m (l_m) = \overbrace{\left(\frac{p_m}{a_m}-w \right)}^{\text{Positivo}}l_m}$$; maximizada en $\color{red}{\pi_m(\infty) = \infty}$
+  
+* Las empresaas producirán infinitamente y los precios nunca se ajustarán. 
+---
+
+# Solución de equilibrio 
+
+**Incognitas de equilibrio**: precios $\{p_1, p_2\}$, salarios $\{w_1, w_2\}$, y asignaciones $\{c,l,y\}_{i \in \{D,E\}}$
+
+
+**Ecuaciones de equilibrio**: 
+  - Optimización del consumo en cada país, $i = D,E$
+
+$$\color{red}{c_{1}^{i} = \frac{w^{i}L^{i}}{p_1} \left( \frac{\theta_{1}}{\theta_{1} + \theta_{2}} \right) ; c_{2}^{i} = \frac{w^{i}L^{i}}{p_{2}} \left( \frac{\theta_{2}}{\theta_{1}+ \theta_{2}}\right)}$$
+  - Optimización de la producción en cada país $i = D,E$, para cada bien, $m=1,2$
+  
+  $$\color{red}{\frac{p_m}{a_{m}^{i}}, \text{  si  } l_{m}^{i}>0}$$
+  
+  Con función de producción: $\color{red}{y_{m}^{i}=\frac{1}{a_{m}}l_{m}^{i}}$
+  - Los mercados de trabajo y bienes se vacían. 
+---
+
+class: inverse, middle
+
+# Solución del equilibrio en autarquía
+
+
+---
+
+# Solución del modelo en autarquía 
+
+Para encontrar la solución de equilibrio en autarquía debemos encontrar los precios $\{p_1, p_2\}$, salarios $\{w\}$ y asignaciones, $\{c_1, c_2, l_1, l_2; y_1, y_2\}$ tales que: 
+
+* Las condiciones de optimización de los consumidores se mantengan: 
+$$\color{red}{c_{1} = \frac{wL}{p_1} \left( \frac{\theta_{1}}{\theta_{1} + \theta_{2}} \right) ; c_{2} = \frac{wL}{p_{2}} \left( \frac{\theta_{2}}{\theta_{1}+ \theta_{2}}\right)}$$
+
+* Las empresas optimicen la producción de los bienes $m=1,2$: 
+
+$$\color{red}{\frac{p_m}{a_m} = w, \text{   si   } l_m > 0}$$
+* Los mercados se vacían: $l_1+l_2=L$ y $c_1=y_1, c_2=y_2$
+---
+
+# Solución del equilibrio (autarquía)
+
+**Paso 1:** Utilizar la condición de vaciado de mercado de bienes ($\color{red}{y_m=c_m}$)  y los precios de equilibrio ($\color{red}{w=p_m/a_m}$) de las empresas en la ecuación de los consumidores. 
+
+$$\color{red}{y_1} = \frac{\color{red}{(p_1/a_1)}L}{p_1} \left( \frac{\theta_1}{\theta_1 + \theta_2}\right); \color{red}{y_2}=\frac{\color{red}{(p_2/a_2)}L}{p_2}\left(\frac{\theta_2}{\theta_1 + \theta_2} \right)$$
+
+Haciendo un poco de algebra (precios) encontramos las **asignaciones para los bienes**:
+
+$$\color{red}{y_1 = \frac{1}{a_1}L\left( \frac{\theta_1}{\theta_1 + \theta_{2}}\right)};  \color{red}{ y_2 = \frac{1}{a_2}L \left(\frac{\theta_2}{\theta_1 + \theta_2}\right)}$$
+
+---
+
+# Solución del equilibrio (autarquía)
+
+**Paso 2:** Insertar la asignación de bienes en la **función de producción** para encontrar la demanda de trabajo:
+
+$$l_m =a_m\color{red}{\left(\frac{1}{a_1}L \left(\frac{\theta_1}{\theta_1 + \theta_2}\right)\right)} \implies \color{red}{l_m = L\left( \frac{\theta_1}{\theta_1 + \theta_2}\right)}, m = 1,2$$
+
+**Paso 3:** Cuando calculamos los **precios**, solo importan los precios .hi-pink[relativos]. Ya conocemos los precios relativos (bienes respecto al salario) de las CPO: 
+
+$$ \color{red}{\frac{p_m}{w}=a_m}, m = 1,2  $$
+Terminamos. No necesitamos saber $w$, toda vez que $w/w=1$. Normalmente normalizamos $w=1$ para ordenar los resultados
+
+$$\color{red}{w = 1, p_1 = a_1, p_2 = a_2}$$
+
+
+---
+# Equilibrio en autarquía
+
+* Hasta aquí hemos aprendido a resolver el modelo más sencillo. 
+
+* Aprendimos algunas cosas sobre los supuestos del modelo: 
+  - Preferencias Cobb-Douglas $\implies$ proporción constante en el gasto. La asignación de trabajo no depende de la productividad del bien. 
+  - Solo importan los .hi-pink[precios relativos]. Reducimos los objetos a encontrar en el equilibrio al normalizar $w=1$. 
+  - **Ley de Walras** (de forma general): en los modelos de equilibrio general, si se cumplen todas las restricciones de equilibrio menos una, entonces la última se cumple automáticamente.
+  - Nota que no hemos utilizado la condición de vaciado del mercado de trabajo. 
+  - Podemos sustituir el vaciado del mercado por otra condición y llegamos al mismo resultado. 
+
+---
+
+class: inverse, middle
+
+.bigger[.center[.white[**Solución del equilibrio en libre comercio**]]]
+
+
+---
+
+# Solución del equilibrio: Libre comercio
+
+* El cambio más importante está en la condición de vaciado de los mercados. 
+
+* Existen múltiples resultados potenciales (un país se especializa, ambos se especializan)
+
+* Dos supuestos hacen las cosas más sencillas: 
+  1. Supongamos que $a_{1}^{D}/a_{2}^{D} < a_{1}^{E}/a_{2}^{E}$. El país **doméstico** tiene ventaja comparativa en producir el .blue[Bien 1]. 
+  
+  2. Supongamos que en el equilibrio existe especialización completa. 
+  
+¿Cómo sabemos que el segundo supuesto se cumple? .hi-pink[No sabemos]. Podemos utilizar este supuesto y revisar si funciona. 
+
+* Si el supuesto no es válido vamos a encontrar valores negativos en precios o cantidades. 
+
+---
+
+# Discusión sobre los supuestos
+
+* En economía, es muy importante entender los supuestos de cada modelo que estudiemos. 
+
+* ¿Qué otros supuestos estamos haciendo y por qué? 
+  - .hi-pink[Los países tienen las mismas preferencias].
+  - .hi-pink[Se producen y consumen únicamente dos bienes].
+  - .hi-red[Existen solo dos países].
+  
+* ¿Por qué lo hacemos?
+   - Hace la notación y el álgebra más sencilla. 
+   - Cada país tiene el mismo conjunto relativo de bienes de consumo. 
+
+---
+exclude: true
+
+```{R generate pdfs, include = F, eval = F}
+#remotes::install_github('rstudio/pagedown')
+library(pagedown)
+pagedown::chrome_print("02-ricardian.html", output = "02-ricardian.pdf")
+```

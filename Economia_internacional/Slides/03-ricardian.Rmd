@@ -1,42 +1,70 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>I9387: Clase 2</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="Emmanuel Anguiano" />
-    <script src="03-ricardian_files/header-attrs/header-attrs.js"></script>
-    <link href="03-ricardian_files/remark-css/default.css" rel="stylesheet" />
-    <link href="03-ricardian_files/remark-css/metropolis.css" rel="stylesheet" />
-    <link href="03-ricardian_files/remark-css/metropolis-fonts.css" rel="stylesheet" />
-    <link rel="stylesheet" href="my-css.css" type="text/css" />
-  </head>
-  <body>
-    <textarea id="source">
-class: center, middle, inverse, title-slide
-
-.title[
-# I9387: Clase 2
-]
-.subtitle[
-## Modelo ricardiano (Libre comercio)
-]
-.author[
-### Emmanuel Anguiano
-]
-.date[
-### Otoño 2025
-]
+---
+title: "I9387: Clase 2"
+subtitle: "Modelo ricardiano (Libre comercio)"
+author: "Emmanuel Anguiano"
+date: "Otoño 2025"
+output:
+  xaringan::moon_reader:
+    css: ['default', 'metropolis', 'metropolis-fonts', 'my-css.css']
+    self_contained: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
 
 ---
 
 
 
-
 class: inverse, middle
 
+```{r Setup, include = F}
+options(htmltools.dir.version = FALSE)
+library(pacman)
+p_load(ggthemes, viridis, knitr, dslabs, gapminder, extrafont, Ecdat, wooldridge, tidyverse, magrittr)
+#devtools::install_github("R-CoderDotCom/econocharts")
 
+library(econocharts)
+# Define colors
+red_pink <- "#e64173"
+met_slate <- "#272822" 
+turquoise <- "#20B2AA"
+orange <- "#FFA500"
+red <- "#fb6107"
+blue <- "#2b59c3"
+green <- "#8bb174"
+grey_light <- "grey70"
+grey_mid <- "grey50"
+grey_dark <- "grey20"
+purple <- "#6A5ACD"
+slate <- "#314f4f"
+# Notes directory
+dir_slides <- "~/Semana 1/01-Intro"
+# Knitr options
+opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  fig.height = 7,
+  fig.width = 10.5,
+  warning = F,
+  message = F
+)  
+opts_chunk$set(dev = "svg")
+options(device = function(file, width, height) {
+  svg(tempfile(), width = width, height = height)
+})
+options(crayon.enabled = F)
+options(knitr.table.format = "html")
+```
 
-
+```{css, echo = F, eval = F}
+@media print {
+  .has-continuation {
+    display: block !important;
+  }
+}
+```
 
 # Prólogo 
 ---
@@ -67,7 +95,7 @@ class: inverse, middle
 
 # Ley de Walras
 
-&gt; En los modelos de equilibrio general, si todas menos una de las ecuaciones de equilibrio se mantiene, entonces la última ecuación estará en equilibrio automáticamente.
+> En los modelos de equilibrio general, si todas menos una de las ecuaciones de equilibrio se mantiene, entonces la última ecuación estará en equilibrio automáticamente.
 
 
 --
@@ -87,7 +115,7 @@ class: inverse, middle
 
 class: inverse, middle
 
-.bigger[.center[.white[**Solución del modelo en equilibrio: &lt;br&gt; Libre comercio**]]]
+.bigger[.center[.white[**Solución del modelo en equilibrio: <br> Libre comercio**]]]
 
 ---
 # Equilibrio de libre comercio
@@ -98,7 +126,7 @@ Existen múltiples resultados potenciales: un país se especializa o ambos se es
 
 * Podemos hacer dos supuestos para simplificar el modelo: 
 
-1. Supongamos que `\(a_{1}^{D}/a_{2}^{D}&lt;a_{1}^{E}/a_{2}{E}\)`. Esto implica que el país .blue[Doméstico] tiene ventaja comparativa en el **Bien 1**.
+1. Supongamos que $a_{1}^{D}/a_{2}^{D}<a_{1}^{E}/a_{2}{E}$. Esto implica que el país .blue[Doméstico] tiene ventaja comparativa en el **Bien 1**.
 
 2. Supongamos que existe la especialización completa en el equilibrio. 
   - Existen varios escenarios que examinaremos rápidamente en la siguientes diapositivas. 
@@ -117,7 +145,7 @@ $$ \color{red}{RS = \frac{(Q_x^D +Q_x^E)}{Q_y^D+Q_y^E}}$$
 
 class: inverse, middle
 
-.bigger[.center[.white[**Derivación del equilibrio: &lt;br&gt; Curvas de oferta y demanda relativa**]]]
+.bigger[.center[.white[**Derivación del equilibrio: <br> Curvas de oferta y demanda relativa**]]]
 
 
 
@@ -125,15 +153,23 @@ class: inverse, middle
 
 # Derivación de curva de oferta relativa 
 
-&lt;img src="figures/OR_0.png" width="60%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="60%", echo=FALSE}
 
-Supongamos que `\(\color{red}{\left(\frac{a_1^D}{a_2^D}\right)&lt;\left(\frac{a_1^E}{a_2^D}\right)}\)`. Así, el país .blue[Doméstico] tiene ventaja comparativa en el **Bien 1**. &lt;br&gt; (El Bien 1 tiene un costo de oportunidad menor en términos del Bien 2 en el país Doméstico en comparación con el Extranjero).
+knitr::include_graphics("figures/OR_0.png")
+
+```
+
+Supongamos que $\color{red}{\left(\frac{a_1^D}{a_2^D}\right)<\left(\frac{a_1^E}{a_2^D}\right)}$. Así, el país .blue[Doméstico] tiene ventaja comparativa en el **Bien 1**. <br> (El Bien 1 tiene un costo de oportunidad menor en términos del Bien 2 en el país Doméstico en comparación con el Extranjero).
 
 ---
 # Derivación de curva de oferta relativa
 
-&lt;img src="figures/OR_1.png" width="60%" style="display: block; margin: auto;" /&gt;
-**Caso 1**: `\(\color{red}{\left(\frac{p_1}{p_2}\right)&lt; \left(\frac{a_1^D}{a_2^D}\right) &lt; \left(\frac{a_1^E}{a_2^E}\right)} \implies\)` .red[Ninguno de los países producirá el **Bien 1**] &lt;br&gt;
+```{r, out.width="60%", echo=FALSE}
+
+knitr::include_graphics("figures/OR_1.png")
+
+```
+**Caso 1**: $\color{red}{\left(\frac{p_1}{p_2}\right)< \left(\frac{a_1^D}{a_2^D}\right) < \left(\frac{a_1^E}{a_2^E}\right)} \implies$ .red[Ninguno de los países producirá el **Bien 1**] <br>
 $$ \color{red}{RS = \frac{(0 + 0 )}{Q_y^D+Q_y^E}} = 0, \text{  donde  } Q_2^D=\frac{L^D}{a_2^D} \text{  y } Q_2^E=\frac{L^E}{a_2^E}$$
 
 
@@ -141,24 +177,36 @@ $$ \color{red}{RS = \frac{(0 + 0 )}{Q_y^D+Q_y^E}} = 0, \text{  donde  } Q_2^D=\f
 ---
 # Derivación de curva de oferta relativa
 
-&lt;img src="figures/OR_2.png" width="55%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="55%", echo=FALSE}
 
-**Caso 2**: `\(\color{red}{\left(\frac{p_1}{p_2}\right) = \left(\frac{a_1^D}{a_2^D}\right) &lt; \left(\frac{a_1^E}{a_2^E}\right)} \implies\)` .red[El país Doméstico es indiferente entre producir el Bien 1 y el Bien 2] &lt;br&gt;
+knitr::include_graphics("figures/OR_2.png")
+
+```
+
+**Caso 2**: $\color{red}{\left(\frac{p_1}{p_2}\right) = \left(\frac{a_1^D}{a_2^D}\right) < \left(\frac{a_1^E}{a_2^E}\right)} \implies$ .red[El país Doméstico es indiferente entre producir el Bien 1 y el Bien 2] <br>
 $$ \color{red}{RS = \frac{(0 + 0 )}{Q_y^D+Q_y^E}} = 0, \text{  donde  } Q_1^D\in \left[0, \frac{L^D}{a_1^D}\right] \text{  ; } Q_2^E=\frac{L^D-a_1^DQ_1^D}{a_2^D} \text{  y  } Q_2^E= \frac{L^E}{a_2^E}$$
 ---
 
 # Derivación de curva de oferta relativa
 
-&lt;img src="figures/OR_3.png" width="55%" style="display: block; margin: auto;" /&gt;
-**Caso 3**: `\(\color{red}{\left(\frac{a_1^D}{a_2^D}\right) &lt; \left(\frac{p_1}{p_2}\right)} &lt; \left(\frac{a_1^E}{a_2^E}\right) \implies\)` .red[El país Doméstico produce solamente el Bien 1. El país Extranjero produce únicamente el Bien 2]. &lt;br&gt;
+```{r, out.width="55%", echo=FALSE}
 
-`$$RS = \left(\frac{Q_1^D+0}{0+Q_2^D}\right) \text{  donde  } Q_1^D=\frac{L^D}{a_1^D} \text{   y  } Q_2^E = \frac{L^D}{a_2^E}$$`
+knitr::include_graphics("figures/OR_3.png")
+
+```
+**Caso 3**: $\color{red}{\left(\frac{a_1^D}{a_2^D}\right) < \left(\frac{p_1}{p_2}\right)} < \left(\frac{a_1^E}{a_2^E}\right) \implies$ .red[El país Doméstico produce solamente el Bien 1. El país Extranjero produce únicamente el Bien 2]. <br>
+
+$$RS = \left(\frac{Q_1^D+0}{0+Q_2^D}\right) \text{  donde  } Q_1^D=\frac{L^D}{a_1^D} \text{   y  } Q_2^E = \frac{L^D}{a_2^E}$$
 ---
 
 # Derivación de curva de oferta relativa
 
-&lt;img src="figures/OR_4.png" width="55%" style="display: block; margin: auto;" /&gt;
-**Caso 4**: `\(\left(\frac{a_1^D}{a_2^D}\right) &lt;\left(\frac{a_1^E}{a_2^E}\right) \color{red}{=\left(\frac{p_1}{p_2}\right)} \implies\)` .red[El país Extranjero es indiferente entre producir ambos bienes] &lt;br&gt;
+```{r, out.width="55%", echo=FALSE}
+
+knitr::include_graphics("figures/OR_4.png")
+
+```
+**Caso 4**: $\left(\frac{a_1^D}{a_2^D}\right) <\left(\frac{a_1^E}{a_2^E}\right) \color{red}{=\left(\frac{p_1}{p_2}\right)} \implies$ .red[El país Extranjero es indiferente entre producir ambos bienes] <br>
 
 $$RS = \left(\frac{Q_1^D+Q_1^E}{0+Q_2^E}\right) , \text{  donde } Q_1^D=\frac{L^D}{a_1^D} \text{  y } Q_2^E\in \left[0, \frac{L^E}{a_2^E}\right]; Q_1^E=\frac{L^E-a_2^EQ_2^E}{a_1^E} $$
 
@@ -167,8 +215,12 @@ $$RS = \left(\frac{Q_1^D+Q_1^E}{0+Q_2^E}\right) , \text{  donde } Q_1^D=\frac{L^
 
 # Derivación de curva de oferta relativa
 
-&lt;img src="figures/OR_4.png" width="55%" style="display: block; margin: auto;" /&gt;
-**Caso 5**: `\(\left(\frac{a_1^D}{a_2^D}\right) &lt;\left(\frac{a_1^E}{a_2^E}\right) \color{red}{&lt;\left(\frac{p_1}{p_2}\right)} \implies\)` .red[Ninguno de los países producirá el Bien 2] &lt;br&gt;
+```{r, out.width="55%", echo=FALSE}
+
+knitr::include_graphics("figures/OR_4.png")
+
+```
+**Caso 5**: $\left(\frac{a_1^D}{a_2^D}\right) <\left(\frac{a_1^E}{a_2^E}\right) \color{red}{<\left(\frac{p_1}{p_2}\right)} \implies$ .red[Ninguno de los países producirá el Bien 2] <br>
 
 $$RS = \left(\frac{Q_1^D+Q_1^E}{0+0}\right) = \infty , \text{  donde } Q_1^D=\frac{L^D}{a_1^D} \text{  y } Q_1^E=\frac{L^E}{a_1^E} $$
 
@@ -176,10 +228,14 @@ $$RS = \left(\frac{Q_1^D+Q_1^E}{0+0}\right) = \infty , \text{  donde } Q_1^D=\fr
 ---
 # Equilibrio y Demanda Relativa
 
-&lt;img src="figures/Oferta_demanda_relativa.png" width="55%" style="display: block; margin: auto;" /&gt;
-Encontramos el equilibrio cuando `\(OR=DR\)`. Esto sucede en el punto .red[Equilibrio 1]. &lt;br&gt;
+```{r, out.width="55%", echo=FALSE}
 
-Por lo tanto, `\(\left(\frac{a_1^D}{a_2^D}\right) \color{red}{&lt;\left(\frac{p_1}{p_2}\right) &lt; \left(\frac{a_1^E}{a_2^E}\right)} \implies\)` .red[El país Doméstico solo produce el Bien 1. El país Extranjero solo produce el Bien 2]
+knitr::include_graphics("figures/Oferta_demanda_relativa.png")
+
+```
+Encontramos el equilibrio cuando $OR=DR$. Esto sucede en el punto .red[Equilibrio 1]. <br>
+
+Por lo tanto, $\left(\frac{a_1^D}{a_2^D}\right) \color{red}{<\left(\frac{p_1}{p_2}\right) < \left(\frac{a_1^E}{a_2^E}\right)} \implies$ .red[El país Doméstico solo produce el Bien 1. El país Extranjero solo produce el Bien 2]
 
 
 
@@ -187,14 +243,22 @@ Por lo tanto, `\(\left(\frac{a_1^D}{a_2^D}\right) \color{red}{&lt;\left(\frac{p_
 
 # Equilibrio y Demanda Relativa
 
-&lt;img src="figures/Oferta_demanda_relativa_2.png" width="55%" style="display: block; margin: auto;" /&gt;
-Diferentes curvas de DR conllevan diferentes equilibrios. La nueva curva de DR intersecta la OR en el .red[Equilibrio 2] `\(\implies \color{red}{\left(\frac{p_1}{p_2}\right)=\left(\frac{a_1^D}{a_2^D}\right) &lt; \left(\frac{a_1^E}{a_2^E}\right)} \implies\)` .red[El país Doméstico es indiferente entre producir ambos bienes. El país Extranjero solo produce el Bien 2]
+```{r, out.width="55%", echo=FALSE}
+
+knitr::include_graphics("figures/Oferta_demanda_relativa_2.png")
+
+```
+Diferentes curvas de DR conllevan diferentes equilibrios. La nueva curva de DR intersecta la OR en el .red[Equilibrio 2] $\implies \color{red}{\left(\frac{p_1}{p_2}\right)=\left(\frac{a_1^D}{a_2^D}\right) < \left(\frac{a_1^E}{a_2^E}\right)} \implies$ .red[El país Doméstico es indiferente entre producir ambos bienes. El país Extranjero solo produce el Bien 2]
 
 ---
 
 # Demanda relativa (Equilibrio)
 
-&lt;img src="figures/Oferta_demanda_relativa.png" width="60%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="60%", echo=FALSE}
+
+knitr::include_graphics("figures/Oferta_demanda_relativa.png")
+
+```
 * Resolvemos el modelo suponiendo que un patrón de especialización completa de los países. Ambos se especializan en un solo producto e intercambian. 
 
 * Más adelante podemos revisar si el supuesto es válido. 
@@ -203,7 +267,11 @@ Diferentes curvas de DR conllevan diferentes equilibrios. La nueva curva de DR i
 
 # Demanda relativa (Equilibrio)
 
-&lt;img src="figures/Oferta_demanda_relativa_2.png" width="60%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="60%", echo=FALSE}
+
+knitr::include_graphics("figures/Oferta_demanda_relativa_2.png")
+
+```
 * En este nuevo equilibrio, el país .blue[Doméstico] produce ambos bienes y el país .red[Extranjero] solo produce el bien 2. .hi-pink[No es una solución de equilibrio válida] ¿Por qué? 🤷🏽‍♀️ 
 
 * Siendo rigurosos debemos resolver todos los posibles escenarios de especialización. 
@@ -213,7 +281,7 @@ Diferentes curvas de DR conllevan diferentes equilibrios. La nueva curva de DR i
 ---
 # Definición de equilibrio 
 
-En el equilibrio encontramos el conjunto de precios `\(\{p_1,p_2\}\)`, salarios `\(\{w_1, w_2\}\)` y las asignaciones de consumo y produccion domésticas y extranjeras `\(\{c_1^{i}, c_2^{i}, y_{1}^{i}, y_{2}^{i}\}_{i \in [D,E]}\)`, sujetos a: 
+En el equilibrio encontramos el conjunto de precios $\{p_1,p_2\}$, salarios $\{w_1, w_2\}$ y las asignaciones de consumo y produccion domésticas y extranjeras $\{c_1^{i}, c_2^{i}, y_{1}^{i}, y_{2}^{i}\}_{i \in [D,E]}$, sujetos a: 
 
 1. Los consumidores maximizan su utilidad. 
 
@@ -222,21 +290,21 @@ En el equilibrio encontramos el conjunto de precios `\(\{p_1,p_2\}\)`, salarios 
 3. Los mercados se vacían. 
 
 
-**Incognitas de equilibrio**: precios `\(\{p_1,p_2\}\)`, salarios `\(\{w_1, w_2\}\)` y las asignaciones de consumo y produccion domésticas y extranjeras `\(\{c_1^{i}, c_2^{i}, y_{1}^{i}, y_{2}^{i}\}_{i \in [D,E]}\)`
+**Incognitas de equilibrio**: precios $\{p_1,p_2\}$, salarios $\{w_1, w_2\}$ y las asignaciones de consumo y produccion domésticas y extranjeras $\{c_1^{i}, c_2^{i}, y_{1}^{i}, y_{2}^{i}\}_{i \in [D,E]}$
 
 
 ---
 
 # Ecuaciones de equilibrio
 
-* La optimización del consumo en cada país, `\(i=D,E\)`
+* La optimización del consumo en cada país, $i=D,E$
 
 $$\color{red}{c_1^{i}= \frac{w^i L^i}{p_1}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right); \text{  }c_2 ^i = \frac{w^i L^i}{p_2^i}\left(\frac{\theta_2}{\theta_1 + \theta_2}\right)} $$
-* La optimización de las empresas en cada país, `\(i = D,E\)` para cada bien, `\(m=1,2\)`: 
+* La optimización de las empresas en cada país, $i = D,E$ para cada bien, $m=1,2$: 
 
-`$$\color{red}{\frac{p_m}{a^i_m} = w^i}, \quad \text{si } l_m^i &gt; 0; \qquad 
+$$\color{red}{\frac{p_m}{a^i_m} = w^i}, \quad \text{si } l_m^i > 0; \qquad 
 \text{la función de producción: } 
-\color{red}{y_m^i = \frac{1}{a_m^i} l_m^i}$$`
+\color{red}{y_m^i = \frac{1}{a_m^i} l_m^i}$$
 
 *Las condiciones de vaciado de los mercados se presentan más adelante*
 
@@ -244,16 +312,16 @@ $$\color{red}{c_1^{i}= \frac{w^i L^i}{p_1}\left(\frac{\theta_1}{\theta_1 + \thet
 
 # Ecuaciones de equilibrio
 
-* Vaciado del mercado de trabajo para cada país, `\(i=D,E\)`: 
+* Vaciado del mercado de trabajo para cada país, $i=D,E$: 
 
-`$$\color{red}{l_1^i + l_2^i = L^i}$$`
+$$\color{red}{l_1^i + l_2^i = L^i}$$
 La demanda de trabajo es igual a la oferta. 
 
 
 Para el mercado de bienes para cada uno tenemos que: 
 
 $$ \overbrace{\color{red}{c_1^D + c_1^E}}^{\text{Consumo mundial del Bien 1}} \color{red}{= \overbrace{y_1^D+y_1^E}^{\text{Consumo mundial del Bien 2}}}$$
-`$$\color{red}{c_2^D + c_2^E = y_2^D+y_2^E}$$`
+$$\color{red}{c_2^D + c_2^E = y_2^D+y_2^E}$$
 Lo que se produce es lo que se consume. 
 
 ---
@@ -262,7 +330,7 @@ Lo que se produce es lo que se consume.
  Tenemos una nueva condición de equilibrio: Balance del comercio: 
   - El comercio está balanceado en cada país: 
   
-  `$$\color{red}{\text{Valor Exportaciones = Valor Importaciones}}$$`
+  $$\color{red}{\text{Valor Exportaciones = Valor Importaciones}}$$
 Bajo el supuesto de especialización completa (Doméstico produce Bien 1 y Extranjero Bien 2)
 
 $$\overbrace{\color{red}{p_2c_2 ^D}}^{\text{Valor de importaciones domésticas}} = \overbrace{\color{red}{p_1c_1^E}}^{\text{Valor Importaciones del extranjero}} $$
@@ -279,13 +347,13 @@ El país .blue[Doméstico] produce el **Bien 1** y el país .red[Extranjero] pro
 
 * La condición de vaciado de los mercados se convierte en: 
 
-`$$\color{red}{c_1^D + c_1^E = y_1^D}$$`
-`$$\color{red}{c_2^D+c_2^E = y_2^E}$$`
+$$\color{red}{c_1^D + c_1^E = y_1^D}$$
+$$\color{red}{c_2^D+c_2^E = y_2^E}$$
 * El vaciado de los mercados de trabajo se convierte en las asignaciones de equilibrio: 
 
-`$$\color{red}{l_1^D=L^D; \text{  } l_2^E=L^F}$$`
+$$\color{red}{l_1^D=L^D; \text{  } l_2^E=L^F}$$
 * Los precios deben satisfacer que: 
-`$$\color{red}{p_1 = a_1^D w^D \quad ; \quad p_2 = a_2^E w^E}$$`
+$$\color{red}{p_1 = a_1^D w^D \quad ; \quad p_2 = a_2^E w^E}$$
 
 ---
 
@@ -295,17 +363,17 @@ El país .blue[Doméstico] produce el **Bien 1** y el país .red[Extranjero] pro
 
 Para el Bien 1 tenemos que: 
 
-`$$\overbrace{\color{red}{\frac{w^DL^D}{p_1} \left( \frac{\theta_1}{\theta_1 +\theta_2}\right)}}^{{c_1^D}} + \overbrace{\color{red}{\frac{w^EL^E}{p_1}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}}^{c_1^E} \color{red}{= y_1^D}$$`
+$$\overbrace{\color{red}{\frac{w^DL^D}{p_1} \left( \frac{\theta_1}{\theta_1 +\theta_2}\right)}}^{{c_1^D}} + \overbrace{\color{red}{\frac{w^EL^E}{p_1}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}}^{c_1^E} \color{red}{= y_1^D}$$
 
 --
 
 Reemplazando los precios de equilibrio: 
 
-`$$\overbrace{\color{red}{\frac{w^DL^D}{\color{blue}{a_1^Dw^D}} \left( \frac{\theta_1}{\theta_1 +\theta_2}\right)}}^{{c_1^D}} + \overbrace{\color{red}{\frac{w^EL^E}{\color{blue}{a_1^Dw^D}}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}}^{c_1^E} \color{red}{= y_1^D}$$`
+$$\overbrace{\color{red}{\frac{w^DL^D}{\color{blue}{a_1^Dw^D}} \left( \frac{\theta_1}{\theta_1 +\theta_2}\right)}}^{{c_1^D}} + \overbrace{\color{red}{\frac{w^EL^E}{\color{blue}{a_1^Dw^D}}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}}^{c_1^E} \color{red}{= y_1^D}$$
 ---
 # Solución de libre comercio
 
-`$$\overbrace{\color{red}{\frac{w^DL^D}{\color{blue}{a_1^Dw^D}} \left( \frac{\theta_1}{\theta_1 +\theta_2}\right)}}^{{c_1^D}} + \overbrace{\color{red}{\frac{w^EL^E}{\color{blue}{a_1^Dw^D}}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}}^{c_1^E} \color{red}{= y_1^D}$$`
+$$\overbrace{\color{red}{\frac{w^DL^D}{\color{blue}{a_1^Dw^D}} \left( \frac{\theta_1}{\theta_1 +\theta_2}\right)}}^{{c_1^D}} + \overbrace{\color{red}{\frac{w^EL^E}{\color{blue}{a_1^Dw^D}}\left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}}^{c_1^E} \color{red}{= y_1^D}$$
 Haciendo un poco de álgebra: 
 $$ \color{red}{\left( L^D + \frac{w^E}{\color{blue}{w^D}}L^E \right)\left(\frac{\theta_1}{\theta_1 + \theta_2}\right) = } \color{blue}{a_1^D}\color{red}{y_1^D}$$
 
@@ -319,46 +387,46 @@ $$ \color{red}{\left( L^D + \frac{w^E}{\color{blue}{w^D}}L^E \right)\left(\frac{
 
 $$ \color{red}{\left( L^D + \frac{w^E}{\color{blue}{w^D}}L^E \right)\left(\frac{\theta_1}{\theta_1 + \theta_2}\right) = } \color{blue}{a_1^D}\overbrace{\color{red}{\left(\frac{1}{a_1^D}L^D\right)}}^{y_1^D}$$
 
-Cancelando `\(a_1^D\)` resulta una expresión que solo depende de los **salarios relativos**
+Cancelando $a_1^D$ resulta una expresión que solo depende de los **salarios relativos**
 
-`$$\color{red}{\left(L^D + \color{blue}{\frac{w^E}{w^D}}L^E\right)\left(\frac{\theta_1}{\theta_1 + \theta_2}\right) = L^D}$$`
+$$\color{red}{\left(L^D + \color{blue}{\frac{w^E}{w^D}}L^E\right)\left(\frac{\theta_1}{\theta_1 + \theta_2}\right) = L^D}$$
 
 --
-Dividiendo ambos lados de la ecuación por `\((\theta_1/ \theta_1 + \theta_2)\)`
+Dividiendo ambos lados de la ecuación por $(\theta_1/ \theta_1 + \theta_2)$
 
-`$$\color{red}{\left(L^D + \color{blue}{\frac{w^E}{w^D}}L^E\right) = L^D \left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}$$`
+$$\color{red}{\left(L^D + \color{blue}{\frac{w^E}{w^D}}L^E\right) = L^D \left(\frac{\theta_1}{\theta_1 + \theta_2}\right)}$$
 --
 
-Restando `\(L^D\)` de ambos lados de la ecuación: 
+Restando $L^D$ de ambos lados de la ecuación: 
 
-`$$\color{red}{
+$$\color{red}{
 \color{blue}{\frac{w^E}{w^D}} L^E = \left( \frac{\theta_1}{\theta_1 + \theta_2} \right) L^D - L^D
-}$$`
+}$$
 
 ---
 
 # Solución de libre comercio
-`$$\color{red}{
+$$\color{red}{
 \color{blue}{\frac{w^E}{w^D}} L^E = \left( \frac{\theta_1}{\theta_1 + \theta_2} \right) L^D - L^D
-}$$`
+}$$
 
 Simplificando
 
-`$$\color{blue}{\frac{w^E}{w^D}} \color{red}{L^E = L^H \left(\left( 1+ \frac{\theta_2}{\theta_1 }\right) -1 \right)}$$`
-`$$\color{blue}{\frac{w^E}{w^D}} \color{red}{L^E = L^H \left( \frac{\theta_2}{\theta_1 }\right)}$$`
+$$\color{blue}{\frac{w^E}{w^D}} \color{red}{L^E = L^H \left(\left( 1+ \frac{\theta_2}{\theta_1 }\right) -1 \right)}$$
+$$\color{blue}{\frac{w^E}{w^D}} \color{red}{L^E = L^H \left( \frac{\theta_2}{\theta_1 }\right)}$$
 
 Dividiendo ambos lados por los salarios relativos (Extranjeros relativos a domésticos)
 
-`$$\color{blue}{\frac{w^E}{w^D}}\color{red}{=\frac{L^D}{L^E} \left(\frac{\theta_2}{\theta_1}\right)}$$`
-.red[Salarios relativos = 1/(Oferta relativa de trabajo)] `\(\times\)` .red[Proporción relativa de consumo del bien exportado]
+$$\color{blue}{\frac{w^E}{w^D}}\color{red}{=\frac{L^D}{L^E} \left(\frac{\theta_2}{\theta_1}\right)}$$
+.red[Salarios relativos = 1/(Oferta relativa de trabajo)] $\times$ .red[Proporción relativa de consumo del bien exportado]
 
 ---
 
 # Solución de libre comercio
 
-`$$\color{blue}{\frac{w^E}{w^D}}\color{red}{=\frac{L^D}{L^E} \left(\frac{\theta_2}{\theta_1}\right)}$$`
+$$\color{blue}{\frac{w^E}{w^D}}\color{red}{=\frac{L^D}{L^E} \left(\frac{\theta_2}{\theta_1}\right)}$$
 
-.red[Salarios relativos = 1/(Oferta relativa de trabajo)] `\(\times\)` .red[Proporción relativa de consumo del bien exportado]
+.red[Salarios relativos = 1/(Oferta relativa de trabajo)] $\times$ .red[Proporción relativa de consumo del bien exportado]
 
 * Los salarios relativos de un país .hi-pink[disminuirán] en la medida en que su **oferta relativa de trabajo** se .red[incremente]. 
 
@@ -374,8 +442,8 @@ Podemos utilizar los salarios relativos para encontrar el resto de nuestras **in
 
 * Para el **Bien 1** (el que se produce en el país Doméstico)
 
-`$$\color{red}{\frac{p_1}{w^D} = a_1^D}$$`
-* Para el **Bien 2**, insertamos los salarios relativos en forma de `\(\color{blue}{w^E}\color{red}{=w^D\frac{L^D}{L^E}\left(\frac{\theta_2}{\theta_1}\right)}\)`
+$$\color{red}{\frac{p_1}{w^D} = a_1^D}$$
+* Para el **Bien 2**, insertamos los salarios relativos en forma de $\color{blue}{w^E}\color{red}{=w^D\frac{L^D}{L^E}\left(\frac{\theta_2}{\theta_1}\right)}$
 
 $$\color{red}{\frac{p_2}{\color{blue}{\left(w^D \left(\frac{\theta_2}{\theta_1}\right)\right)}}=a_2^E \implies \frac{p_2}{w^D}= a_2^E\frac{L^D}{L^E}\left(\frac{\theta_2}{\theta_1}\right)} $$
 
@@ -391,7 +459,7 @@ $$ \color{red}{c_1^D =  \overbrace{(1/a_1^D)}^{w^D/p_1} L^D \left(\frac{\theta_1
 
 De forma similar para el **Bien 2**
 
-`$$\color{red}{
+$$\color{red}{
 \overbrace{
 c_2^D = 
 \left( \frac{1}{a_2^E} \cdot \frac{L^E}{L^D} \cdot \frac{\theta_1}{\theta_2} \right)
@@ -408,15 +476,15 @@ L^D \cdot \left( \frac{\theta_2}{\theta_1 + \theta_2} \right)
 \overbrace{
 L^E \cdot \left( \frac{\theta_1}{\theta_1 + \theta_2} \right)
 }^{\text{Proporción ingreso E destinado a Bien 1}}
-}$$`
+}$$
 
-*La proporción del ingreso es `\(\theta\)`. Multiplicado por `\(w^iL^i\)` resulta en la asignación del ingreso para cada bien*
+*La proporción del ingreso es $\theta$. Multiplicado por $w^iL^i$ resulta en la asignación del ingreso para cada bien*
 ---
 # Solución de libre comercio 
 
 * Para el país .red[Extranjero] podemos realizar el mismo proceso: 
 
-`$$\color{red}{c_1^E = (1/a_1^D) L^D \left(\frac{\theta_2}{\theta_1 + \theta_2}\right), c_2^E = (1/a_2^E)\left(\frac{\theta_2}{\theta_1 + \theta_2}\right)  }$$`
+$$\color{red}{c_1^E = (1/a_1^D) L^D \left(\frac{\theta_2}{\theta_1 + \theta_2}\right), c_2^E = (1/a_2^E)\left(\frac{\theta_2}{\theta_1 + \theta_2}\right)  }$$
 De aquí obtenemos los precios relativos y las asignaciones. Hemos concluido 🥳🎉👯‍♂️
 
 ---
@@ -443,14 +511,14 @@ La ecuación de **Balance de comercio** bajo especialización completa es:
 
 $$\overbrace{\color{red}{p_2 c_2^D}}^{\text{Valor de importaciones Domésticas}} =\overbrace{\color{red}{p_1 c_1^E}}^{\text{Valor de exportaciones Extranjeras}} $$
 
-Ahora, .red[Normalicemos] `\(\color{red}{w^D = 1}\)` e introduzcamosla en nuestras ecuaciones de precios y consumos de equilibrio:
+Ahora, .red[Normalicemos] $\color{red}{w^D = 1}$ e introduzcamosla en nuestras ecuaciones de precios y consumos de equilibrio:
 
-`$$\overbrace{\color{red}{a_2^E \frac{L^D}{L^E}\left(\frac{\theta_2}{\theta_1}\right)}}^{p_2}\overbrace{\color{red}{(1/a_2^E)L^E\left(\frac{\theta_1}{\theta_1+\theta_2}\right)}}^{c_2^D} = \overbrace{\color{red}{a_1^D}}^{p_1}\overbrace{\color{red}{(1/a_1^D)L^D\left(\frac{\theta_2}{\theta_1+\theta_2}\right)}}^{c_1^E}$$`
+$$\overbrace{\color{red}{a_2^E \frac{L^D}{L^E}\left(\frac{\theta_2}{\theta_1}\right)}}^{p_2}\overbrace{\color{red}{(1/a_2^E)L^E\left(\frac{\theta_1}{\theta_1+\theta_2}\right)}}^{c_2^D} = \overbrace{\color{red}{a_1^D}}^{p_1}\overbrace{\color{red}{(1/a_1^D)L^D\left(\frac{\theta_2}{\theta_1+\theta_2}\right)}}^{c_1^E}$$
 --
 
 Simplificando la ecuación anterior tenemos que la Ley de Walras se mantiene automáticamente en nuestros valores de equilibrio
 
-`$$\color{red}{L^H\left(\frac{\theta_2}{\theta_1 + \theta_2}\right) = L^D \left(\frac{\theta_2}{\theta1 +\theta_2}\right)} \implies 1 = 1$$`
+$$\color{red}{L^H\left(\frac{\theta_2}{\theta_1 + \theta_2}\right) = L^D \left(\frac{\theta_2}{\theta1 +\theta_2}\right)} \implies 1 = 1$$
 
 ---
 
@@ -458,7 +526,7 @@ Simplificando la ecuación anterior tenemos que la Ley de Walras se mantiene aut
 
 Dadas nuestras preferencias y libre comercio, el escenario de especialización completa **siempre** es un equilibrio. 
 
-* Peor escenario posible: Los países son idénticos `\(implies\)` no ganancias/pérdidas por el comercio. Múltiples equilibrios. 
+* Peor escenario posible: Los países son idénticos $implies$ no ganancias/pérdidas por el comercio. Múltiples equilibrios. 
 
 * Los resultados no son **válidos** si existen distorsiones (aranceles o costos del comercio). Los países podrían elegir no comerciar. 
 
@@ -476,7 +544,7 @@ class: inverse, middle
 
 * Como hemos dicho, los modelos dependen de **parámetros exógenos**
 
-* Supongamos que `\(L^D = L^E = 1\)`, `\(\theta_1 = \theta_2 = 1\)`, `\(a_1^D = a_2^E = 1\)`, `\(a_2^D = a_1^E=2\)`
+* Supongamos que $L^D = L^E = 1$, $\theta_1 = \theta_2 = 1$, $a_1^D = a_2^E = 1$, $a_2^D = a_1^E=2$
 
 
 
@@ -491,25 +559,29 @@ $$ \color{red}{\frac{a_1^D}{a_2^D} = \frac{1}{2}; \frac{a_1^E}{a_2^E} =2} $$
 
 Por lo tanto, los precios relativos de los bienes son
 
-`$$\color{red}{p_1 = a_1^D} \text{  y  } \color{red}{p_2=a_2^E\frac{L^D}{L^E}\left(\frac{\theta_2}{\theta_1}\right)=1 \implies \frac{p_1}{p_2} = 1}$$`  
+$$\color{red}{p_1 = a_1^D} \text{  y  } \color{red}{p_2=a_2^E\frac{L^D}{L^E}\left(\frac{\theta_2}{\theta_1}\right)=1 \implies \frac{p_1}{p_2} = 1}$$  
 
 ---
 # Equilibrio y demanda relativa
 
-&lt;img src="figures/Oferta_demanda_relativa.png" width="60%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="60%", echo=FALSE}
 
-`\(\frac{1}{2} \color{red}{&lt;1&lt;}2 \implies \left(\frac{a_1^D}{a_2^D}\right) &lt; \color{red}{\left(\frac{p_1}{p_2}\right) &lt;} \frac{a_1^E}{a_2^E} \implies\)` .red[El país Doméstico SOLO produce el Bien 1]. El país .blue[Extranjero] SOLO produce el Bien 2. 
+knitr::include_graphics("figures/Oferta_demanda_relativa.png")
+
+```
+
+$\frac{1}{2} \color{red}{<1<}2 \implies \left(\frac{a_1^D}{a_2^D}\right) < \color{red}{\left(\frac{p_1}{p_2}\right) <} \frac{a_1^E}{a_2^E} \implies$ .red[El país Doméstico SOLO produce el Bien 1]. El país .blue[Extranjero] SOLO produce el Bien 2. 
 ---
 class: inverse, middle
 
-.bigger[.center[.white[**¿La Ventaja Comparativa explica los patrones del comercio internacional? &lt;br&gt;**]]]
+.bigger[.center[.white[**¿La Ventaja Comparativa explica los patrones del comercio internacional? <br>**]]]
 
 ---
 # Predicción básica
 
 .center[.hi-pink[Los países tenderán a exportar los bienes en los que su productividad es relativamente mayor, e importarán aquellos bienes en los que su productividad sea relativamente menor]]
 
-&lt;iframe src="https://ourworldindata.org/grapher/growth-of-income-and-trade" loading="lazy" style="width: 80%; height: 400px; border: 0px none;display: block; margin: auto;"&gt;&lt;/iframe&gt;
+<iframe src="https://ourworldindata.org/grapher/growth-of-income-and-trade" loading="lazy" style="width: 80%; height: 400px; border: 0px none;display: block; margin: auto;"></iframe>
 
 ---
 # Evidencia de ventaja comparativa
@@ -535,7 +607,11 @@ class: inverse, middle
 
 .pull-right[
 
-&lt;img src="figures/balasa.data-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="100%", echo=FALSE, fig.height=7}
+
+knitr::include_graphics("figures/balasa.data-1.png")
+
+```
 
 .source[Balassa, Bela, 1963, "An Empirical Demonstration of Classical Comparative Cost Theory", *Review of Economics and Statistics* 45(3): 231-238]
 
@@ -572,11 +648,11 @@ Deardorff demostró un teorema fundamental en un modelo general que permite múl
 
 * **Teorema**: El valor del vector de comercio neto de un país, cuando se evalúa a precios de autarquía, debe ser menor o igual a cero.
 
-`$$p^{a}T^{n} \le 0$$`
+$$p^{a}T^{n} \le 0$$
 
 Donde:
-- `\(p^{a}\)` es el vector de precios en autarquía.
-- `\(T^{n}\)` es el vector de comercio neto (exportaciones - importaciones).
+- $p^{a}$ es el vector de precios en autarquía.
+- $T^{n}$ es el vector de comercio neto (exportaciones - importaciones).
 
 Esto significa que el valor de lo que un país entrega (exporta) no es mayor, a precios de autarquía, que el valor de lo que adquiere (importa).
 
@@ -599,12 +675,20 @@ La formulación de Deardorff es teóricamente robusta, pero probarla empíricame
 
 .pull-left[
 
-&lt;img src="figures/japantokugawa.png" width="100%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="100%", echo=FALSE, fig.height=7}
+
+knitr::include_graphics("figures/japantokugawa.png")
+
+```
 
 ]
 
 .pull-right[
-&lt;img src="figures/tokugawa.JPG" width="100%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="100%", echo=FALSE, fig.height=7}
+
+knitr::include_graphics("figures/tokugawa.JPG")
+
+```
 ]
 
 Los edictos de reclusión nacional del shogunato Tokugawa de 1639 prohíben la entrada a Japón de todos los occidentales (excepto algunos holandeses) durante el período Edo.
@@ -614,7 +698,11 @@ Los edictos de reclusión nacional del shogunato Tokugawa de 1639 prohíben la e
 
 .center[
 
-&lt;img src="figures/perryopenjapan.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+```{r, out.width="70%", echo=FALSE}
+
+knitr::include_graphics("figures/perryopenjapan.jpg")
+
+```
 
 ]
 
@@ -673,8 +761,8 @@ Los edictos de reclusión nacional del shogunato Tokugawa de 1639 prohíben la e
 
 Los autores construyeron un conjunto de datos único para probar la teoría.
 
-- **Precios de Autarquía (`\(p^{a}\)`)**: Utilizaron datos detallados de precios de productos específicos de los últimos años de aislamiento de Japón (1851-1853).
-- **Vector de Comercio (`\(T\)`)**: Recopilaron datos sobre los flujos de importación y exportación de Japón para el período posterior a la apertura (1868-1875).
+- **Precios de Autarquía ($p^{a}$)**: Utilizaron datos detallados de precios de productos específicos de los últimos años de aislamiento de Japón (1851-1853).
+- **Vector de Comercio ($T$)**: Recopilaron datos sobre los flujos de importación y exportación de Japón para el período posterior a la apertura (1868-1875).
 - **Condiciones del Modelo**: La evidencia histórica sugiere que la economía japonesa de la época cumplía con los supuestos clave del modelo neoclásico (mercados competitivos, comportamiento de tomador de precios).
 
 
@@ -704,147 +792,15 @@ Los autores construyeron un conjunto de datos único para probar la teoría.
 ---
 # Resultados
 
-&gt; “.hi[Encontramos que las ganancias para la economía japonesa resultantes de la ventaja comparativa estática probablemente no fueron mayores al 8 o 9 por ciento del PIB de Japón en ese momento]. Nuestras estimaciones indican que .hi[cambios significativos en los precios de los productos no se traducen necesariamente en grandes aumentos de bienestar]. También sugiere precaución al justificar el libre comercio basándose en aumentos de bienestar derivados de la ventaja comparativa estática. .hi[Dado que los aspectos dinámicos del comercio internacional probablemente tienen un impacto mucho mayor sobre el ingreso nacional], la futura investigación empírica sobre la naturaleza y magnitud de estas ganancias dinámicas es indispensable.” (p.222).
+> “.hi[Encontramos que las ganancias para la economía japonesa resultantes de la ventaja comparativa estática probablemente no fueron mayores al 8 o 9 por ciento del PIB de Japón en ese momento]. Nuestras estimaciones indican que .hi[cambios significativos en los precios de los productos no se traducen necesariamente en grandes aumentos de bienestar]. También sugiere precaución al justificar el libre comercio basándose en aumentos de bienestar derivados de la ventaja comparativa estática. .hi[Dado que los aspectos dinámicos del comercio internacional probablemente tienen un impacto mucho mayor sobre el ingreso nacional], la futura investigación empírica sobre la naturaleza y magnitud de estas ganancias dinámicas es indispensable.” (p.222).
 
 .smallest[Bernhofen, Daniel and John C. Brown, 2005, "An Empirical Assessment of the Comparative Advantage Gains from Trade: Evidence from Japan," *American Economic Review* 95(1): 208-225.]
 
 ---
 exclude: true
 
-
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-  "highlightStyle": "github",
-  "highlightLines": true,
-  "countIncrementalSlides": false
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
-// screen reader (see PR #262)
-(function(d) {
-  let res = {};
-  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
-    const t = tr.querySelector('td:nth-child(2)').innerText;
-    tr.querySelectorAll('td:first-child .key').forEach(key => {
-      const k = key.innerText;
-      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
-    });
-  });
-  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
-})(document);
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-// adds .remark-code-has-line-highlighted class to <pre> parent elements
-// of code chunks containing highlighted lines with class .remark-code-line-highlighted
-(function(d) {
-  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
-  const preParents = [];
-  const findPreParent = function(line, p = 0) {
-    if (p > 1) return null; // traverse up no further than grandparent
-    const el = line.parentElement;
-    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
-  };
-
-  for (let line of hlines) {
-    let pre = findPreParent(line);
-    if (pre && !preParents.includes(pre)) preParents.push(pre);
-  }
-  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
-})(document);</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>
+```{R generate pdfs, include = F, eval = F}
+#remotes::install_github('rstudio/pagedown')
+library(pagedown)
+pagedown::chrome_print("03-ricardian.html", output = "03-ricardian.pdf")
+```

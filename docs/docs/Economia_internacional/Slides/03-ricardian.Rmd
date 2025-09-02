@@ -279,6 +279,16 @@ knitr::include_graphics("figures/Oferta_demanda_relativa_2.png")
 
 
 ---
+
+class: inverse, middle
+
+.bigger[.center[.white[**Equilibrio con comercio internacional**]]]
+
+
+
+
+---
+
 # Definición de equilibrio 
 
 En el equilibrio encontramos el conjunto de precios $\{p_1,p_2\}$, salarios $\{w_1, w_2\}$ y las asignaciones de consumo y produccion domésticas y extranjeras $\{c_1^{i}, c_2^{i}, y_{1}^{i}, y_{2}^{i}\}_{i \in [D,E]}$, sujetos a: 
@@ -613,14 +623,14 @@ knitr::include_graphics("figures/balasa.data-1.png")
 
 ```
 
-.source[Balassa, Bela, 1963, "An Empirical Demonstration of Classical Comparative Cost Theory", *Review of Economics and Statistics* 45(3): 231-238]
+.source[.smallest[Balassa, Bela, 1963, "An Empirical Demonstration of Classical Comparative Cost Theory", *Review of Economics and Statistics* 45(3): 231-238]]
 
 ]
 ---
 
 # El problema de la Ventaja Comparativa
 
-* La Ley de la Ventaja Comparativa es una de las proposiciones más antiguas y fundamentales en la teoría del comercio internacional
+La Ley de la Ventaja Comparativa es una de las proposiciones más antiguas y fundamentales en la teoría del comercio internacional
 
 - **Formulación Simple**: En un mundo de 2 países y 2 bienes, un país exportará el bien cuyo precio de autarquía (sin comercio) es relativamente más bajo.
 

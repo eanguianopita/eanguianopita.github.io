@@ -1,0 +1,22 @@
+---
+title: "Tarea #1. Teoría de la ventaja comparativa"
+author: "Javier Emmanuel Anguiano Pita"
+date: 2025-08-25
+format: 
+  pdf:
+    latex-engine: xelatex    # keep XeLaTeX for system fonts
+    draft: true              # speeds up compilation in draft mode
+execute:
+  cache: true                # cache code chunk outputs
+  cache-location: _cache
+  fig-width: 6               # smaller figure width
+  fig-height: 4              # smaller figure height
+  dpi: 72                    # lower resolution for faster plotting
+editor: source
+---
+
+Para cada uno de los siguientes problemas realiza lo siguiente: (a) escribe la ecuación de la frontera de posibilidades de producción (FPP) de cada individuo expresando el primer bien en el eje horizontal y el segundo bien en el eje vertical. (b) ¿cuál es el costo de oportunidad de cada individuo? (c) ¿En qué bien se especializará cada individuo? (d) ¿cuál será el rango de precios para cada bien cuando decidan intercambiar?
+
+1.  Carlos y Sofía se dedican a recolectar plátanos y pescar. Si Carlos emplea todo su tiempo disponible en una sola actividad, puede producir 100 plátanos o 30 pescados. Por su parte, si Sofía utiliza todo su tiempo en una sola actividad puede obtener 60 plátanos o 30 pescados. En la situación actual, Carlos recolecta 50 plátanos y 15 pescados. Sofía recolecta 30 plátanos y 15 pescados.
+
+2. Japón e Irlanda pueden producir pescados y automóviles. Si Japón utiliza todos sus recursos, puede producir 2,000 pescados y 200 autos. Si Irlanda utiliza todos sus recursos, puede producir 6,000 pescados y 300 autos. Actualmente, Japón está produciendo 1000 pescados y 100 autos; Irlanda está produciendo 2,000 pescados y 200 autos. 

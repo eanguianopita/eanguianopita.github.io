@@ -39,7 +39,7 @@ css: html/styles.css
 |:-------------:|:-------------:|:-------------:|:-------------:|:-----:|
 | 1 | Introducción a la economía internacional | [Enlace](https://eanguianopita.github.io/docs/Economia_internacional/Slides/01-intro){target="_blank"} | [Syllabus](https://eanguianopita.github.io/docs/Economia_internacional/Syllabus/Syllabus_Clase_EcoInt.pdf) |  | |
 | 2 | Modelo ricardiano| [Autarquía](https://eanguianopita.github.io/docs/Economia_internacional/Slides/02-ricardian) <br> [Libre comercio](https://eanguianopita.github.io/docs/Economia_internacional/Slides/03-ricardian)| [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_2.txt) |[Tarea 1](https://eanguianopita.github.io/docs/Economia_internacional/Tareas/Tarea1_Ventaja_comparativa_NA.pdf)     |
-| 3 | Modelo de dotaciones factoriales | [Modelo estándar](https://eanguianopita.github.io/docs/Economia_internacional/Slides/03-ricardian.html) <br> [Modelo de Hecksher-Ohlin]()| [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_3.txt) |[Tarea 2](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/null)     |
+| 3 | Modelo de dotaciones factoriales | [Modelo estándar](https://eanguianopita.github.io/docs/Economia_internacional/Slides/04-standard-trade-model.html) <br> [Modelo de Hecksher-Ohlin]()| [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_3.txt) |[Tarea 2](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/null)     |
 
 # Libros de texto
 

@@ -42,7 +42,7 @@ css: html/styles.css
 | 4 | Modelo neoclásico | [Modelo estándar](https://eanguianopita.github.io/docs/Economia_internacional/Slides/04-standard_trade_model.html)| | | 
 | 5 | Modelo de factores específicos | [Introducción](https://eanguianopita.github.io/docs/Economia_internacional/Slides/05-specific_factors.pdf) | - | - |
 | 5.1 | Modelo H-O | [Teoría](https://eanguianopita.github.io/docs/Economia_internacional/Slides/06-HO_model.pdf) <br> [Evidencias empíricas](https://eanguianopita.github.io/docs/Economia_internacional/Slides/07-HO_empirics.pdf) | [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_3.txt) |[Tarea 2](https://eanguianopita.github.io/docs/Economia_internacional/Tareas/Preguntas Modelo HOV_Daniel Trefler_1995.pdf)   <br> [Tarea 3]()  |
-| 6 | Modelo gravitatorio | [Teoría]() | [Lista]() | [Tarea 3]() |
+| 6 | Modelo gravitatorio | [Teoría]() | [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_5.txt) | [Tarea 3]() |
 
 
 

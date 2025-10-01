@@ -41,7 +41,7 @@ css: html/styles.css
 | 2-3 | Modelo ricardiano| [Autarquía](https://eanguianopita.github.io/docs/Economia_internacional/Slides/02-ricardian) <br> [Libre comercio](https://eanguianopita.github.io/docs/Economia_internacional/Slides/03-ricardian)| [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_2.txt) |[Tarea 1](https://eanguianopita.github.io/docs/Economia_internacional/Tareas/Tarea1_Ventaja_comparativa_NA.pdf)     |
 | 4 | Modelo neoclásico | [Modelo estándar](https://eanguianopita.github.io/docs/Economia_internacional/Slides/04-standard_trade_model.html)| | | 
 | 5 | Modelo de factores específicos | [Introducción](https://eanguianopita.github.io/docs/Economia_internacional/Slides/05-specific_factors.pdf) | - | - |
-| 5.1 | Modelo H-O | [Teoria](https://eanguianopita.github.io/docs/Economia_internacional/Slides/06-HO_model.pdf) <br> [Evidencias empíricas](https://eanguianopita.github.io/docs/Economia_internacional/Slides/07-HO_empirics.pdf) | [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_5.txt) |[Tarea 2](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/null)     |
+| 5.1 | Modelo H-O | [Teoria](https://eanguianopita.github.io/docs/Economia_internacional/Slides/06-HO_model.pdf) <br> [Evidencias empíricas](https://eanguianopita.github.io/docs/Economia_internacional/Slides/07-HO_empirics.pdf) | [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_5.txt) |[Tarea 2](https://eanguianopita.github.io/docs/Economia_internacional/Tareas/Preguntas Modelo HOV_Daniel Trefler_1995.pdf)     |
 
 
 

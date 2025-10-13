@@ -4,3 +4,4 @@ countries<-c("Albania", "Denmark", "Kenya", "Romania", "Algeria", "Djibouti", "K
 # Creamos un vector con los nombres de las variables a conservar
 
 variables <-c("iso3num_o","iso3num_d","year","iso3_o", "iso3_d", "distw_harmonic", "contig", "comcol", "comlang_off","gdp_o","gdp_d", "gdpcap_o", "gdpcap_d","fta_wto","tradeflow_baci")
+

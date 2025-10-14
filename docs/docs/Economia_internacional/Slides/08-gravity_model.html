@@ -86,6 +86,11 @@ Importaciones de EE.UU desde Japón
 ]
 
 
+.center[.hi[¿Qué explica los patrones de comercio internacional?]]
+ - Modelo ricardiano
+ - Modelo de dotaciones (HO)
+
+Ambos se basan en ventajas comparativas **interindustriales**
 
 
 
@@ -98,7 +103,7 @@ class: inverse, middle
 # Ejemplo de comercio intraindustrial 
 
 .center[
-&lt;img src="figures/intraindustrytrade.jpg" style="width:auto; height:80 vw;"&gt;]
+&lt;img src="figures/intraindustrytrade.jpg" style="width:auto; height:500px;"&gt;]
 
 ---
 
@@ -186,7 +191,7 @@ $$ GLI = 1 - \frac{|X_i - M_i|}{X_i + M_i}$$
 .pull-left[
 $$ GLI = 1 - \frac{|X_i - M_i|}{X_i + M_i}$$
 
-* .hi-green[**Ejemplo**]: En 2010, las importaciones de EE.UU de caña de azúcar tuvieron un valor de $1.9 mil MDD y el valor de las exportaciones fue de $170 MDD
+* .hi-green[**Ejemplo**]: En 2010, las importaciones de EE.UU de caña de azúcar tuvieron un valor de 1.9 mil MDD y el valor de las exportaciones fue de 170 MDD
 
 $$GLI = 1 - \frac{|0.170 - 1.900|}{0.170 + 1.900} = 0.164 $$
  - Existió **poco** comercio intraindustrial
@@ -223,7 +228,7 @@ $$GLI = 1 - \frac{|1.000 - 1.200|}{1.000 + 1.200} = 0.909 $$
 ---
 # .smallest[El dilema de las similitudes en el comercio]
 
-.center[&lt;img src="figures/brulhart2.png" style="width:auto; height:auto;"&gt;]
+.center[&lt;img src="figures/brulhart2.png" style="width:auto; height:450px;"&gt;]
 
 .source[Brulhart, Marius, 2009, “An Account of Global Intra-industry Trade, 1962-2006,” *The World Economy* 32(2):401-459]
 
@@ -239,12 +244,12 @@ $$GLI = 1 - \frac{|1.000 - 1.200|}{1.000 + 1.200} = 0.909 $$
 
 # .smallest[El dilema de las similitudes en el comercio]
 
-.center[&lt;img src="figures/intraindustrytrade2.png" style="height:60vw; width:auto;"&gt;]
+.center[&lt;img src="figures/intraindustrytrade2.png" style="height:450px; width:auto;"&gt;]
 
 
 .smallest[Proporción de IIT por país (más de 100%): suma en todas las industrias, poderando cada industria por su contribución al comercio total]
 
-.source[Krugman, Paul, 2008, “The Increasing Returns Revolution in Trade and Geography,” *Nobel Prize Lecture*]
+.source[Krugman, Paul., Obstfeld, Maurice., Melitz, Mark. (2011). *International Economics Theory &amp; Policy*, 9 Ed., p. 169.]
 
 
 ---
@@ -399,9 +404,9 @@ class: inverse, middle
 * McCallum (1995) estima el impacto de las fronteras internacionales en los flujos de comercio: 
  - Estudia los flujos de comercio entre las provincias de Canadá  y aquellos entre las provincias canadienses y los estados de EE.UU. 
  - Estima la siguiente regresión: 
- `$$\log F_{ij} = \beta_0 +  \beta_1 \log Y_i + \beta_2 \log Y_j - \beta_3 D_{ij} + \beta_4 D_{ij}+ \varepsilon_{ij}$$`
+ `$$\log F_{ij} = \beta_0 +  \beta_1 \log Y_i + \beta_2 \log Y_j - \beta_3 D_{ij} + \beta_4 DUMMY_{ij}+ \varepsilon_{ij}$$`
 
-- `\(D_{ij}\)` es igual a 0 para el comercio entre Canadá y EE.UU. y 1 para el comercio entre las provincias canadienses. 
+- `\(DUMMY_{ij}\)` es igual a 0 para el comercio entre Canadá y EE.UU. y 1 para el comercio entre las provincias canadienses. 
 
 - Los resultados de McCallum (1995) sugieren que `\(\beta_4\)` es positivo y significativo
  - Esto implica que los flujos de comercio son significativamente más grandes cuando no existe una frontera internacional
@@ -422,7 +427,9 @@ class: inverse, middle
  - En **ausencia de fronteras**, Ontario y Quebec deberían exportar 10x más a California y no a Columbia Británica
  - Los **datos reales** muestran que Quebec y Ontario exportan 3x más a Columbia Británica que a California
  - En general, los resultados muestran que los flujos de comercio deberían ser hasta 22x más grandes (reduce 95%) si no existieran fronteras internacionales
-  - .hi[Limitación]: El estudio considera el período antes del TLCAN, existían algunos aranceles al comercio internacional entre Canadá y EE.UU. 
+
+.hi[Limitaciones]: 
+  - El estudio considera el período antes del TLCAN (1988), existían algunos aranceles al comercio internacional entre Canadá y EE.UU. 
   - Los efectos estimados de las fronteras disminuyen a medida que lo hacen los aranceles, pero aún se mantienen 'altos'
 
 
@@ -469,11 +476,9 @@ Anderson y van Wincoop (2003) muestran que la ecuación gravitatoria de comercio
 `$$U_j = \left(\sum_{i=2}^{N} (\beta_i)^{\frac{1-\sigma}{\sigma}} (c_{ij})^{\frac{\sigma}{1-\sigma}}\right)^{\frac{\sigma}{\sigma-1}}$$`
 Donde `\(\beta_{ij}\)` determina la proporción del gasto en cada bien y `\(\sigma\)` es la elasticidad de sustitución. 
 
-Casos: 
+Posibles casos de `\(\sigma\)`:  
 
-.smallest[
-
- - Caso 1: `\(\sigma = 1\)` Caso tipo Cobb-Douglas. El gasto es constante en ambos bienes y no depende de precios relativos. 
+.smallest[- Caso 1: `\(\sigma = 1\)` Caso tipo Cobb-Douglas. El gasto es constante en ambos bienes y no depende de precios relativos. 
  - Caso 2: `\(0 &lt; \sigma &lt; 1\)` (Baja sustitución). El gasto se modifica muy poco ante variaciones en los precios relativos. 
  - Caso 3: `\(\sigma = 0^{+}\)`. Bienes complementarios (Leontieff)
  - Caso 4: `\(\sigma &gt; 1\)` Bienes perfectamente sustitutos. Responde fuertemente a cambios en precios relativos. 
@@ -494,7 +499,7 @@ Casos:
 
 --
 
-* El valor de las exportaciones del país `\(i\)` al `\(j\)` está dado por: (`\(x_{ij} = p_{ij}c_{ij}\)`
+* El valor de las exportaciones del país `\(i\)` al `\(j\)` está dado por: (`\(x_{ij} = p_{ij}c_{ij})\)`
 
 `$$x_{ij} = \left(\frac{\beta_i t_{ij} p_{i}}{P_j}\right)^{1-\sigma}y_j$$`
 
@@ -504,6 +509,8 @@ Casos:
 Podemos derivar la siguiente regresión para las exportaciones de `\(i\)` desde `\(j\)`
 
 `$$x_{ij} = \frac{y_i y_j }{y^{W}}\left(\frac{t_{ij}}{P_i P_j}\right)^{1-\sigma}$$`
+.center[**Modelo estructural**]
+
 --
 
 Donde `\(y^{W} := \sum_{i=1}^{N}y_j\)`, que es .hi[muy similar] a la ecuación original del modelo gravitatorio
@@ -511,17 +518,23 @@ Donde `\(y^{W} := \sum_{i=1}^{N}y_j\)`, que es .hi[muy similar] a la ecuación o
 `$$X_{ij} = G \frac{Y_i Y_j}{D_{ij}}$$`
 Adviértase que `\(D_{ij} = (t_{ij})^{\sigma -1}\)` y `\(G = \frac{(P_i P_j)^{\sigma -1}}{y^W}\)`
 
+
+.source[Anderson, James E., y van Wincoop, E. (2003). Gravity with Gravitas: A Solution to the Border Puzzle. *The American Economic Review*, *93*(1), p. 170-192 [DOI](https://www.aeaweb.org/articles?id=10.1257/000282803321455214)]
+
 ---
-# .smallest[Implicaciones de la gravedad]
+# .smallest[Implicaciones del modelo]
 
  Hay diversas implicaciones del modelo que acabamos de derivar `\(x_{ij} = \frac{y_i y_j}{y^W}\left(\frac{t_{ij}}{P_i P_j}\right)^{1-\sigma}:\)`
-  - Las .hi[barreras al comercio] reducen el comercio entre países grandes más que entre países pequeños. 
-  - De forma análoga, las mismas **barreras** incrementan más que proporcionalmente el comercio entre países pequeños en comparación con aquel con los grandes.
-  - las .hi[barreras al comercio] tienen efectos más **grandes** en la medida en que se pueda sustituir los bienes producidos entre países. 
-
+  - Las .hi[barreras al comercio internacional] reducen el comercio de forma diferenciada: 
+   - Se reduce más entre países grandes que entre países pequeños. 
+   - Incrementan más que proporcionalmente el comercio entre países pequeños en comparación con el de los grandes. 
+   - Tienen efectos más .hi[grandes] en la medida en que se puedan sustituir la producción entre países. 
 --
 
-* Los .hi[costos del comercio] no son observables. Deben estimarse: 
+&lt;br&gt; 
+
+* ¿Cuáles son los .hi[costos del comercio]? 
+ - No son observables y deben estimarse de forma empírica  
 `$$t_{ij} = b_{ij} (d_{ij})^{\rho}$$`
 
 Donde `\(b_{ij}\)` indica el arancel equivalente a la existencia de frontera entre `\(i\)` y `\(j\)`. Nota que `\(b_{ij} = 1\)` y `\(d_{ij}\)` es la distancia entre los dos países. 
@@ -532,10 +545,10 @@ Donde `\(b_{ij}\)` indica el arancel equivalente a la existencia de frontera ent
 
 Estiman la siguiente regresión utilizando datos actualizados del comercio entre las provincias de Canadá y los estados de EE.UU.: 
 
-`$$\log z_{ij} := \log \left(\frac{x_ij}{y_i y_j}\right) = k + a_1 + \log d_{ij} + a_2 (1-\delta_{ij}) - (1-\sigma) \log P_i - (1-\sigma ) \log P_j + \varepsilon_{ij}$$`
+`$$\log z_{ij} := \log \left(\frac{x_{ij}}{y_i y_j}\right) = k + a_1 + \log d_{ij} + a_2 (1-\delta_{ij}) - (1-\sigma) \log P_i - (1-\sigma ) \log P_j + \varepsilon_{ij}$$`
  - Los índices de precios son las variables que omitió el estudio de McCallum (1995)
  - En la práctica, los índices de precios no son CPI, sino que se estiman en conjunto con el modelo gravitatorio: 
- `$$(P_j)^{1-\sigma} = \sum_{i=1}^{N} (P_i)^{\sigma -1} \theta_i e^{(a_1 \log d_{ij} + a_2 \log 1-\delta_{ij}=}$$`
+ `$$(P_j)^{1-\sigma} = \sum_{i=1}^{N} (P_i)^{\sigma -1} \theta_i e^{(a_1 \log d_{ij} + a_2 \log (1-\delta_{ij})}$$`
 
 Donde `\(\delta_{ij}\)` es una variable dicotómica que distingue el comercio internacional del comercio doméstico. 
 
@@ -544,13 +557,13 @@ Donde `\(\delta_{ij}\)` es una variable dicotómica que distingue el comercio in
 
 Al actualizar la ecuación considerando los **costos del comercio** á la Anderson y van Wincoop (2003) encuentran un efecto mucho menor de las fronteras en los flujos comerciales:
 
- - Los efectos de las fronteras dependen de un parámetro que mide la elasticidad del consumo (no está identificado). Lo estiman en aprox. `\(\sigma = 5\)`
+ - Los efectos de las fronteras dependen de un parámetro que mide la elasticidad del consumo (no está identificado). Lo estiman en aprox. `\(\sigma = 5\)` (alto grado de sustitución)
  - Estiman dos modelos: 
    - Un modelo con dos países (Canadá y EE.UU)
    - Un modelo multi-país que permite estudiar los efectos del resto del mundo
 
 * La existencia de fronteras **reduce** en 44% el comercio internacional. 
-* Existen sesgos hacia los intercambios domésticos. 
+* Existen sesgos hacia el comercio doméstico. 
 
 ---
 # .smallest[.smallest[Anderson y van Wincoop (2003): Resistencia al comercio]]
@@ -578,7 +591,7 @@ Asturias y Petty (2013) examinan la relación entre la distancia geográfica y e
  
 .center[&lt;img src="figures/asturias_correlation_2013.png" style="height:400px; width:auto;"&gt;]
 
-.source[Asturias, José., y Petty, S. (2013). Endogenous Transportation Costs (Discussion Paper). University of Minnesota[Enlace]()] 
+.source[Asturias, José., y Petty, S. (2013). Endogenous Transportation Costs (Discussion Paper). University of Minnesota [Enlace]()] 
  
 ---
 

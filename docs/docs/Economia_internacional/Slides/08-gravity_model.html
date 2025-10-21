@@ -409,7 +409,7 @@ class: inverse, middle
 - `\(DUMMY_{ij}\)` es igual a 0 para el comercio entre Canadá y EE.UU. y 1 para el comercio entre las provincias canadienses. 
 
 - Los resultados de McCallum (1995) sugieren que `\(\beta_4\)` es positivo y significativo
- - Esto implica que los flujos de comercio son significativamente más grandes cuando no existe una frontera internacional
+ - Esto implica que los flujos de comercio son significativamente más grandes al interior del país (No existe frontera)
 
 
 ---
@@ -467,41 +467,51 @@ Anderson y van Wincoop (2003) muestran que la ecuación gravitatoria de comercio
  - Al corregir el problema, los resultados sugieren un efecto mucho menor, aunque significativo, de las fronteras en los flujos de comercio internacional. 
 
 ---
-# Modelo Armington 
+class: inverse, middle
 
-* `\(i,j = 1,...,N\)` países. Cada país produce un bien específico. 
+.bigger[.center[.white[**Modelo Armington**]]]
+
+---
+
+# Modelo Armington (1969)
+
+* `\(i,j = 1,...,N\)` países; cada país produce su propio bien específico. 
 
 * Los consumidores tienen preferencias tipo CES en los bienes y el ingreso `\(y_j\)`: 
 
-`$$U_j = \left(\sum_{i=2}^{N} (\beta_i)^{\frac{1-\sigma}{\sigma}} (c_{ij})^{\frac{\sigma}{1-\sigma}}\right)^{\frac{\sigma}{\sigma-1}}$$`
-Donde `\(\beta_{ij}\)` determina la proporción del gasto en cada bien y `\(\sigma\)` es la elasticidad de sustitución. 
 
+`$$U_{j} = \left( \sum_{i=1}^{N} \beta_i c_{ij}^{\frac{\sigma -1 }{\sigma}}\right)^{\frac{\sigma}{\sigma-1}}$$`  
+Donde `\(\beta_{ij}\)` determina el gasto de consumo en cada bien y `\(\sigma\)` es la elasticidad de sustitución. 
+
+.smallest[
 Posibles casos de `\(\sigma\)`:  
 
-.smallest[- Caso 1: `\(\sigma = 1\)` Caso tipo Cobb-Douglas. El gasto es constante en ambos bienes y no depende de precios relativos. 
+ - Caso 1: `\(\sigma = 1\)` Caso tipo Cobb-Douglas. El gasto es constante en ambos bienes y no depende de precios relativos. 
  - Caso 2: `\(0 &lt; \sigma &lt; 1\)` (Baja sustitución). El gasto se modifica muy poco ante variaciones en los precios relativos. 
  - Caso 3: `\(\sigma = 0^{+}\)`. Bienes complementarios (Leontieff)
- - Caso 4: `\(\sigma &gt; 1\)` Bienes perfectamente sustitutos. Responde fuertemente a cambios en precios relativos. 
+ - Caso 4: `\(\sigma &gt; 1\)` Bienes perfectamente sustitutos. Responde fuertemente a cambios en precios relativos. ]
 
-]
+
 ---
 
 # Modelo Armington 
 
-* Los precios de las exportaciones son iguales al precio doméstico multiplicado por un *costo de comerciar* (`\(t_{ij}\)`): 
+* Los precios de las exportaciones son iguales al precio doméstico multiplicado por un **costo de comerciar** (`\(t_{ij}\)`): 
 
 `$$p_{ij} = t_{ij}p_{i}$$`
 
 --
 
 * Supongamos que existe un índice de precios CES (`\(P_j\)` tal que `\(P_j U_j = I_j\)`): 
-`$$P_j = \left(\sum_{i = 1}^{N}(\beta_i t_{ij}p_i)^{1-\sigma} \right)$$`
+`$$P_j = \left(\sum_{i = 1}^{N}(\beta_i t_{ij}p_i)^{1-\sigma} \right)^{\frac{1}{1-\sigma
+}
+}$$`
 
 --
 
-* El valor de las exportaciones del país `\(i\)` al `\(j\)` está dado por: (`\(x_{ij} = p_{ij}c_{ij})\)`
+* El valor de las exportaciones del país `\(i\)` al `\(j\)` está dado por: (`\(x_{ij} = p_{ij}q_{ij})\)`
 
-`$$x_{ij} = \left(\frac{\beta_i t_{ij} p_{i}}{P_j}\right)^{1-\sigma}y_j$$`
+`$$x_{ij} = \left(\frac{\beta_i t_{ij} p_{i}}{P_j}\right)^{1-\sigma}I_j$$`
 
 ---
 # Modelo gravitatorio
@@ -537,7 +547,7 @@ Adviértase que `\(D_{ij} = (t_{ij})^{\sigma -1}\)` y `\(G = \frac{(P_i P_j)^{\s
  - No son observables y deben estimarse de forma empírica  
 `$$t_{ij} = b_{ij} (d_{ij})^{\rho}$$`
 
-Donde `\(b_{ij}\)` indica el arancel equivalente a la existencia de frontera entre `\(i\)` y `\(j\)`. Nota que `\(b_{ij} = 1\)` y `\(d_{ij}\)` es la distancia entre los dos países. 
+Donde `\(b_{ij}\)` indica el arancel equivalente a la existencia de frontera entre `\(i\)` y `\(j\)` y `\(d_{ij}\)` es la distancia entre los países
 
 
 ---
@@ -545,10 +555,11 @@ Donde `\(b_{ij}\)` indica el arancel equivalente a la existencia de frontera ent
 
 Estiman la siguiente regresión utilizando datos actualizados del comercio entre las provincias de Canadá y los estados de EE.UU.: 
 
-`$$\log z_{ij} := \log \left(\frac{x_{ij}}{y_i y_j}\right) = k + a_1 + \log d_{ij} + a_2 (1-\delta_{ij}) - (1-\sigma) \log P_i - (1-\sigma ) \log P_j + \varepsilon_{ij}$$`
+`$$\log z_{ij} := \log \left(\frac{x_{ij}}{y_i y_j}\right) = k + a_1 + \log d_{ij} + a_2 \underbrace{(1-\delta_{ij})}_{\text{Efecto frontera}} - (1-\sigma) \log P_i - (1-\sigma ) \log P_j + \varepsilon_{ij}$$`
+ - `\(\delta_{ij}=1\)` comercio intra país y 0 e.o.c. 
  - Los índices de precios son las variables que omitió el estudio de McCallum (1995)
  - En la práctica, los índices de precios no son CPI, sino que se estiman en conjunto con el modelo gravitatorio: 
- `$$(P_j)^{1-\sigma} = \sum_{i=1}^{N} (P_i)^{\sigma -1} \theta_i e^{(a_1 \log d_{ij} + a_2 \log (1-\delta_{ij})}$$`
+ `$$(P_j)^{1-\sigma} = \sum_{i=1}^{N} (P_i)^{\sigma -1} \theta_i e^{(a_1 \log d_{ij} + a_2 \log (1-\delta_{ij}))}$$`
 
 Donde `\(\delta_{ij}\)` es una variable dicotómica que distingue el comercio internacional del comercio doméstico. 
 
@@ -575,14 +586,18 @@ Al actualizar la ecuación considerando los **costos del comercio** á la Anders
 ---
 # Distancia vs. costos de transporte
 
+.center[.hi[¿Por qué la distancia reduce los flujos de comercio?]]
+
+--
+
 Asturias y Petty (2013) examinan la relación entre la distancia geográfica y el costo de envío puerto-puerto
 
  - Los resultados sugieren que no existe correlación entre ambos. 
  - Encuentran una correlación negativa entre los costos de envío (*shipping costs*) y los volúmenes de comercio
  - Los países que comercian **más** contratan más servicios de logística y emplean tecnologías más eficientes
- - Las ganancias del comercio debido a la liberalización del comercio se incrementan después de tomar en cuenta los costos endógenos de transporte
+ - Las ganancias del comercio debido a la liberalización del comercio se incrementan después de tomar en cuenta los costos endógenos de transporte.
 
-.hi[Interrogante]: ¿Por qué la distancia reduce los flujos de comercio?
+
 
 ---
 
@@ -618,7 +633,7 @@ Asturias y Petty (2013) examinan la relación entre la distancia geográfica y e
 
 class: inverse, middle
 
-.bigger[.center[.white[**Zeros in Trade Data**]]]
+.bigger[.center[.white[**Ceros en datos de comercio**]]]
 
 ---
 # Introducción
@@ -681,7 +696,6 @@ En su análisis, muestra que considerar esos ceros afecta las estimaciones sobre
 
 ---
 # Gravedad con ceros
-
 * ¿Por qué nos debería importar que existan ceros? 
  - Formas funcionales logarítmicas
  - No existe comercio o hay errores en los datos
@@ -693,6 +707,62 @@ En su análisis, muestra que considerar esos ceros afecta las estimaciones sobre
  - Derivar un modelo de regresión que genere de forma endógena los ceros
  - Incluir costos fijos en los modelos de comercio (si el comercio es muy costos se generan ceros)
  - Añadir un término al modelo en logaritmos que contabilice los ceros que predice el modelo (dummy)
+
+
+
+
+
+---
+# Gravedad con ceros
+
+.hi[Problemas frecuentes]: 
+
+--
+
+* `\(\log(0) =\)` No definido.  Se excluyen observaciones y se induce **sesgo de seleccion**
+
+* Transformación _ad hoc_ `\(\log(1 + x)\)`. Ya no son semielasticidades e induce no linealidad de los parámetros. 
+
+* Coeficientes sesgados y errores estándar inestables (Heterocedasticidad)
+
+--
+
+.hi[Alternativas]: 
+ - Poisson Pseudo MLE: Robusto a la heterocedasticidad. 
+ - Probit / Logit. Útil con ceros estructurales. 
+ - Tobit censurado: útil con datos incompletos
+
+---
+class: inverse, middle
+
+.bigger[.center[.white[**Conclusiones**]]]
+
+---
+
+# .smallest[Modelo gravitatorio vs. H-O]
+
+.pull-left[ .smallest[
+
+* .hi-purple[¿El modelo gravitatorio es consistente con la teoría H-O?]
+ - Si el comercio disminuye con la distancia, se requiere que los productos sean lo suficientemente **diferenciados** para que valga la pena el comercio 
+
+* Históricamente, el comercio internacional se ha realizado entre países muy distantes
+  - UK importa soya y trigo de Argentina.
+  - UK importa carne de oveja de Nueva Zelanda
+
+* En la actualidad, el comercio se caracteriza por realizarse entre países muy cercanos que comercian bienes muy similares
+
+* .hi[Nueva teoría del comercio internacional]
+]
+
+]
+
+.pull-right[
+  &lt;img src="figures/tradeportship.jpg" style="width:auto; height:auto;"&gt;
+
+
+
+]
 
 ---
 

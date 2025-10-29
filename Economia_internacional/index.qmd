@@ -44,6 +44,7 @@ css: html/styles.css
 | 6 | Modelo H-O | [Teoría](https://eanguianopita.github.io/docs/Economia_internacional/Slides/06-HO_model.pdf) <br> [Evidencias empíricas](https://eanguianopita.github.io/docs/Economia_internacional/Slides/07-HO_empirics.pdf) | [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_3.txt) | [Tarea 2](https://eanguianopita.github.io/docs/Economia_internacional/Tareas/Preguntas%20Modelo%20HOV_Daniel%20Trefler_1995.pdf) <br> [Tarea 3]() |
 | 7 | Modelo gravitatorio | [Diapositivas](https://eanguianopita.github.io/docs/Economia_internacional/Slides/08-gravity_model.pdf) | [Lista](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_5.txt)|  [Lectura](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_7.txt) <br> [Datos](https://drive.google.com/file/d/18ybWy4FZBVKc24GrX87ylqi6P59UhSqv/view?usp=sharing) <br> [Código](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Paises.txt) |
 | 8 | Nueva teoría del comercio | [Diapositivas](https://eanguianopita.github.io/docs/Economia_internacional/Slides/09-increasing_rts.pdf) | [Lista]() |  |
+| 9 | Barreras al comercio  | [Diapositivas]() | [Lecturas](https://eanguianopita.github.io/docs/Economia_internacional/Lecturas/Semana_9.txt) | [Tareas]() | 
 
 
 # Libros de texto
